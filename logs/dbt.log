@@ -1,0 +1,1502 @@
+[0m16:34:40.103366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF5DFEAF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF60972A20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF60A2B2C0>]}
+
+
+============================== 16:34:40.103366 | 0b2e517e-dbe7-4ef4-9bdd-0bdafea35e0a ==============================
+[0m16:34:40.103366 [info ] [MainThread]: Running with dbt=1.10.5
+[0m16:34:40.103366 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:34:40.170181 [info ] [MainThread]: dbt version: 1.10.5
+[0m16:34:40.171384 [info ] [MainThread]: python version: 3.12.6
+[0m16:34:40.171384 [info ] [MainThread]: python path: C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python.exe
+[0m16:34:40.171384 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:34:40.753116 [info ] [MainThread]: Using profiles dir at C:\Users\lenovo\.dbt
+[0m16:34:40.754152 [info ] [MainThread]: Using profiles.yml file at C:\Users\lenovo\.dbt\profiles.yml
+[0m16:34:40.754152 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\lenovo\data_pipeline\dbt_project.yml
+[0m16:34:40.756840 [info ] [MainThread]: adapter type: snowflake
+[0m16:34:40.756840 [info ] [MainThread]: adapter version: 1.10.0
+[0m16:34:40.880314 [info ] [MainThread]: Configuration:
+[0m16:34:40.880314 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:34:40.896419 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:34:40.896419 [info ] [MainThread]: Required dependencies:
+[0m16:34:40.896419 [debug] [MainThread]: Executing "git --help"
+[0m16:34:40.925825 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:34:40.925825 [debug] [MainThread]: STDERR: "b''"
+[0m16:34:40.928224 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:34:40.928224 [info ] [MainThread]: Connection:
+[0m16:34:40.930235 [info ] [MainThread]:   account: YFCCUOK-SC28960
+[0m16:34:40.930235 [info ] [MainThread]:   user: Pranjal007
+[0m16:34:40.930235 [info ] [MainThread]:   database: dbt_db
+[0m16:34:40.930235 [info ] [MainThread]:   warehouse: dbt_wh
+[0m16:34:40.930235 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m16:34:40.930235 [info ] [MainThread]:   schema: dbt_schema
+[0m16:34:40.930235 [info ] [MainThread]:   authenticator: None
+[0m16:34:40.930235 [info ] [MainThread]:   oauth_client_id: None
+[0m16:34:40.930235 [info ] [MainThread]:   query_tag: None
+[0m16:34:40.930235 [info ] [MainThread]:   client_session_keep_alive: False
+[0m16:34:40.930235 [info ] [MainThread]:   host: None
+[0m16:34:40.930235 [info ] [MainThread]:   port: None
+[0m16:34:40.930235 [info ] [MainThread]:   proxy_host: None
+[0m16:34:40.930235 [info ] [MainThread]:   proxy_port: None
+[0m16:34:40.930235 [info ] [MainThread]:   protocol: None
+[0m16:34:40.930235 [info ] [MainThread]:   connect_retries: 1
+[0m16:34:40.930235 [info ] [MainThread]:   connect_timeout: None
+[0m16:34:40.930235 [info ] [MainThread]:   retry_on_database_errors: False
+[0m16:34:40.930235 [info ] [MainThread]:   retry_all: False
+[0m16:34:40.930235 [info ] [MainThread]:   insecure_mode: False
+[0m16:34:40.930235 [info ] [MainThread]:   reuse_connections: True
+[0m16:34:40.930235 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m16:34:40.930235 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m16:34:41.372571 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m16:34:41.454889 [debug] [MainThread]: Using snowflake connection "debug"
+[0m16:34:41.454889 [debug] [MainThread]: On debug: select 1 as id
+[0m16:34:41.454889 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:34:44.014112 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.550 seconds
+[0m16:34:44.016113 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:34:44.017120 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:34:44.019339 [debug] [MainThread]: Command `dbt debug` succeeded at 16:34:44.018311 after 4.11 seconds
+[0m16:34:44.019339 [debug] [MainThread]: Connection 'debug' was left open.
+[0m16:34:44.020339 [debug] [MainThread]: On debug: Close
+[0m16:34:44.200640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF606A47A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF62258500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EF633881A0>]}
+[0m16:34:44.201646 [debug] [MainThread]: Flushing usage events
+[0m16:34:45.316067 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:35:56.367824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C8991D400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C89C6CA40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C89C6D520>]}
+
+
+============================== 16:35:56.375284 | 3c858013-c932-4360-9979-3146da652a3e ==============================
+[0m16:35:56.375284 [info ] [MainThread]: Running with dbt=1.10.5
+[0m16:35:56.377292 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m16:35:56.410231 [info ] [MainThread]: dbt version: 1.10.5
+[0m16:35:56.411308 [info ] [MainThread]: python version: 3.12.6
+[0m16:35:56.411308 [info ] [MainThread]: python path: C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python.exe
+[0m16:35:56.412334 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:35:56.995008 [info ] [MainThread]: Using profiles dir at C:\Users\lenovo\.dbt
+[0m16:35:56.995008 [info ] [MainThread]: Using profiles.yml file at C:\Users\lenovo\.dbt\profiles.yml
+[0m16:35:56.995008 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\lenovo\data_pipeline\dbt_project.yml
+[0m16:35:57.010914 [info ] [MainThread]: adapter type: snowflake
+[0m16:35:57.010914 [info ] [MainThread]: adapter version: 1.10.0
+[0m16:35:57.164334 [info ] [MainThread]: Configuration:
+[0m16:35:57.168325 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:35:57.169435 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:35:57.169435 [info ] [MainThread]: Required dependencies:
+[0m16:35:57.169435 [debug] [MainThread]: Executing "git --help"
+[0m16:35:57.215605 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:35:57.217616 [debug] [MainThread]: STDERR: "b''"
+[0m16:35:57.217616 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:35:57.219627 [info ] [MainThread]: Connection:
+[0m16:35:57.219627 [info ] [MainThread]:   account: YFCCUOK-SC28960
+[0m16:35:57.219627 [info ] [MainThread]:   user: Pranjal007
+[0m16:35:57.221637 [info ] [MainThread]:   database: dbt_db
+[0m16:35:57.221637 [info ] [MainThread]:   warehouse: dbt_wh
+[0m16:35:57.224023 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m16:35:57.225154 [info ] [MainThread]:   schema: dbt_schema
+[0m16:35:57.225661 [info ] [MainThread]:   authenticator: None
+[0m16:35:57.225661 [info ] [MainThread]:   oauth_client_id: None
+[0m16:35:57.225661 [info ] [MainThread]:   query_tag: None
+[0m16:35:57.225661 [info ] [MainThread]:   client_session_keep_alive: False
+[0m16:35:57.229915 [info ] [MainThread]:   host: None
+[0m16:35:57.229915 [info ] [MainThread]:   port: None
+[0m16:35:57.231806 [info ] [MainThread]:   proxy_host: None
+[0m16:35:57.231806 [info ] [MainThread]:   proxy_port: None
+[0m16:35:57.231806 [info ] [MainThread]:   protocol: None
+[0m16:35:57.231806 [info ] [MainThread]:   connect_retries: 1
+[0m16:35:57.234635 [info ] [MainThread]:   connect_timeout: None
+[0m16:35:57.236461 [info ] [MainThread]:   retry_on_database_errors: False
+[0m16:35:57.236461 [info ] [MainThread]:   retry_all: False
+[0m16:35:57.238473 [info ] [MainThread]:   insecure_mode: False
+[0m16:35:57.238473 [info ] [MainThread]:   reuse_connections: True
+[0m16:35:57.239982 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m16:35:57.239982 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m16:35:57.681408 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m16:35:57.799127 [debug] [MainThread]: Using snowflake connection "debug"
+[0m16:35:57.799127 [debug] [MainThread]: On debug: select 1 as id
+[0m16:35:57.799127 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:36:00.113321 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.315 seconds
+[0m16:36:00.113321 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:36:00.113321 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:36:00.113321 [debug] [MainThread]: Command `dbt debug` succeeded at 16:36:00.113321 after 3.95 seconds
+[0m16:36:00.120396 [debug] [MainThread]: Connection 'debug' was left open.
+[0m16:36:00.120396 [debug] [MainThread]: On debug: Close
+[0m16:36:00.332849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C86E5A9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C8C30F7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028C88C05220>]}
+[0m16:36:00.332849 [debug] [MainThread]: Flushing usage events
+[0m16:36:01.588774 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:42:41.945309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A38FE2600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A386C2FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A3863CDA0>]}
+
+
+============================== 16:42:41.951391 | 8745537a-4bc9-4da6-bfbc-28c2ac4822d7 ==============================
+[0m16:42:41.951391 [info ] [MainThread]: Running with dbt=1.10.5
+[0m16:42:41.952301 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:42:41.984574 [info ] [MainThread]: dbt version: 1.10.5
+[0m16:42:41.985573 [info ] [MainThread]: python version: 3.12.6
+[0m16:42:41.986944 [info ] [MainThread]: python path: C:\Users\lenovo\AppData\Local\Programs\Python\Python312\python.exe
+[0m16:42:41.986944 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m16:42:42.599187 [info ] [MainThread]: Using profiles dir at C:\Users\lenovo\.dbt
+[0m16:42:42.600742 [info ] [MainThread]: Using profiles.yml file at C:\Users\lenovo\.dbt\profiles.yml
+[0m16:42:42.602304 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\lenovo\data_pipeline\dbt_project.yml
+[0m16:42:42.603715 [info ] [MainThread]: adapter type: snowflake
+[0m16:42:42.604371 [info ] [MainThread]: adapter version: 1.10.0
+[0m16:42:42.751992 [info ] [MainThread]: Configuration:
+[0m16:42:42.752796 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:42:42.753806 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:42:42.754807 [info ] [MainThread]: Required dependencies:
+[0m16:42:42.755291 [debug] [MainThread]: Executing "git --help"
+[0m16:42:42.793642 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:42:42.794665 [debug] [MainThread]: STDERR: "b''"
+[0m16:42:42.794665 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:42:42.795813 [info ] [MainThread]: Connection:
+[0m16:42:42.797322 [info ] [MainThread]:   account: YFCCUOK-SC28960
+[0m16:42:42.797322 [info ] [MainThread]:   user: Pranjal007
+[0m16:42:42.798496 [info ] [MainThread]:   database: dbt_db
+[0m16:42:42.799794 [info ] [MainThread]:   warehouse: dbt_wh
+[0m16:42:42.799794 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m16:42:42.800795 [info ] [MainThread]:   schema: dbt_schema
+[0m16:42:42.802077 [info ] [MainThread]:   authenticator: None
+[0m16:42:42.802077 [info ] [MainThread]:   oauth_client_id: None
+[0m16:42:42.803225 [info ] [MainThread]:   query_tag: None
+[0m16:42:42.804244 [info ] [MainThread]:   client_session_keep_alive: False
+[0m16:42:42.804244 [info ] [MainThread]:   host: None
+[0m16:42:42.805258 [info ] [MainThread]:   port: None
+[0m16:42:42.806258 [info ] [MainThread]:   proxy_host: None
+[0m16:42:42.807242 [info ] [MainThread]:   proxy_port: None
+[0m16:42:42.808244 [info ] [MainThread]:   protocol: None
+[0m16:42:42.808244 [info ] [MainThread]:   connect_retries: 1
+[0m16:42:42.809245 [info ] [MainThread]:   connect_timeout: None
+[0m16:42:42.810245 [info ] [MainThread]:   retry_on_database_errors: False
+[0m16:42:42.811243 [info ] [MainThread]:   retry_all: False
+[0m16:42:42.812244 [info ] [MainThread]:   insecure_mode: False
+[0m16:42:42.812244 [info ] [MainThread]:   reuse_connections: True
+[0m16:42:42.813248 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m16:42:42.814244 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m16:42:43.260973 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m16:42:43.348661 [debug] [MainThread]: Using snowflake connection "debug"
+[0m16:42:43.349662 [debug] [MainThread]: On debug: select 1 as id
+[0m16:42:43.349662 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:42:45.562995 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.213 seconds
+[0m16:42:45.564999 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:42:45.565995 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:42:45.566996 [debug] [MainThread]: Command `dbt debug` succeeded at 16:42:45.566996 after 3.87 seconds
+[0m16:42:45.568105 [debug] [MainThread]: Connection 'debug' was left open.
+[0m16:42:45.568105 [debug] [MainThread]: On debug: Close
+[0m16:42:45.976433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A35FE3EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A3B2F4B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A3B658F50>]}
+[0m16:42:45.977436 [debug] [MainThread]: Flushing usage events
+[0m16:42:47.126045 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:51:31.033698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CC35AB050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CC6189160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CC617AD20>]}
+
+
+============================== 16:51:31.038727 | 29f911f7-bf69-4e22-a780-680514e4ff6e ==============================
+[0m16:51:31.038727 [info ] [MainThread]: Running with dbt=1.10.5
+[0m16:51:31.040736 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:51:31.286932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '29f911f7-bf69-4e22-a780-680514e4ff6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CC660B260>]}
+[0m16:51:31.337963 [debug] [MainThread]: Set downloads directory='C:\Users\lenovo\AppData\Local\Temp\dbt-downloads-rxchev14'
+[0m16:51:31.340393 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m16:54:19.862749 [error] [MainThread]: Encountered an error:
+
+[0m16:54:19.904737 [debug] [MainThread]: Command `dbt deps` failed at 16:54:19.904737 after 169.14 seconds
+[0m16:54:19.904737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CC5AE91C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CC78ABCE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023CC67B6600>]}
+[0m16:54:19.904737 [debug] [MainThread]: Flushing usage events
+[0m16:54:22.194114 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:54:28.780866 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020486411550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020486411970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020486412900>]}
+
+
+============================== 16:54:28.786201 | 69fe917c-74d2-49ab-a376-7dfaeee162b0 ==============================
+[0m16:54:28.786201 [info ] [MainThread]: Running with dbt=1.10.5
+[0m16:54:28.788211 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:54:29.011642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '69fe917c-74d2-49ab-a376-7dfaeee162b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020485DC5C10>]}
+[0m16:54:29.055193 [debug] [MainThread]: Set downloads directory='C:\Users\lenovo\AppData\Local\Temp\dbt-downloads-ojg0tlml'
+[0m16:54:29.055193 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m16:55:53.548204 [error] [MainThread]: Encountered an error:
+
+[0m16:55:53.852566 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 303, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 461, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 215, in run
+    self.lock()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 98, in resolved
+    self._check_in_index()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 75, in _check_in_index
+    index = registry.index_cached()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\utils\utils.py", line 127, in __call__
+    value = self.func(*args)
+            ^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\clients\registry.py", line 189, in index
+    return connection_exception_retry(get_index_fn, 5)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+           ^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\clients\registry.py", line 168, in _get_index
+    resp = requests.get(url, timeout=30)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 81, in create_connection
+    sock.close()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 501, in close
+    def close(self):
+    
+KeyboardInterrupt
+
+[0m16:55:53.854572 [debug] [MainThread]: Command `dbt deps` failed at 16:55:53.854572 after 85.32 seconds
+[0m16:55:53.856577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002048691E2A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020483AEA150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000204839B4170>]}
+[0m16:55:53.856577 [debug] [MainThread]: Flushing usage events
+[0m16:55:56.293505 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:56:33.582098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021E2D72C170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021E2CADBF80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021E2B132F60>]}
+
+
+============================== 16:56:33.587823 | d5bcaa07-9b84-45b4-9279-166dd0b9aedd ==============================
+[0m16:56:33.587823 [info ] [MainThread]: Running with dbt=1.10.5
+[0m16:56:33.587823 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:56:33.780636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd5bcaa07-9b84-45b4-9279-166dd0b9aedd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021E2DB3D6A0>]}
+[0m16:56:33.824393 [debug] [MainThread]: Set downloads directory='C:\Users\lenovo\AppData\Local\Temp\dbt-downloads-neei71ir'
+[0m16:56:33.826404 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m16:59:02.327601 [error] [MainThread]: Encountered an error:
+
+[0m16:59:02.336623 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\requires.py", line 303, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\cli\main.py", line 461, in deps
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 215, in run
+    self.lock()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\task\deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 98, in resolved
+    self._check_in_index()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\deps\registry.py", line 75, in _check_in_index
+    index = registry.index_cached()
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\utils\utils.py", line 127, in __call__
+    value = self.func(*args)
+            ^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\clients\registry.py", line 189, in index
+    return connection_exception_retry(get_index_fn, 5)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt_common\utils\connection.py", line 22, in connection_exception_retry
+    return fn()
+           ^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\dbt\clients\registry.py", line 168, in _get_index
+    resp = requests.get(url, timeout=30)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages\urllib3\util\connection.py", line 81, in create_connection
+    sock.close()
+  File "C:\Users\lenovo\AppData\Local\Programs\Python\Python312\Lib\socket.py", line 501, in close
+    def close(self):
+    
+KeyboardInterrupt
+
+[0m16:59:02.339912 [debug] [MainThread]: Command `dbt deps` failed at 16:59:02.339912 after 149.02 seconds
+[0m16:59:02.340914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021E2CCC4590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021E2D1D92E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021E2F0A0320>]}
+[0m16:59:02.341915 [debug] [MainThread]: Flushing usage events
+[0m16:59:04.484688 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:00:10.720357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002265E9845F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022664730920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022664DB92E0>]}
+
+
+============================== 17:00:10.725830 | 13fb5032-671f-4202-b735-2bc4f62b1ba7 ==============================
+[0m17:00:10.725830 [info ] [MainThread]: Running with dbt=1.10.5
+[0m17:00:10.726749 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m17:00:10.916613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '13fb5032-671f-4202-b735-2bc4f62b1ba7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022664F23EF0>]}
+[0m17:00:10.960008 [debug] [MainThread]: Set downloads directory='C:\Users\lenovo\AppData\Local\Temp\dbt-downloads-_i_6n86e'
+[0m17:00:10.962007 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/dbt-labs/dbt-utils.git b03949bb53de3439f6a8057088ba4032"
+[0m17:00:13.110124 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:13.110124 [debug] [MainThread]: STDERR: "b"Cloning into 'b03949bb53de3439f6a8057088ba4032'...\n""
+[0m17:00:13.110124 [debug] [MainThread]: Pulling new dependency b03949bb53de3439f6a8057088ba4032.
+[0m17:00:13.110124 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:13.139786 [debug] [MainThread]: STDOUT: "b'7672637704c7ae428125d8aa1769e5e34ae32251\n'"
+[0m17:00:13.139786 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:13.139786 [debug] [MainThread]: Checking out revision 1.3.1.
+[0m17:00:13.139786 [debug] [MainThread]: Executing "git remote set-branches origin 1.3.1"
+[0m17:00:13.180220 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:13.180220 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:13.180220 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 1.3.1"
+[0m17:00:15.904295 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:15.905580 [debug] [MainThread]: STDERR: "b'From https://github.com/dbt-labs/dbt-utils\n * tag               1.3.1      -> FETCH_HEAD\n * [new tag]         0.0.1      -> 0.0.1\n * [new tag]         0.1.0      -> 0.1.0\n * [new tag]         0.1.1      -> 0.1.1\n * [new tag]         0.1.10     -> 0.1.10\n * [new tag]         0.1.11     -> 0.1.11\n * [new tag]         0.1.12     -> 0.1.12\n * [new tag]         0.1.13     -> 0.1.13\n * [new tag]         0.1.14     -> 0.1.14\n * [new tag]         0.1.15     -> 0.1.15\n * [new tag]         0.1.16     -> 0.1.16\n * [new tag]         0.1.17     -> 0.1.17\n * [new tag]         0.1.18     -> 0.1.18\n * [new tag]         0.1.19     -> 0.1.19\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.20     -> 0.1.20\n * [new tag]         0.1.21     -> 0.1.21\n * [new tag]         0.1.22     -> 0.1.22\n * [new tag]         0.1.23     -> 0.1.23\n * [new tag]         0.1.24     -> 0.1.24\n * [new tag]         0.1.25     -> 0.1.25\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.1.5      -> 0.1.5\n * [new tag]         0.1.6      -> 0.1.6\n * [new tag]         0.1.7      -> 0.1.7\n * [new tag]         0.1.8      -> 0.1.8\n * [new tag]         0.1.9      -> 0.1.9\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.6.0      -> 0.6.0\n * [new tag]         0.6.1      -> 0.6.1\n * [new tag]         0.6.2      -> 0.6.2\n * [new tag]         0.6.3      -> 0.6.3\n * [new tag]         0.6.4      -> 0.6.4\n * [new tag]         0.6.5      -> 0.6.5\n * [new tag]         0.6.6      -> 0.6.6\n * [new tag]         0.7.0      -> 0.7.0\n * [new tag]         0.7.1      -> 0.7.1\n * [new tag]         0.7.2      -> 0.7.2\n * [new tag]         0.7.3      -> 0.7.3\n * [new tag]         0.7.4      -> 0.7.4\n * [new tag]         0.7.4-b1   -> 0.7.4-b1\n * [new tag]         0.7.4b1    -> 0.7.4b1\n * [new tag]         0.7.5      -> 0.7.5\n * [new tag]         0.7.6      -> 0.7.6\n * [new tag]         0.8.0      -> 0.8.0\n * [new tag]         0.8.1      -> 0.8.1\n * [new tag]         0.8.2      -> 0.8.2\n * [new tag]         0.8.3      -> 0.8.3\n * [new tag]         0.8.4      -> 0.8.4\n * [new tag]         0.8.5      -> 0.8.5\n * [new tag]         0.8.6      -> 0.8.6\n * [new tag]         0.9.0      -> 0.9.0\n * [new tag]         0.9.1      -> 0.9.1\n * [new tag]         0.9.2      -> 0.9.2\n * [new tag]         0.9.5      -> 0.9.5\n * [new tag]         0.9.6      -> 0.9.6\n * [new tag]         1.0.0      -> 1.0.0\n * [new tag]         1.0.0-b1   -> 1.0.0-b1\n * [new tag]         1.0.0-b2   -> 1.0.0-b2\n * [new tag]         1.0.0-rc1  -> 1.0.0-rc1\n * [new tag]         1.1.0      -> 1.1.0\n * [new tag]         1.1.1      -> 1.1.1\n * [new tag]         1.2.0      -> 1.2.0\n * [new tag]         1.2.0-rc1  -> 1.2.0-rc1\n * [new tag]         1.3.0      -> 1.3.0\n * [new tag]         1.3.1      -> 1.3.1\n'"
+[0m17:00:15.905580 [debug] [MainThread]: Executing "git tag --list"
+[0m17:00:15.940812 [debug] [MainThread]: STDOUT: "b'0.0.1\n0.1.0\n0.1.1\n0.1.10\n0.1.11\n0.1.12\n0.1.13\n0.1.14\n0.1.15\n0.1.16\n0.1.17\n0.1.18\n0.1.19\n0.1.2\n0.1.20\n0.1.21\n0.1.22\n0.1.23\n0.1.24\n0.1.25\n0.1.3\n0.1.4\n0.1.5\n0.1.6\n0.1.7\n0.1.8\n0.1.9\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.3.0\n0.4.0\n0.4.1\n0.5.0\n0.5.1\n0.6.0\n0.6.1\n0.6.2\n0.6.3\n0.6.4\n0.6.5\n0.6.6\n0.7.0\n0.7.1\n0.7.2\n0.7.3\n0.7.4\n0.7.4-b1\n0.7.4b1\n0.7.5\n0.7.6\n0.8.0\n0.8.1\n0.8.2\n0.8.3\n0.8.4\n0.8.5\n0.8.6\n0.9.0\n0.9.1\n0.9.2\n0.9.5\n0.9.6\n1.0.0\n1.0.0-b1\n1.0.0-b2\n1.0.0-rc1\n1.1.0\n1.1.1\n1.2.0\n1.2.0-rc1\n1.3.0\n1.3.1\n'"
+[0m17:00:15.943327 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:15.943327 [debug] [MainThread]: Executing "git reset --hard tags/1.3.1"
+[0m17:00:16.124190 [debug] [MainThread]: STDOUT: "b'HEAD is now at 4232773 Fix logic to not reset the variable (#1043)\n'"
+[0m17:00:16.126891 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:16.126891 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:16.149964 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:16.149964 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:16.151972 [debug] [MainThread]: Checked out at 4232773.
+[0m17:00:16.151972 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:16.171809 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:16.171809 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:16.196685 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/dbt-labs/dbt-utils.git b03949bb53de3439f6a8057088ba4032"
+[0m17:00:16.218619 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:16.220630 [debug] [MainThread]: STDERR: "b"fatal: destination path 'b03949bb53de3439f6a8057088ba4032' already exists and is not an empty directory.\n""
+[0m17:00:16.220630 [debug] [MainThread]: command return code=128
+[0m17:00:16.220630 [debug] [MainThread]: Updating existing dependency b03949bb53de3439f6a8057088ba4032.
+[0m17:00:16.220630 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:16.246285 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:16.246285 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:16.246285 [debug] [MainThread]: Checking out revision 1.3.1.
+[0m17:00:16.246285 [debug] [MainThread]: Executing "git remote set-branches origin 1.3.1"
+[0m17:00:16.284050 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:16.284050 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:16.286057 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 1.3.1"
+[0m17:00:19.188897 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:19.190391 [debug] [MainThread]: STDERR: "b'From https://github.com/dbt-labs/dbt-utils\n * tag               1.3.1      -> FETCH_HEAD\n'"
+[0m17:00:19.190391 [debug] [MainThread]: Executing "git tag --list"
+[0m17:00:19.227849 [debug] [MainThread]: STDOUT: "b'0.0.1\n0.1.0\n0.1.1\n0.1.10\n0.1.11\n0.1.12\n0.1.13\n0.1.14\n0.1.15\n0.1.16\n0.1.17\n0.1.18\n0.1.19\n0.1.2\n0.1.20\n0.1.21\n0.1.22\n0.1.23\n0.1.24\n0.1.25\n0.1.3\n0.1.4\n0.1.5\n0.1.6\n0.1.7\n0.1.8\n0.1.9\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.3.0\n0.4.0\n0.4.1\n0.5.0\n0.5.1\n0.6.0\n0.6.1\n0.6.2\n0.6.3\n0.6.4\n0.6.5\n0.6.6\n0.7.0\n0.7.1\n0.7.2\n0.7.3\n0.7.4\n0.7.4-b1\n0.7.4b1\n0.7.5\n0.7.6\n0.8.0\n0.8.1\n0.8.2\n0.8.3\n0.8.4\n0.8.5\n0.8.6\n0.9.0\n0.9.1\n0.9.2\n0.9.5\n0.9.6\n1.0.0\n1.0.0-b1\n1.0.0-b2\n1.0.0-rc1\n1.1.0\n1.1.1\n1.2.0\n1.2.0-rc1\n1.3.0\n1.3.1\n'"
+[0m17:00:19.228867 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:19.229856 [debug] [MainThread]: Executing "git reset --hard tags/1.3.1"
+[0m17:00:19.280777 [debug] [MainThread]: STDOUT: "b'HEAD is now at 4232773 Fix logic to not reset the variable (#1043)\n'"
+[0m17:00:19.281798 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:19.281798 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:19.305670 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:19.306723 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:19.306723 [debug] [MainThread]: Already at 4232773, nothing to do.
+[0m17:00:19.307723 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:19.329801 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:19.330817 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:19.471065 [info ] [MainThread]: Updating lock file in file path: C:\Users\lenovo\data_pipeline/package-lock.yml
+[0m17:00:19.492375 [debug] [MainThread]: Set downloads directory='C:\Users\lenovo\AppData\Local\Temp\dbt-downloads-mlevjakh'
+[0m17:00:19.493720 [info ] [MainThread]: Installing https://github.com/dbt-labs/dbt-utils.git
+[0m17:00:19.494739 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/dbt-labs/dbt-utils.git b03949bb53de3439f6a8057088ba4032"
+[0m17:00:21.472295 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:21.472295 [debug] [MainThread]: STDERR: "b"Cloning into 'b03949bb53de3439f6a8057088ba4032'...\n""
+[0m17:00:21.474303 [debug] [MainThread]: Pulling new dependency b03949bb53de3439f6a8057088ba4032.
+[0m17:00:21.474303 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:21.496394 [debug] [MainThread]: STDOUT: "b'7672637704c7ae428125d8aa1769e5e34ae32251\n'"
+[0m17:00:21.498404 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:21.498404 [debug] [MainThread]: Checking out revision 423277393abcd0f3827e30bdbe5c896bfa833239.
+[0m17:00:21.498404 [debug] [MainThread]: Executing "git fetch origin --depth 1 423277393abcd0f3827e30bdbe5c896bfa833239"
+[0m17:00:23.304483 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:23.305521 [debug] [MainThread]: STDERR: "b'From https://github.com/dbt-labs/dbt-utils\n * branch            423277393abcd0f3827e30bdbe5c896bfa833239 -> FETCH_HEAD\n'"
+[0m17:00:23.306517 [debug] [MainThread]: Executing "git reset --hard 423277393abcd0f3827e30bdbe5c896bfa833239"
+[0m17:00:23.431459 [debug] [MainThread]: STDOUT: "b'HEAD is now at 4232773 Fix logic to not reset the variable (#1043)\n'"
+[0m17:00:23.431459 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:23.432471 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:23.454530 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:23.455556 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:23.456550 [debug] [MainThread]: Checked out at 4232773.
+[0m17:00:23.456550 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:23.479219 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:23.480243 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:23.482765 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/dbt-labs/dbt-utils.git b03949bb53de3439f6a8057088ba4032"
+[0m17:00:23.502713 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:23.504030 [debug] [MainThread]: STDERR: "b"fatal: destination path 'b03949bb53de3439f6a8057088ba4032' already exists and is not an empty directory.\n""
+[0m17:00:23.504030 [debug] [MainThread]: command return code=128
+[0m17:00:23.505077 [debug] [MainThread]: Updating existing dependency b03949bb53de3439f6a8057088ba4032.
+[0m17:00:23.505077 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:23.528799 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:23.528799 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:23.529802 [debug] [MainThread]: Checking out revision 423277393abcd0f3827e30bdbe5c896bfa833239.
+[0m17:00:23.529802 [debug] [MainThread]: Executing "git fetch origin --depth 1 423277393abcd0f3827e30bdbe5c896bfa833239"
+[0m17:00:25.494549 [debug] [MainThread]: STDOUT: "b''"
+[0m17:00:25.494963 [debug] [MainThread]: STDERR: "b'From https://github.com/dbt-labs/dbt-utils\n * branch            423277393abcd0f3827e30bdbe5c896bfa833239 -> FETCH_HEAD\n'"
+[0m17:00:25.494963 [debug] [MainThread]: Executing "git reset --hard 423277393abcd0f3827e30bdbe5c896bfa833239"
+[0m17:00:25.545833 [debug] [MainThread]: STDOUT: "b'HEAD is now at 4232773 Fix logic to not reset the variable (#1043)\n'"
+[0m17:00:25.545833 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:25.545833 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m17:00:25.562339 [debug] [MainThread]: STDOUT: "b'423277393abcd0f3827e30bdbe5c896bfa833239\n'"
+[0m17:00:25.562339 [debug] [MainThread]: STDERR: "b''"
+[0m17:00:25.562339 [debug] [MainThread]: Already at 4232773, nothing to do.
+[0m17:00:25.574358 [info ] [MainThread]: Installed from revision 423277393abcd0f3827e30bdbe5c896bfa833239
+[0m17:00:25.574358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '13fb5032-671f-4202-b735-2bc4f62b1ba7', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266617BFE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002266420CF80>]}
+[0m17:00:25.576798 [debug] [MainThread]: Command `dbt deps` succeeded at 17:00:25.576798 after 15.11 seconds
+[0m17:00:25.576798 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002265E9845F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022664F23C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022666120B30>]}
+[0m17:00:25.576798 [debug] [MainThread]: Flushing usage events
+[0m17:00:26.766303 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:04:02.460550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE15652B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE1565550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE1567500>]}
+
+
+============================== 17:04:02.466969 | b43a6da3-5c18-4b03-94b5-1161367c3a73 ==============================
+[0m17:04:02.466969 [info ] [MainThread]: Running with dbt=1.10.5
+[0m17:04:02.467959 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:04:02.676426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b43a6da3-5c18-4b03-94b5-1161367c3a73', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE21259A0>]}
+[0m17:04:02.719670 [debug] [MainThread]: Set downloads directory='C:\Users\lenovo\AppData\Local\Temp\dbt-downloads-1exx65aq'
+[0m17:04:02.721108 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m17:06:52.527476 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m17:06:52.528479 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m17:09:41.206981 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m17:09:41.226964 [info ] [MainThread]: Updating lock file in file path: C:\Users\lenovo\data_pipeline/package-lock.yml
+[0m17:09:41.248004 [debug] [MainThread]: Set downloads directory='C:\Users\lenovo\AppData\Local\Temp\dbt-downloads-q1pa2nxm'
+[0m17:09:41.259106 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m17:09:43.314694 [info ] [MainThread]: Installed from version 1.3.1
+[0m17:09:43.315694 [info ] [MainThread]: Up to date!
+[0m17:09:43.316709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'b43a6da3-5c18-4b03-94b5-1161367c3a73', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE2238F80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE3305CA0>]}
+[0m17:09:43.318690 [debug] [MainThread]: Command `dbt deps` succeeded at 17:09:43.318690 after 341.11 seconds
+[0m17:09:43.319689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE20BCC20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE14DE3F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026BE14DF590>]}
+[0m17:09:43.319689 [debug] [MainThread]: Flushing usage events
+[0m17:09:44.361864 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:29:26.694303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E7F0DAE40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E7EFCBEF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E7EFCB710>]}
+
+
+============================== 18:29:26.697210 | 99dddeca-61ce-423e-8201-7bf368139dab ==============================
+[0m18:29:26.697210 [info ] [MainThread]: Running with dbt=1.10.5
+[0m18:29:26.697210 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:29:27.539793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '99dddeca-61ce-423e-8201-7bf368139dab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E7F1D3EC0>]}
+[0m18:29:27.636878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '99dddeca-61ce-423e-8201-7bf368139dab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E04483140>]}
+[0m18:29:27.636878 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m18:29:28.295779 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m18:29:28.295779 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:29:28.299851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '99dddeca-61ce-423e-8201-7bf368139dab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E023ABFB0>]}
+[0m18:29:32.837489 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.data_pipeline.marts
+[0m18:29:32.850487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '99dddeca-61ce-423e-8201-7bf368139dab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E04B96060>]}
+[0m18:29:32.940226 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m18:29:32.944214 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m18:29:32.981898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '99dddeca-61ce-423e-8201-7bf368139dab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E04C64470>]}
+[0m18:29:32.981898 [info ] [MainThread]: Found 1 model, 3 data tests, 2 sources, 593 macros
+[0m18:29:32.982898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '99dddeca-61ce-423e-8201-7bf368139dab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E04C17560>]}
+[0m18:29:32.984898 [info ] [MainThread]: 
+[0m18:29:32.985406 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m18:29:32.985406 [info ] [MainThread]: 
+[0m18:29:32.986428 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:29:32.987428 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m18:29:33.116618 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m18:29:33.116618 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m18:29:33.117621 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:29:34.714263 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.600 seconds
+[0m18:29:34.721679 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m18:29:34.721679 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m18:29:34.721679 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m18:29:34.721679 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:29:35.240950 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.506 seconds
+[0m18:29:35.242733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '99dddeca-61ce-423e-8201-7bf368139dab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E04CC3230>]}
+[0m18:29:35.249312 [debug] [Thread-1 (]: Began running node model.data_pipeline.stg_tpch_orders
+[0m18:29:35.249312 [info ] [Thread-1 (]: 1 of 1 START sql view model dbt_schema.stg_tpch_orders ......................... [RUN]
+[0m18:29:35.249312 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_orders'
+[0m18:29:35.249312 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.stg_tpch_orders
+[0m18:29:35.264961 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_orders"
+[0m18:29:35.264961 [debug] [Thread-1 (]: Began executing node model.data_pipeline.stg_tpch_orders
+[0m18:29:35.297094 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_orders"
+[0m18:29:35.297094 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.stg_tpch_orders"
+[0m18:29:35.297094 [debug] [Thread-1 (]: On model.data_pipeline.stg_tpch_orders: create or replace   view dbt_db.dbt_schema.stg_tpch_orders
+  
+  
+  
+  
+  as (
+    select
+    o_orderkey as order_key,
+    o_custkey as customer_key,
+    o_orderstatus as status_code,
+    o_totalprice as total_price,
+    o_orderdate as order_date
+from
+    snowflake_sample_data.tpch_sf1.orders
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_orders"} */;
+[0m18:29:35.297094 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:29:37.350355 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.042 seconds
+[0m18:29:37.389985 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '99dddeca-61ce-423e-8201-7bf368139dab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E7F1D3050>]}
+[0m18:29:37.390970 [info ] [Thread-1 (]: 1 of 1 OK created sql view model dbt_schema.stg_tpch_orders .................... [[32mSUCCESS 1[0m in 2.14s]
+[0m18:29:37.392971 [debug] [Thread-1 (]: Finished running node model.data_pipeline.stg_tpch_orders
+[0m18:29:37.396490 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:29:37.397488 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m18:29:37.397488 [debug] [MainThread]: On list_dbt_db: Close
+[0m18:29:37.592360 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m18:29:37.593874 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m18:29:37.832933 [debug] [MainThread]: Connection 'model.data_pipeline.stg_tpch_orders' was left open.
+[0m18:29:37.833957 [debug] [MainThread]: On model.data_pipeline.stg_tpch_orders: Close
+[0m18:29:38.013036 [info ] [MainThread]: 
+[0m18:29:38.014038 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 5.03 seconds (5.03s).
+[0m18:29:38.016127 [debug] [MainThread]: Command end result
+[0m18:29:38.059551 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m18:29:38.066838 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m18:29:38.077259 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m18:29:38.077259 [info ] [MainThread]: 
+[0m18:29:38.078763 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:29:38.079837 [info ] [MainThread]: 
+[0m18:29:38.080841 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m18:29:38.081842 [debug] [MainThread]: Command `dbt run` succeeded at 18:29:38.081842 after 11.65 seconds
+[0m18:29:38.082843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E7F0DAE40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E02292690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028E02292090>]}
+[0m18:29:38.082843 [debug] [MainThread]: Flushing usage events
+[0m18:29:39.329348 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:48:58.641552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC15DCF140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC13B62E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC15DCEF00>]}
+
+
+============================== 09:48:58.641552 | 42ee22b2-2999-4c87-8e37-01bd3c730cb1 ==============================
+[0m09:48:58.641552 [info ] [MainThread]: Running with dbt=1.10.5
+[0m09:48:58.641552 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:48:59.687310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '42ee22b2-2999-4c87-8e37-01bd3c730cb1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC163E10A0>]}
+[0m09:48:59.752788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '42ee22b2-2999-4c87-8e37-01bd3c730cb1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC163E32C0>]}
+[0m09:48:59.754359 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m09:49:00.256415 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m09:49:01.905479 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m09:49:01.905479 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\staging\stg_tpch_line_items.sql
+[0m09:49:02.142232 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.data_pipeline.marts
+[0m09:49:02.156405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '42ee22b2-2999-4c87-8e37-01bd3c730cb1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC18B80C80>]}
+[0m09:49:02.236974 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m09:49:02.258219 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m09:49:02.294026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '42ee22b2-2999-4c87-8e37-01bd3c730cb1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC188CB230>]}
+[0m09:49:02.294026 [info ] [MainThread]: Found 2 models, 3 data tests, 2 sources, 593 macros
+[0m09:49:02.295025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '42ee22b2-2999-4c87-8e37-01bd3c730cb1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC18B82C60>]}
+[0m09:49:02.296484 [info ] [MainThread]: 
+[0m09:49:02.297484 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m09:49:02.298484 [info ] [MainThread]: 
+[0m09:49:02.298484 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m09:49:02.303484 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m09:49:04.799792 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m09:49:04.799792 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m09:49:04.799792 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:49:07.531174 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.731 seconds
+[0m09:49:07.534179 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m09:49:07.545178 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m09:49:07.545178 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m09:49:07.545178 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:49:08.565135 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.020 seconds
+[0m09:49:08.567663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '42ee22b2-2999-4c87-8e37-01bd3c730cb1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC18EED8E0>]}
+[0m09:49:08.581124 [debug] [Thread-1 (]: Began running node model.data_pipeline.stg_tpch_line_items
+[0m09:49:08.581124 [debug] [Thread-2 (]: Began running node model.data_pipeline.stg_tpch_orders
+[0m09:49:08.582124 [info ] [Thread-1 (]: 1 of 2 START sql view model dbt_schema.stg_tpch_line_items ..................... [RUN]
+[0m09:49:08.582124 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_line_items'
+[0m09:49:08.582124 [info ] [Thread-2 (]: 2 of 2 START sql view model dbt_schema.stg_tpch_orders ......................... [RUN]
+[0m09:49:08.583471 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.stg_tpch_line_items
+[0m09:49:08.583471 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_orders'
+[0m09:49:08.591806 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_line_items"
+[0m09:49:08.591806 [debug] [Thread-2 (]: Began compiling node model.data_pipeline.stg_tpch_orders
+[0m09:49:08.594805 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_orders"
+[0m09:49:08.595804 [debug] [Thread-1 (]: Began executing node model.data_pipeline.stg_tpch_line_items
+[0m09:49:08.595804 [debug] [Thread-2 (]: Began executing node model.data_pipeline.stg_tpch_orders
+[0m09:49:08.619821 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_line_items"
+[0m09:49:08.622771 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_orders"
+[0m09:49:08.624919 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.stg_tpch_orders"
+[0m09:49:08.624919 [debug] [Thread-2 (]: On model.data_pipeline.stg_tpch_orders: create or replace   view dbt_db.dbt_schema.stg_tpch_orders
+  
+  
+  
+  
+  as (
+    select
+    o_orderkey as order_key,
+    o_custkey as customer_key,
+    o_orderstatus as status_code,
+    o_totalprice as total_price,
+    o_orderdate as order_date
+from
+    snowflake_sample_data.tpch_sf1.orders
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_orders"} */;
+[0m09:49:08.624919 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m09:49:08.625920 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.stg_tpch_line_items"
+[0m09:49:08.626920 [debug] [Thread-1 (]: On model.data_pipeline.stg_tpch_line_items: create or replace   view dbt_db.dbt_schema.stg_tpch_line_items
+  
+  
+  
+  
+  as (
+    select
+    md5(cast(coalesce(cast(l_orderkey as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(l_linenumber as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_item_key,
+	l_orderkey as order_key,
+	l_partkey as part_key,
+	l_linenumber as line_number,
+	l_quantity as quantity,
+	l_extendedprice as extended_price,
+	l_discount as discount_percentage,
+	l_tax as tax_rate
+from
+    snowflake_sample_data.tpch_sf1.lineitem
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_line_items"} */;
+[0m09:49:08.627920 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:49:09.634542 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.007 seconds
+[0m09:49:09.635655 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.010 seconds
+[0m09:49:09.661392 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '42ee22b2-2999-4c87-8e37-01bd3c730cb1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC132EF290>]}
+[0m09:49:09.661392 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '42ee22b2-2999-4c87-8e37-01bd3c730cb1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC15700860>]}
+[0m09:49:09.661392 [info ] [Thread-1 (]: 1 of 2 OK created sql view model dbt_schema.stg_tpch_line_items ................ [[32mSUCCESS 1[0m in 1.07s]
+[0m09:49:09.663634 [debug] [Thread-1 (]: Finished running node model.data_pipeline.stg_tpch_line_items
+[0m09:49:09.662547 [info ] [Thread-2 (]: 2 of 2 OK created sql view model dbt_schema.stg_tpch_orders .................... [[32mSUCCESS 1[0m in 1.08s]
+[0m09:49:09.663634 [debug] [Thread-2 (]: Finished running node model.data_pipeline.stg_tpch_orders
+[0m09:49:09.665029 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:49:09.665029 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m09:49:09.666396 [debug] [MainThread]: On list_dbt_db: Close
+[0m09:49:09.964461 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m09:49:09.964461 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m09:49:10.218421 [debug] [MainThread]: Connection 'model.data_pipeline.stg_tpch_line_items' was left open.
+[0m09:49:10.218421 [debug] [MainThread]: On model.data_pipeline.stg_tpch_line_items: Close
+[0m09:49:10.541511 [debug] [MainThread]: Connection 'model.data_pipeline.stg_tpch_orders' was left open.
+[0m09:49:10.541511 [debug] [MainThread]: On model.data_pipeline.stg_tpch_orders: Close
+[0m09:49:10.704632 [info ] [MainThread]: 
+[0m09:49:10.704632 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 8.41 seconds (8.41s).
+[0m09:49:10.704632 [debug] [MainThread]: Command end result
+[0m09:49:10.720908 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m09:49:10.729789 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m09:49:10.735888 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m09:49:10.736903 [info ] [MainThread]: 
+[0m09:49:10.736903 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:49:10.736903 [info ] [MainThread]: 
+[0m09:49:10.738287 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m09:49:10.738287 [debug] [MainThread]: Command `dbt run` succeeded at 09:49:10.738287 after 12.31 seconds
+[0m09:49:10.738287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC130E7A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC126C8530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC156AE450>]}
+[0m09:49:10.738287 [debug] [MainThread]: Flushing usage events
+[0m09:49:12.184906 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:58:47.043646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002436E2C5E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002436DDBE0F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002436E47A090>]}
+
+
+============================== 09:58:47.047650 | a5721fc4-9052-4f54-b7ef-031e1f0dbee6 ==============================
+[0m09:58:47.047650 [info ] [MainThread]: Running with dbt=1.10.5
+[0m09:58:47.047650 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run -s int_order_items', 'send_anonymous_usage_stats': 'True'}
+[0m09:58:47.573543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a5721fc4-9052-4f54-b7ef-031e1f0dbee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024370377740>]}
+[0m09:58:47.629147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a5721fc4-9052-4f54-b7ef-031e1f0dbee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002436FED9370>]}
+[0m09:58:47.631078 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m09:58:47.990321 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m09:58:48.226970 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 4 files added, 0 files changed.
+[0m09:58:48.226970 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\marts\int_order_items.sql
+[0m09:58:48.226970 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\marts\int_order_items_summary.sql
+[0m09:58:48.227970 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\marts\fct_orders.sql
+[0m09:58:48.227970 [debug] [MainThread]: Partial parsing: added file: data_pipeline://macros\pricing.sql
+[0m09:58:48.504314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a5721fc4-9052-4f54-b7ef-031e1f0dbee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024371060DA0>]}
+[0m09:58:48.579332 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m09:58:48.582336 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m09:58:48.603916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a5721fc4-9052-4f54-b7ef-031e1f0dbee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000243710C3DD0>]}
+[0m09:58:48.604916 [info ] [MainThread]: Found 5 models, 3 data tests, 2 sources, 594 macros
+[0m09:58:48.605910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a5721fc4-9052-4f54-b7ef-031e1f0dbee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024370896E10>]}
+[0m09:58:48.607134 [info ] [MainThread]: 
+[0m09:58:48.607134 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m09:58:48.608284 [info ] [MainThread]: 
+[0m09:58:48.608284 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m09:58:48.609481 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m09:58:48.704873 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m09:58:48.705873 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m09:58:48.705873 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:58:50.856992 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.160 seconds
+[0m09:58:50.872666 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m09:58:50.883424 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m09:58:50.884588 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m09:58:50.884588 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:58:51.776691 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.893 seconds
+[0m09:58:51.780383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a5721fc4-9052-4f54-b7ef-031e1f0dbee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024371113E90>]}
+[0m09:58:51.785300 [debug] [Thread-1 (]: Began running node model.data_pipeline.int_order_items
+[0m09:58:51.786304 [info ] [Thread-1 (]: 1 of 1 START sql table model dbt_schema.int_order_items ........................ [RUN]
+[0m09:58:51.787314 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.int_order_items'
+[0m09:58:51.787314 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.int_order_items
+[0m09:58:51.794441 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.int_order_items"
+[0m09:58:51.795442 [debug] [Thread-1 (]: Began executing node model.data_pipeline.int_order_items
+[0m09:58:51.820194 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.int_order_items"
+[0m09:58:51.822321 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.int_order_items"
+[0m09:58:51.822321 [debug] [Thread-1 (]: On model.data_pipeline.int_order_items: create or replace transient table dbt_db.dbt_schema.int_order_items
+    
+    
+    
+    as (select
+    line_item.order_item_key,
+    line_item.part_key,
+    line_item.line_number,
+    line_item.extended_price,
+    orders.order_key,
+    orders.customer_key,
+    orders.order_date,
+    
+    (-1 * line_item.extended_price * line_item.discount_percentage)::decimal(16, 2)
+ as item_discount_amount
+from
+    dbt_db.dbt_schema.stg_tpch_orders as orders
+join
+    dbt_db.dbt_schema.stg_tpch_line_items as line_item
+        on orders.order_key = line_item.order_key
+order by
+    orders.order_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.int_order_items"} */;
+[0m09:58:51.822321 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m09:58:56.759159 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 4.936 seconds
+[0m09:58:56.778720 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a5721fc4-9052-4f54-b7ef-031e1f0dbee6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002436B832F90>]}
+[0m09:58:56.780063 [info ] [Thread-1 (]: 1 of 1 OK created sql table model dbt_schema.int_order_items ................... [[32mSUCCESS 1[0m in 4.99s]
+[0m09:58:56.781104 [debug] [Thread-1 (]: Finished running node model.data_pipeline.int_order_items
+[0m09:58:56.782102 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:58:56.782102 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m09:58:56.783091 [debug] [MainThread]: On list_dbt_db: Close
+[0m09:58:57.205271 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m09:58:57.206315 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m09:58:58.194137 [debug] [MainThread]: Connection 'model.data_pipeline.int_order_items' was left open.
+[0m09:58:58.194137 [debug] [MainThread]: On model.data_pipeline.int_order_items: Close
+[0m09:58:58.465601 [info ] [MainThread]: 
+[0m09:58:58.465601 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 9.86 seconds (9.86s).
+[0m09:58:58.465601 [debug] [MainThread]: Command end result
+[0m09:58:58.492352 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m09:58:58.492352 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m09:58:58.499170 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m09:58:58.499170 [info ] [MainThread]: 
+[0m09:58:58.499170 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:58:58.499170 [info ] [MainThread]: 
+[0m09:58:58.499170 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m09:58:58.499170 [debug] [MainThread]: Command `dbt run` succeeded at 09:58:58.499170 after 11.63 seconds
+[0m09:58:58.499170 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002436E5DE840>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002436C19B860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002436C19B140>]}
+[0m09:58:58.499170 [debug] [MainThread]: Flushing usage events
+[0m09:58:59.790304 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:04:32.129487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911F10EF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911F10F260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029119744560>]}
+
+
+============================== 10:04:32.134032 | 8a2e38d7-6d78-4577-a8bf-96508f5e8b89 ==============================
+[0m10:04:32.134032 [info ] [MainThread]: Running with dbt=1.10.5
+[0m10:04:32.134032 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:04:32.683396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029121CAF650>]}
+[0m10:04:32.744966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911FE132C0>]}
+[0m10:04:32.750125 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m10:04:33.093573 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m10:04:33.343708 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:04:33.343708 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:04:33.386399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911FC6BF80>]}
+[0m10:04:33.476264 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:04:33.478394 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:04:33.501343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002912234D9A0>]}
+[0m10:04:33.502752 [info ] [MainThread]: Found 5 models, 3 data tests, 2 sources, 594 macros
+[0m10:04:33.503753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002912245F020>]}
+[0m10:04:33.505751 [info ] [MainThread]: 
+[0m10:04:33.505751 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m10:04:33.506751 [info ] [MainThread]: 
+[0m10:04:33.506751 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:04:33.512041 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m10:04:33.610399 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m10:04:33.610399 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m10:04:33.610399 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:04:35.209468 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.599 seconds
+[0m10:04:35.212557 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m10:04:35.221557 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m10:04:35.222559 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m10:04:35.222559 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:04:35.828151 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.607 seconds
+[0m10:04:35.830305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029121EB7D40>]}
+[0m10:04:35.834939 [debug] [Thread-1 (]: Began running node model.data_pipeline.stg_tpch_line_items
+[0m10:04:35.834939 [debug] [Thread-2 (]: Began running node model.data_pipeline.stg_tpch_orders
+[0m10:04:35.836944 [info ] [Thread-1 (]: 1 of 5 START sql view model dbt_schema.stg_tpch_line_items ..................... [RUN]
+[0m10:04:35.836944 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_line_items'
+[0m10:04:35.836944 [info ] [Thread-2 (]: 2 of 5 START sql view model dbt_schema.stg_tpch_orders ......................... [RUN]
+[0m10:04:35.836944 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.stg_tpch_line_items
+[0m10:04:35.838949 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_orders'
+[0m10:04:35.853004 [debug] [Thread-2 (]: Began compiling node model.data_pipeline.stg_tpch_orders
+[0m10:04:35.855009 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_line_items"
+[0m10:04:35.857013 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_orders"
+[0m10:04:35.857013 [debug] [Thread-2 (]: Began executing node model.data_pipeline.stg_tpch_orders
+[0m10:04:35.879191 [debug] [Thread-1 (]: Began executing node model.data_pipeline.stg_tpch_line_items
+[0m10:04:35.886191 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_orders"
+[0m10:04:35.889191 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_line_items"
+[0m10:04:35.891190 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.stg_tpch_orders"
+[0m10:04:35.892391 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.stg_tpch_line_items"
+[0m10:04:35.892700 [debug] [Thread-2 (]: On model.data_pipeline.stg_tpch_orders: create or replace   view dbt_db.dbt_schema.stg_tpch_orders
+  
+  
+  
+  
+  as (
+    select
+    o_orderkey as order_key,
+    o_custkey as customer_key,
+    o_orderstatus as status_code,
+    o_totalprice as total_price,
+    o_orderdate as order_date
+from
+    snowflake_sample_data.tpch_sf1.orders
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_orders"} */;
+[0m10:04:35.892700 [debug] [Thread-1 (]: On model.data_pipeline.stg_tpch_line_items: create or replace   view dbt_db.dbt_schema.stg_tpch_line_items
+  
+  
+  
+  
+  as (
+    select
+    md5(cast(coalesce(cast(l_orderkey as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(l_linenumber as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_item_key,
+	l_orderkey as order_key,
+	l_partkey as part_key,
+	l_linenumber as line_number,
+	l_quantity as quantity,
+	l_extendedprice as extended_price,
+	l_discount as discount_percentage,
+	l_tax as tax_rate
+from
+    snowflake_sample_data.tpch_sf1.lineitem
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_line_items"} */;
+[0m10:04:35.893853 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:04:35.893853 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:04:36.592894 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.709 seconds
+[0m10:04:36.614003 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911F130920>]}
+[0m10:04:36.625381 [info ] [Thread-2 (]: 2 of 5 OK created sql view model dbt_schema.stg_tpch_orders .................... [[32mSUCCESS 1[0m in 0.78s]
+[0m10:04:36.626230 [debug] [Thread-2 (]: Finished running node model.data_pipeline.stg_tpch_orders
+[0m10:04:37.022658 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.138 seconds
+[0m10:04:37.034923 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002912298DD60>]}
+[0m10:04:37.034923 [info ] [Thread-1 (]: 1 of 5 OK created sql view model dbt_schema.stg_tpch_line_items ................ [[32mSUCCESS 1[0m in 1.20s]
+[0m10:04:37.034923 [debug] [Thread-1 (]: Finished running node model.data_pipeline.stg_tpch_line_items
+[0m10:04:37.034923 [debug] [Thread-4 (]: Began running node model.data_pipeline.int_order_items
+[0m10:04:37.034923 [info ] [Thread-4 (]: 3 of 5 START sql table model dbt_schema.int_order_items ........................ [RUN]
+[0m10:04:37.038454 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.data_pipeline.int_order_items'
+[0m10:04:37.038454 [debug] [Thread-4 (]: Began compiling node model.data_pipeline.int_order_items
+[0m10:04:37.038454 [debug] [Thread-4 (]: Writing injected SQL for node "model.data_pipeline.int_order_items"
+[0m10:04:37.038454 [debug] [Thread-4 (]: Began executing node model.data_pipeline.int_order_items
+[0m10:04:37.062209 [debug] [Thread-4 (]: Writing runtime sql for node "model.data_pipeline.int_order_items"
+[0m10:04:37.062209 [debug] [Thread-4 (]: Using snowflake connection "model.data_pipeline.int_order_items"
+[0m10:04:37.062209 [debug] [Thread-4 (]: On model.data_pipeline.int_order_items: create or replace transient table dbt_db.dbt_schema.int_order_items
+    
+    
+    
+    as (select
+    line_item.order_item_key,
+    line_item.part_key,
+    line_item.line_number,
+    line_item.extended_price,
+    orders.order_key,
+    orders.customer_key,
+    orders.order_date,
+    
+    (-1 * line_item.extended_price * line_item.discount_percentage)::decimal(16, 2)
+ as item_discount_amount
+from
+    dbt_db.dbt_schema.stg_tpch_orders as orders
+join
+    dbt_db.dbt_schema.stg_tpch_line_items as line_item
+        on orders.order_key = line_item.order_key
+order by
+    orders.order_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.int_order_items"} */;
+[0m10:04:37.062209 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:04:42.055244 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 4.989 seconds
+[0m10:04:42.057259 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002912283E930>]}
+[0m10:04:42.058340 [info ] [Thread-4 (]: 3 of 5 OK created sql table model dbt_schema.int_order_items ................... [[32mSUCCESS 1[0m in 5.02s]
+[0m10:04:42.059350 [debug] [Thread-4 (]: Finished running node model.data_pipeline.int_order_items
+[0m10:04:42.059350 [debug] [Thread-6 (]: Began running node model.data_pipeline.int_order_items_summary
+[0m10:04:42.060350 [info ] [Thread-6 (]: 4 of 5 START sql table model dbt_schema.int_order_items_summary ................ [RUN]
+[0m10:04:42.061550 [debug] [Thread-6 (]: Acquiring new snowflake connection 'model.data_pipeline.int_order_items_summary'
+[0m10:04:42.061550 [debug] [Thread-6 (]: Began compiling node model.data_pipeline.int_order_items_summary
+[0m10:04:42.064550 [debug] [Thread-6 (]: Writing injected SQL for node "model.data_pipeline.int_order_items_summary"
+[0m10:04:42.065559 [debug] [Thread-6 (]: Began executing node model.data_pipeline.int_order_items_summary
+[0m10:04:42.067559 [debug] [Thread-6 (]: Writing runtime sql for node "model.data_pipeline.int_order_items_summary"
+[0m10:04:42.068559 [debug] [Thread-6 (]: Using snowflake connection "model.data_pipeline.int_order_items_summary"
+[0m10:04:42.069935 [debug] [Thread-6 (]: On model.data_pipeline.int_order_items_summary: create or replace transient table dbt_db.dbt_schema.int_order_items_summary
+    
+    
+    
+    as (select 
+    order_key,
+    sum(extended_price) as gross_item_sales_amount,
+    sum(item_discount_amount) as item_discount_amount
+from
+    dbt_db.dbt_schema.int_order_items
+group by
+    order_key
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.int_order_items_summary"} */;
+[0m10:04:42.069935 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m10:04:44.771352 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 2.701 seconds
+[0m10:04:44.773353 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029123AA7F80>]}
+[0m10:04:44.773915 [info ] [Thread-6 (]: 4 of 5 OK created sql table model dbt_schema.int_order_items_summary ........... [[32mSUCCESS 1[0m in 2.71s]
+[0m10:04:44.774433 [debug] [Thread-6 (]: Finished running node model.data_pipeline.int_order_items_summary
+[0m10:04:44.775376 [debug] [Thread-8 (]: Began running node model.data_pipeline.fct_orders
+[0m10:04:44.775983 [info ] [Thread-8 (]: 5 of 5 START sql table model dbt_schema.fct_orders ............................. [RUN]
+[0m10:04:44.775983 [debug] [Thread-8 (]: Acquiring new snowflake connection 'model.data_pipeline.fct_orders'
+[0m10:04:44.775983 [debug] [Thread-8 (]: Began compiling node model.data_pipeline.fct_orders
+[0m10:04:44.775983 [debug] [Thread-8 (]: Writing injected SQL for node "model.data_pipeline.fct_orders"
+[0m10:04:44.775983 [debug] [Thread-8 (]: Began executing node model.data_pipeline.fct_orders
+[0m10:04:44.782391 [debug] [Thread-8 (]: Writing runtime sql for node "model.data_pipeline.fct_orders"
+[0m10:04:44.782391 [debug] [Thread-8 (]: Using snowflake connection "model.data_pipeline.fct_orders"
+[0m10:04:44.782391 [debug] [Thread-8 (]: On model.data_pipeline.fct_orders: create or replace transient table dbt_db.dbt_schema.fct_orders
+    
+    
+    
+    as (select
+    orders.*,
+    order_item_summary.gross_item_sales_amount,
+    order_item_summary.item_discount_amount
+from
+    dbt_db.dbt_schema.stg_tpch_orders as orders
+join
+    dbt_db.dbt_schema.int_order_items_summary as order_item_summary
+        on orders.order_key = order_item_summary.order_key
+order by order_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.fct_orders"} */;
+[0m10:04:44.785619 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m10:04:46.637803 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 1.853 seconds
+[0m10:04:46.640269 [debug] [Thread-8 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8a2e38d7-6d78-4577-a8bf-96508f5e8b89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029123AC0AD0>]}
+[0m10:04:46.641268 [info ] [Thread-8 (]: 5 of 5 OK created sql table model dbt_schema.fct_orders ........................ [[32mSUCCESS 1[0m in 1.86s]
+[0m10:04:46.642272 [debug] [Thread-8 (]: Finished running node model.data_pipeline.fct_orders
+[0m10:04:46.643304 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:04:46.644755 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m10:04:46.644755 [debug] [MainThread]: On list_dbt_db: Close
+[0m10:04:46.811527 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m10:04:46.812535 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m10:04:47.400743 [debug] [MainThread]: Connection 'model.data_pipeline.stg_tpch_line_items' was left open.
+[0m10:04:47.400743 [debug] [MainThread]: On model.data_pipeline.stg_tpch_line_items: Close
+[0m10:04:47.859523 [debug] [MainThread]: Connection 'model.data_pipeline.stg_tpch_orders' was left open.
+[0m10:04:47.860522 [debug] [MainThread]: On model.data_pipeline.stg_tpch_orders: Close
+[0m10:04:48.297013 [debug] [MainThread]: Connection 'model.data_pipeline.int_order_items' was left open.
+[0m10:04:48.297013 [debug] [MainThread]: On model.data_pipeline.int_order_items: Close
+[0m10:04:48.646606 [debug] [MainThread]: Connection 'model.data_pipeline.int_order_items_summary' was left open.
+[0m10:04:48.646606 [debug] [MainThread]: On model.data_pipeline.int_order_items_summary: Close
+[0m10:04:48.872968 [debug] [MainThread]: Connection 'model.data_pipeline.fct_orders' was left open.
+[0m10:04:48.873975 [debug] [MainThread]: On model.data_pipeline.fct_orders: Close
+[0m10:04:49.206371 [info ] [MainThread]: 
+[0m10:04:49.207369 [info ] [MainThread]: Finished running 3 table models, 2 view models in 0 hours 0 minutes and 15.70 seconds (15.70s).
+[0m10:04:49.208374 [debug] [MainThread]: Command end result
+[0m10:04:49.230655 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:04:49.232671 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:04:49.237671 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m10:04:49.238668 [info ] [MainThread]: 
+[0m10:04:49.238668 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:04:49.239667 [info ] [MainThread]: 
+[0m10:04:49.239667 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m10:04:49.240669 [debug] [MainThread]: Command `dbt run` succeeded at 10:04:49.240669 after 17.30 seconds
+[0m10:04:49.240669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911C3278C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911F1B7BC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911F1B7B00>]}
+[0m10:04:49.241698 [debug] [MainThread]: Flushing usage events
+[0m10:04:50.980713 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:13:34.814201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CB649AF00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CB8E21340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CB8E21D00>]}
+
+
+============================== 10:13:34.818205 | ad7313c1-2e85-41dc-a359-456d21443f76 ==============================
+[0m10:13:34.818205 [info ] [MainThread]: Running with dbt=1.10.5
+[0m10:13:34.819215 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt test', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:13:35.309869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ad7313c1-2e85-41dc-a359-456d21443f76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CBB739EE0>]}
+[0m10:13:35.358710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ad7313c1-2e85-41dc-a359-456d21443f76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CB96AB680>]}
+[0m10:13:35.358710 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m10:13:35.695005 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m10:13:35.939187 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 3 files added, 0 files changed.
+[0m10:13:35.939187 [debug] [MainThread]: Partial parsing: added file: data_pipeline://tests\fct_orders_discount.sql
+[0m10:13:35.939187 [debug] [MainThread]: Partial parsing: added file: data_pipeline://tests\fct_orders_date_valid.sql
+[0m10:13:35.939187 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\marts\generic_tests.yml
+[0m10:13:36.273185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ad7313c1-2e85-41dc-a359-456d21443f76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CBB97A6C0>]}
+[0m10:13:36.351377 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:13:36.351377 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:13:36.397451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ad7313c1-2e85-41dc-a359-456d21443f76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CBC0962D0>]}
+[0m10:13:36.397451 [info ] [MainThread]: Found 5 models, 9 data tests, 2 sources, 594 macros
+[0m10:13:36.398451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ad7313c1-2e85-41dc-a359-456d21443f76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CBBDF7410>]}
+[0m10:13:36.400453 [info ] [MainThread]: 
+[0m10:13:36.400453 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m10:13:36.401453 [info ] [MainThread]: 
+[0m10:13:36.401453 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:13:36.406125 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m10:13:36.505606 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m10:13:36.506608 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m10:13:36.506608 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:13:37.487423 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 0.980 seconds
+[0m10:13:37.489480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ad7313c1-2e85-41dc-a359-456d21443f76', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CBC048890>]}
+[0m10:13:37.493480 [debug] [Thread-1 (]: Began running node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m10:13:37.494756 [debug] [Thread-2 (]: Began running node test.data_pipeline.fct_orders_date_valid
+[0m10:13:37.494756 [debug] [Thread-3 (]: Began running node test.data_pipeline.fct_orders_discount
+[0m10:13:37.495770 [debug] [Thread-4 (]: Began running node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m10:13:37.495770 [info ] [Thread-1 (]: 1 of 9 START test accepted_values_fct_orders_status_code__P__O__F .............. [RUN]
+[0m10:13:37.495770 [debug] [Thread-5 (]: Began running node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m10:13:37.496766 [debug] [Thread-6 (]: Began running node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m10:13:37.496766 [info ] [Thread-2 (]: 2 of 9 START test fct_orders_date_valid ........................................ [RUN]
+[0m10:13:37.496766 [debug] [Thread-7 (]: Began running node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m10:13:37.497766 [debug] [Thread-8 (]: Began running node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m10:13:37.497766 [info ] [Thread-3 (]: 3 of 9 START test fct_orders_discount .......................................... [RUN]
+[0m10:13:37.497766 [debug] [Thread-9 (]: Began running node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m10:13:37.498936 [debug] [Thread-1 (]: Acquiring new snowflake connection 'test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048'
+[0m10:13:37.498936 [info ] [Thread-4 (]: 4 of 9 START test not_null_fct_orders_order_key ................................ [RUN]
+[0m10:13:37.498936 [info ] [Thread-5 (]: 5 of 9 START test relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_  [RUN]
+[0m10:13:37.500157 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.data_pipeline.fct_orders_date_valid'
+[0m10:13:37.500157 [info ] [Thread-6 (]: 6 of 9 START test source_not_null_tpch_orders_o_orderkey ....................... [RUN]
+[0m10:13:37.501205 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.data_pipeline.fct_orders_discount'
+[0m10:13:37.500157 [info ] [Thread-7 (]: 7 of 9 START test source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_  [RUN]
+[0m10:13:37.501205 [info ] [Thread-8 (]: 8 of 9 START test source_unique_tpch_orders_o_orderkey ......................... [RUN]
+[0m10:13:37.502205 [debug] [Thread-1 (]: Began compiling node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m10:13:37.501205 [info ] [Thread-9 (]: 9 of 9 START test unique_fct_orders_order_key .................................. [RUN]
+[0m10:13:37.502205 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15'
+[0m10:13:37.503359 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce'
+[0m10:13:37.503359 [debug] [Thread-2 (]: Began compiling node test.data_pipeline.fct_orders_date_valid
+[0m10:13:37.503359 [debug] [Thread-6 (]: Acquiring new snowflake connection 'test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b'
+[0m10:13:37.503359 [debug] [Thread-3 (]: Began compiling node test.data_pipeline.fct_orders_discount
+[0m10:13:37.505733 [debug] [Thread-7 (]: Acquiring new snowflake connection 'test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d'
+[0m10:13:37.505733 [debug] [Thread-8 (]: Acquiring new snowflake connection 'test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2'
+[0m10:13:37.513079 [debug] [Thread-1 (]: Writing injected SQL for node "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m10:13:37.514081 [debug] [Thread-9 (]: Acquiring new snowflake connection 'test.data_pipeline.unique_fct_orders_order_key.f5e7a90273'
+[0m10:13:37.514081 [debug] [Thread-4 (]: Began compiling node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m10:13:37.515092 [debug] [Thread-5 (]: Began compiling node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m10:13:37.517080 [debug] [Thread-2 (]: Writing injected SQL for node "test.data_pipeline.fct_orders_date_valid"
+[0m10:13:37.517080 [debug] [Thread-6 (]: Began compiling node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m10:13:37.519225 [debug] [Thread-3 (]: Writing injected SQL for node "test.data_pipeline.fct_orders_discount"
+[0m10:13:37.519225 [debug] [Thread-7 (]: Began compiling node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m10:13:37.520234 [debug] [Thread-8 (]: Began compiling node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m10:13:37.520234 [debug] [Thread-9 (]: Began compiling node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m10:13:37.527829 [debug] [Thread-4 (]: Writing injected SQL for node "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m10:13:37.531830 [debug] [Thread-5 (]: Writing injected SQL for node "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m10:13:37.535828 [debug] [Thread-6 (]: Writing injected SQL for node "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m10:13:37.540562 [debug] [Thread-7 (]: Writing injected SQL for node "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m10:13:37.541679 [debug] [Thread-1 (]: Began executing node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m10:13:37.546802 [debug] [Thread-8 (]: Writing injected SQL for node "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m10:13:37.549806 [debug] [Thread-9 (]: Writing injected SQL for node "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m10:13:37.550805 [debug] [Thread-3 (]: Began executing node test.data_pipeline.fct_orders_discount
+[0m10:13:37.550805 [debug] [Thread-2 (]: Began executing node test.data_pipeline.fct_orders_date_valid
+[0m10:13:37.573594 [debug] [Thread-1 (]: Writing runtime sql for node "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m10:13:37.576603 [debug] [Thread-3 (]: Writing runtime sql for node "test.data_pipeline.fct_orders_discount"
+[0m10:13:37.576603 [debug] [Thread-5 (]: Began executing node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m10:13:37.579603 [debug] [Thread-2 (]: Writing runtime sql for node "test.data_pipeline.fct_orders_date_valid"
+[0m10:13:37.579603 [debug] [Thread-4 (]: Began executing node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m10:13:37.580606 [debug] [Thread-7 (]: Began executing node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m10:13:37.580606 [debug] [Thread-9 (]: Began executing node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m10:13:37.583919 [debug] [Thread-5 (]: Writing runtime sql for node "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m10:13:37.583919 [debug] [Thread-6 (]: Began executing node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m10:13:37.584922 [debug] [Thread-8 (]: Began executing node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m10:13:37.585921 [debug] [Thread-4 (]: Writing runtime sql for node "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m10:13:37.590098 [debug] [Thread-7 (]: Writing runtime sql for node "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m10:13:37.591097 [debug] [Thread-1 (]: Using snowflake connection "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m10:13:37.594095 [debug] [Thread-9 (]: Writing runtime sql for node "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m10:13:37.595102 [debug] [Thread-3 (]: Using snowflake connection "test.data_pipeline.fct_orders_discount"
+[0m10:13:37.597095 [debug] [Thread-6 (]: Writing runtime sql for node "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m10:13:37.600155 [debug] [Thread-8 (]: Writing runtime sql for node "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m10:13:37.601158 [debug] [Thread-5 (]: Using snowflake connection "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m10:13:37.602157 [debug] [Thread-1 (]: On test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status_code as value_field,
+        count(*) as n_records
+
+    from dbt_db.dbt_schema.fct_orders
+    group by status_code
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'P','O','F'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"} */
+[0m10:13:37.602157 [debug] [Thread-2 (]: Using snowflake connection "test.data_pipeline.fct_orders_date_valid"
+[0m10:13:37.603162 [debug] [Thread-3 (]: On test.data_pipeline.fct_orders_discount: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    *
+from
+    dbt_db.dbt_schema.fct_orders
+where
+    item_discount_amount > 0
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.fct_orders_discount"} */
+[0m10:13:37.604314 [debug] [Thread-4 (]: Using snowflake connection "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m10:13:37.605513 [debug] [Thread-9 (]: Using snowflake connection "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m10:13:37.605513 [debug] [Thread-5 (]: On test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select order_key as from_field
+    from dbt_db.dbt_schema.fct_orders
+    where order_key is not null
+),
+
+parent as (
+    select order_key as to_field
+    from dbt_db.dbt_schema.stg_tpch_orders
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"} */
+[0m10:13:37.606660 [debug] [Thread-7 (]: Using snowflake connection "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m10:13:37.607872 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:13:37.607872 [debug] [Thread-2 (]: On test.data_pipeline.fct_orders_date_valid: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    *
+from
+    dbt_db.dbt_schema.fct_orders
+where
+    date(order_date) > CURRENT_DATE()
+    or date(order_date) < date('1990-01-01')
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.fct_orders_date_valid"} */
+[0m10:13:37.608888 [debug] [Thread-8 (]: Using snowflake connection "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m10:13:37.609883 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:13:37.609883 [debug] [Thread-6 (]: Using snowflake connection "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m10:13:37.610887 [debug] [Thread-4 (]: On test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_key
+from dbt_db.dbt_schema.fct_orders
+where order_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"} */
+[0m10:13:37.610887 [debug] [Thread-9 (]: On test.data_pipeline.unique_fct_orders_order_key.f5e7a90273: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_key as unique_field,
+    count(*) as n_records
+
+from dbt_db.dbt_schema.fct_orders
+where order_key is not null
+group by order_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"} */
+[0m10:13:37.611884 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m10:13:37.611884 [debug] [Thread-7 (]: On test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select l_orderkey as from_field
+    from snowflake_sample_data.tpch_sf1.lineitem
+    where l_orderkey is not null
+),
+
+parent as (
+    select o_orderkey as to_field
+    from snowflake_sample_data.tpch_sf1.orders
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"} */
+[0m10:13:37.612964 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:13:37.613963 [debug] [Thread-8 (]: On test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    o_orderkey as unique_field,
+    count(*) as n_records
+
+from snowflake_sample_data.tpch_sf1.orders
+where o_orderkey is not null
+group by o_orderkey
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"} */
+[0m10:13:37.615303 [debug] [Thread-6 (]: On test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select o_orderkey
+from snowflake_sample_data.tpch_sf1.orders
+where o_orderkey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"} */
+[0m10:13:37.617305 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:13:37.617305 [debug] [Thread-9 (]: Opening a new connection, currently in state init
+[0m10:13:37.618305 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m10:13:37.619303 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m10:13:37.621299 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m10:13:38.586679 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 0.969 seconds
+[0m10:13:38.603169 [info ] [Thread-9 (]: 9 of 9 PASS unique_fct_orders_order_key ........................................ [[32mPASS[0m in 1.09s]
+[0m10:13:38.604168 [debug] [Thread-9 (]: Finished running node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m10:13:38.870693 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.261 seconds
+[0m10:13:38.872692 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.255 seconds
+[0m10:13:38.872692 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 1.252 seconds
+[0m10:13:38.873692 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.266 seconds
+[0m10:13:38.875692 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.263 seconds
+[0m10:13:38.874691 [info ] [Thread-3 (]: 3 of 9 PASS fct_orders_discount ................................................ [[32mPASS[0m in 1.37s]
+[0m10:13:38.877692 [info ] [Thread-4 (]: 4 of 9 PASS not_null_fct_orders_order_key ...................................... [[32mPASS[0m in 1.37s]
+[0m10:13:38.878692 [info ] [Thread-6 (]: 6 of 9 PASS source_not_null_tpch_orders_o_orderkey ............................. [[32mPASS[0m in 1.38s]
+[0m10:13:38.881781 [debug] [Thread-3 (]: Finished running node test.data_pipeline.fct_orders_discount
+[0m10:13:38.880772 [info ] [Thread-1 (]: 1 of 9 PASS accepted_values_fct_orders_status_code__P__O__F .................... [[32mPASS[0m in 1.38s]
+[0m10:13:38.882782 [debug] [Thread-4 (]: Finished running node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m10:13:38.881781 [info ] [Thread-2 (]: 2 of 9 PASS fct_orders_date_valid .............................................. [[32mPASS[0m in 1.38s]
+[0m10:13:38.883784 [debug] [Thread-6 (]: Finished running node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m10:13:38.883784 [debug] [Thread-1 (]: Finished running node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m10:13:38.884782 [debug] [Thread-2 (]: Finished running node test.data_pipeline.fct_orders_date_valid
+[0m10:13:39.034736 [debug] [Thread-7 (]: SQL status: SUCCESS 1 in 1.416 seconds
+[0m10:13:39.036735 [info ] [Thread-7 (]: 7 of 9 PASS source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_  [[32mPASS[0m in 1.53s]
+[0m10:13:39.036735 [debug] [Thread-7 (]: Finished running node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m10:13:39.200672 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 1.581 seconds
+[0m10:13:39.203016 [info ] [Thread-8 (]: 8 of 9 PASS source_unique_tpch_orders_o_orderkey ............................... [[32mPASS[0m in 1.70s]
+[0m10:13:39.203931 [debug] [Thread-8 (]: Finished running node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m10:13:39.282104 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.671 seconds
+[0m10:13:39.284131 [info ] [Thread-5 (]: 5 of 9 PASS relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_  [[32mPASS[0m in 1.78s]
+[0m10:13:39.285432 [debug] [Thread-5 (]: Finished running node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m10:13:39.287412 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:13:39.287412 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m10:13:39.288413 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m10:13:39.776054 [debug] [MainThread]: Connection 'test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048' was left open.
+[0m10:13:39.776054 [debug] [MainThread]: On test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048: Close
+[0m10:13:40.105757 [debug] [MainThread]: Connection 'test.data_pipeline.fct_orders_date_valid' was left open.
+[0m10:13:40.105757 [debug] [MainThread]: On test.data_pipeline.fct_orders_date_valid: Close
+[0m10:13:40.434501 [debug] [MainThread]: Connection 'test.data_pipeline.fct_orders_discount' was left open.
+[0m10:13:40.434501 [debug] [MainThread]: On test.data_pipeline.fct_orders_discount: Close
+[0m10:13:40.764996 [debug] [MainThread]: Connection 'test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15' was left open.
+[0m10:13:40.764996 [debug] [MainThread]: On test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15: Close
+[0m10:13:41.174014 [debug] [MainThread]: Connection 'test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce' was left open.
+[0m10:13:41.175443 [debug] [MainThread]: On test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce: Close
+[0m10:13:41.428552 [debug] [MainThread]: Connection 'test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b' was left open.
+[0m10:13:41.429554 [debug] [MainThread]: On test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b: Close
+[0m10:13:41.758207 [debug] [MainThread]: Connection 'test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d' was left open.
+[0m10:13:41.759208 [debug] [MainThread]: On test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d: Close
+[0m10:13:42.251195 [debug] [MainThread]: Connection 'test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2' was left open.
+[0m10:13:42.252194 [debug] [MainThread]: On test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2: Close
+[0m10:13:42.654616 [debug] [MainThread]: Connection 'test.data_pipeline.unique_fct_orders_order_key.f5e7a90273' was left open.
+[0m10:13:42.656084 [debug] [MainThread]: On test.data_pipeline.unique_fct_orders_order_key.f5e7a90273: Close
+[0m10:13:42.902894 [info ] [MainThread]: 
+[0m10:13:42.903922 [info ] [MainThread]: Finished running 9 data tests in 0 hours 0 minutes and 6.50 seconds (6.50s).
+[0m10:13:42.905561 [debug] [MainThread]: Command end result
+[0m10:13:42.928676 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:13:42.930168 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:13:42.936754 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m10:13:42.937782 [info ] [MainThread]: 
+[0m10:13:42.937782 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:13:42.938782 [info ] [MainThread]: 
+[0m10:13:42.938782 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=9
+[0m10:13:42.939781 [debug] [MainThread]: Command `dbt test` succeeded at 10:13:42.939781 after 8.30 seconds
+[0m10:13:42.940782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CB8A1FC80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CB90244D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022CB9025490>]}
+[0m10:13:42.940782 [debug] [MainThread]: Flushing usage events
+[0m10:13:45.299863 [debug] [MainThread]: An error was encountered while trying to flush usage events
