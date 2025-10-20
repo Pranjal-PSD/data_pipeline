@@ -8588,3 +8588,3164 @@ ORDER BY customer_id, dbt_valid_from
 [0m11:09:49.784133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCFFB0CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCF33ED80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCF2C1DF0>]}
 [0m11:09:49.784133 [debug] [MainThread]: Flushing usage events
 [0m11:09:52.132690 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:11:39.009761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418F3FFB60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418CE4C9B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418F0027B0>]}
+
+
+============================== 11:11:39.009761 | a6055105-f488-40d0-bb3a-9a05990d86a2 ==============================
+[0m11:11:39.009761 [info ] [MainThread]: Running with dbt=1.10.5
+[0m11:11:39.009761 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m11:11:39.495735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418F5F8C20>]}
+[0m11:11:39.558930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241913F7F80>]}
+[0m11:11:39.558930 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m11:11:39.871502 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m11:11:40.132088 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:11:40.132088 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:11:40.188340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418EFC4890>]}
+[0m11:11:40.285416 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:11:40.285416 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:11:40.332665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024191C514C0>]}
+[0m11:11:40.332665 [info ] [MainThread]: Found 8 models, 2 snapshots, 13 data tests, 1 seed, 3 sources, 594 macros
+[0m11:11:40.340495 [info ] [MainThread]: 
+[0m11:11:40.340495 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:11:40.341531 [info ] [MainThread]: 
+[0m11:11:40.341531 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:11:40.346598 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:11:40.358136 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:11:40.358136 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:11:40.441450 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:11:40.441450 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:11:40.441450 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:11:40.441450 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:11:40.441450 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:11:40.441450 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:11:40.441450 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:11:40.441450 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:11:40.441450 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:11:41.804705 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.352 seconds
+[0m11:11:41.807184 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.353 seconds
+[0m11:11:42.131262 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.676 seconds
+[0m11:11:42.133259 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m11:11:42.139760 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema_snapshot_data'
+[0m11:11:42.144898 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m11:11:42.147899 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema_snapshot_data"
+[0m11:11:42.147899 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m11:11:42.148901 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m11:11:42.148901 [debug] [ThreadPool]: On list_dbt_db_dbt_schema_snapshot_data: show objects in dbt_db.dbt_schema_snapshot_data
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema_snapshot_data"} */;
+[0m11:11:42.150899 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m11:11:42.150899 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:11:42.150899 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:11:42.150899 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m11:11:42.152900 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:11:43.120040 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.967 seconds
+[0m11:11:43.368374 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.217 seconds
+[0m11:11:43.533100 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.382 seconds
+[0m11:11:43.535101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241922FE450>]}
+[0m11:11:43.541270 [debug] [Thread-1 (]: Began running node model.data_pipeline.stg_tpch_line_items
+[0m11:11:43.541270 [debug] [Thread-2 (]: Began running node seed.data_pipeline.customers
+[0m11:11:43.542287 [debug] [Thread-3 (]: Began running node snapshot.data_pipeline.customer_snapshot
+[0m11:11:43.542287 [debug] [Thread-4 (]: Began running node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m11:11:43.543288 [debug] [Thread-5 (]: Began running node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m11:11:43.542287 [info ] [Thread-1 (]: 1 of 24 START sql view model dbt_schema.stg_tpch_line_items .................... [RUN]
+[0m11:11:43.543288 [debug] [Thread-6 (]: Began running node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m11:11:43.544287 [info ] [Thread-2 (]: 2 of 24 START seed file dbt_schema.customers ................................... [RUN]
+[0m11:11:43.544287 [info ] [Thread-3 (]: 3 of 24 START snapshot snapshots.customer_snapshot ............................. [RUN]
+[0m11:11:43.544287 [info ] [Thread-4 (]: 4 of 24 START test source_not_null_tpch_orders_o_orderkey ...................... [RUN]
+[0m11:11:43.545288 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_line_items'
+[0m11:11:43.545288 [info ] [Thread-5 (]: 5 of 24 START test source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_  [RUN]
+[0m11:11:43.546285 [debug] [Thread-2 (]: Acquiring new snowflake connection 'seed.data_pipeline.customers'
+[0m11:11:43.546285 [info ] [Thread-6 (]: 6 of 24 START test source_unique_tpch_orders_o_orderkey ........................ [RUN]
+[0m11:11:43.547285 [debug] [Thread-3 (]: Acquiring new snowflake connection 'snapshot.data_pipeline.customer_snapshot'
+[0m11:11:43.547285 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b'
+[0m11:11:43.548288 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.stg_tpch_line_items
+[0m11:11:43.548288 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d'
+[0m11:11:43.548288 [debug] [Thread-2 (]: Began compiling node seed.data_pipeline.customers
+[0m11:11:43.549288 [debug] [Thread-6 (]: Acquiring new snowflake connection 'test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2'
+[0m11:11:43.549288 [debug] [Thread-3 (]: Began compiling node snapshot.data_pipeline.customer_snapshot
+[0m11:11:43.549288 [debug] [Thread-4 (]: Began compiling node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m11:11:43.565727 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_line_items"
+[0m11:11:43.565727 [debug] [Thread-5 (]: Began compiling node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m11:11:43.566727 [debug] [Thread-2 (]: Began executing node seed.data_pipeline.customers
+[0m11:11:43.567232 [debug] [Thread-6 (]: Began compiling node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m11:11:43.569821 [debug] [Thread-3 (]: Began executing node snapshot.data_pipeline.customer_snapshot
+[0m11:11:43.578827 [debug] [Thread-4 (]: Writing injected SQL for node "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m11:11:43.584826 [debug] [Thread-5 (]: Writing injected SQL for node "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m11:11:43.606829 [debug] [Thread-6 (]: Writing injected SQL for node "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m11:11:43.631558 [debug] [Thread-1 (]: Began executing node model.data_pipeline.stg_tpch_line_items
+[0m11:11:43.645658 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:43.655165 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:11:43.664384 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:43.674385 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_line_items"
+[0m11:11:43.674385 [debug] [Thread-4 (]: Began executing node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m11:11:43.675399 [debug] [Thread-2 (]: On seed.data_pipeline.customers: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m11:11:43.675399 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:11:43.675399 [debug] [Thread-6 (]: Began executing node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m11:11:43.676395 [debug] [Thread-5 (]: Began executing node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m11:11:43.695285 [debug] [Thread-4 (]: Writing runtime sql for node "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m11:11:43.695285 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:11:43.698388 [debug] [Thread-6 (]: Writing runtime sql for node "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m11:11:43.699393 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.stg_tpch_line_items"
+[0m11:11:43.703686 [debug] [Thread-5 (]: Writing runtime sql for node "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m11:11:43.706778 [debug] [Thread-1 (]: On model.data_pipeline.stg_tpch_line_items: create or replace   view dbt_db.dbt_schema.stg_tpch_line_items
+  
+  
+  
+  
+  as (
+    select
+    md5(cast(coalesce(cast(l_orderkey as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(l_linenumber as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_item_key,
+	l_orderkey as order_key,
+	l_partkey as part_key,
+	l_linenumber as line_number,
+	l_quantity as quantity,
+	l_extendedprice as extended_price,
+	l_discount as discount_percentage,
+	l_tax as tax_rate
+from
+    snowflake_sample_data.tpch_sf1.lineitem
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_line_items"} */;
+[0m11:11:43.708799 [debug] [Thread-4 (]: Using snowflake connection "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m11:11:43.708799 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:11:43.709797 [debug] [Thread-4 (]: On test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select o_orderkey
+from snowflake_sample_data.tpch_sf1.orders
+where o_orderkey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"} */
+[0m11:11:43.710800 [debug] [Thread-6 (]: Using snowflake connection "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m11:11:43.712818 [debug] [Thread-5 (]: Using snowflake connection "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m11:11:43.712818 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:11:43.714824 [debug] [Thread-6 (]: On test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    o_orderkey as unique_field,
+    count(*) as n_records
+
+from snowflake_sample_data.tpch_sf1.orders
+where o_orderkey is not null
+group by o_orderkey
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"} */
+[0m11:11:43.715818 [debug] [Thread-5 (]: On test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select l_orderkey as from_field
+    from snowflake_sample_data.tpch_sf1.lineitem
+    where l_orderkey is not null
+),
+
+parent as (
+    select o_orderkey as to_field
+    from snowflake_sample_data.tpch_sf1.orders
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"} */
+[0m11:11:43.716819 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m11:11:43.717820 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m11:11:44.446215 [debug] [Thread-3 (]: SQL status: SUCCESS 8 in 0.770 seconds
+[0m11:11:44.447215 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.734 seconds
+[0m11:11:44.490519 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:44.499526 [info ] [Thread-4 (]: 4 of 24 PASS source_not_null_tpch_orders_o_orderkey ............................ [[32mPASS[0m in 0.95s]
+[0m11:11:44.500526 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: create or replace temporary table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp"
+as (
+    
+    
+    with snapshot_query as (
+
+        
+
+
+
+SELECT
+    customer_id,
+    customer_name,
+    customer_status,
+    updated_at
+FROM dbt_db.dbt_schema.customers  -- must match YAML source name
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            
+  
+  coalesce(nullif(updated_at, updated_at), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            updated_at as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data.dbt_valid_from < source_data.updated_at)
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.updated_at)
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */;
+[0m11:11:44.501526 [debug] [Thread-4 (]: Finished running node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m11:11:44.687613 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.992 seconds
+[0m11:11:44.688649 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.971 seconds
+[0m11:11:44.689646 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:11:44.690655 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.974 seconds
+[0m11:11:44.692656 [debug] [Thread-2 (]: On seed.data_pipeline.customers: truncate table "DBT_DB"."DBT_SCHEMA"."CUSTOMERS"
+  
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */;
+[0m11:11:44.691657 [info ] [Thread-5 (]: 5 of 24 PASS source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_  [[32mPASS[0m in 1.14s]
+[0m11:11:44.694655 [info ] [Thread-6 (]: 6 of 24 PASS source_unique_tpch_orders_o_orderkey .............................. [[32mPASS[0m in 1.14s]
+[0m11:11:44.695656 [debug] [Thread-5 (]: Finished running node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m11:11:44.696654 [debug] [Thread-6 (]: Finished running node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m11:11:44.697655 [debug] [Thread-8 (]: Began running node model.data_pipeline.stg_tpch_orders
+[0m11:11:44.697655 [info ] [Thread-8 (]: 7 of 24 START sql view model dbt_schema.stg_tpch_orders ........................ [RUN]
+[0m11:11:44.698699 [debug] [Thread-8 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_orders'
+[0m11:11:44.699655 [debug] [Thread-8 (]: Began compiling node model.data_pipeline.stg_tpch_orders
+[0m11:11:44.701655 [debug] [Thread-8 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_orders"
+[0m11:11:44.702655 [debug] [Thread-8 (]: Began executing node model.data_pipeline.stg_tpch_orders
+[0m11:11:44.705655 [debug] [Thread-8 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_orders"
+[0m11:11:44.707663 [debug] [Thread-8 (]: Using snowflake connection "model.data_pipeline.stg_tpch_orders"
+[0m11:11:44.707663 [debug] [Thread-8 (]: On model.data_pipeline.stg_tpch_orders: create or replace   view dbt_db.dbt_schema.stg_tpch_orders
+  
+  
+  
+  
+  as (
+    select
+    o_orderkey as order_key,
+    o_custkey as customer_key,
+    o_orderstatus as status_code,
+    o_totalprice as total_price,
+    o_orderdate as order_date
+from
+    snowflake_sample_data.tpch_sf1.orders
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_orders"} */;
+[0m11:11:44.707663 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m11:11:44.711934 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.003 seconds
+[0m11:11:44.728153 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418E8B0800>]}
+[0m11:11:44.729150 [info ] [Thread-1 (]: 1 of 24 OK created sql view model dbt_schema.stg_tpch_line_items ............... [[32mSUCCESS 1[0m in 1.18s]
+[0m11:11:44.729150 [debug] [Thread-1 (]: Finished running node model.data_pipeline.stg_tpch_line_items
+[0m11:11:44.914020 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.219 seconds
+[0m11:11:44.915020 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:11:44.915020 [debug] [Thread-2 (]: On seed.data_pipeline.customers: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m11:11:45.090891 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.597 seconds
+[0m11:11:45.090891 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:45.090891 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:45.139454 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.225 seconds
+[0m11:11:45.139454 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:11:45.154590 [debug] [Thread-2 (]: On seed.data_pipeline.customers: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m11:11:45.340020 [debug] [Thread-3 (]: SQL status: SUCCESS 10 in 0.238 seconds
+[0m11:11:45.340020 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:45.340020 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:45.340020 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.194 seconds
+[0m11:11:45.355322 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:11:45.356328 [debug] [Thread-2 (]: On seed.data_pipeline.customers: insert into dbt_db.dbt_schema.customers (customer_id, customer_name, customer_status, updated_at) values
+            (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */...
+[0m11:11:45.510641 [debug] [Thread-3 (]: SQL status: SUCCESS 8 in 0.157 seconds
+[0m11:11:45.514651 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:45.514651 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:45.604886 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 0.897 seconds
+[0m11:11:45.604886 [debug] [Thread-8 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002419356A480>]}
+[0m11:11:45.604886 [info ] [Thread-8 (]: 7 of 24 OK created sql view model dbt_schema.stg_tpch_orders ................... [[32mSUCCESS 1[0m in 0.91s]
+[0m11:11:45.604886 [debug] [Thread-8 (]: Finished running node model.data_pipeline.stg_tpch_orders
+[0m11:11:45.604886 [debug] [Thread-10 ]: Began running node model.data_pipeline.int_order_items
+[0m11:11:45.604886 [info ] [Thread-10 ]: 8 of 24 START sql table model dbt_schema.int_order_items ....................... [RUN]
+[0m11:11:45.604886 [debug] [Thread-10 ]: Acquiring new snowflake connection 'model.data_pipeline.int_order_items'
+[0m11:11:45.604886 [debug] [Thread-10 ]: Began compiling node model.data_pipeline.int_order_items
+[0m11:11:45.604886 [debug] [Thread-10 ]: Writing injected SQL for node "model.data_pipeline.int_order_items"
+[0m11:11:45.604886 [debug] [Thread-10 ]: Began executing node model.data_pipeline.int_order_items
+[0m11:11:45.627602 [debug] [Thread-10 ]: Writing runtime sql for node "model.data_pipeline.int_order_items"
+[0m11:11:45.627602 [debug] [Thread-10 ]: Using snowflake connection "model.data_pipeline.int_order_items"
+[0m11:11:45.627602 [debug] [Thread-10 ]: On model.data_pipeline.int_order_items: create or replace transient table dbt_db.dbt_schema.int_order_items
+    
+    
+    
+    as (select
+    line_item.order_item_key,
+    line_item.part_key,
+    line_item.line_number,
+    line_item.extended_price,
+    orders.order_key,
+    orders.customer_key,
+    orders.order_date,
+    
+    (-1 * line_item.extended_price * line_item.discount_percentage)::decimal(16, 2)
+ as item_discount_amount
+from
+    dbt_db.dbt_schema.stg_tpch_orders as orders
+join
+    dbt_db.dbt_schema.stg_tpch_line_items as line_item
+        on orders.order_key = line_item.order_key
+order by
+    orders.order_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.int_order_items"} */;
+[0m11:11:45.627602 [debug] [Thread-10 ]: Opening a new connection, currently in state init
+[0m11:11:45.627602 [debug] [Thread-3 (]: SQL status: SUCCESS 10 in 0.122 seconds
+[0m11:11:45.641806 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:45.641806 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:45.757372 [debug] [Thread-3 (]: SQL status: SUCCESS 8 in 0.115 seconds
+[0m11:11:45.757372 [debug] [Thread-2 (]: SQL status: SUCCESS 4 in 0.402 seconds
+[0m11:11:45.764779 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:45.764779 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:11:45.764779 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:45.766254 [debug] [Thread-2 (]: On seed.data_pipeline.customers: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m11:11:45.913387 [debug] [Thread-3 (]: SQL status: SUCCESS 10 in 0.158 seconds
+[0m11:11:45.930739 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:45.930739 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: select * from (
+        
+    
+    with snapshot_query as (
+
+        
+
+
+
+SELECT
+    customer_id,
+    customer_name,
+    customer_status,
+    updated_at
+FROM dbt_db.dbt_schema.customers  -- must match YAML source name
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            
+  
+  coalesce(nullif(updated_at, updated_at), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            updated_at as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data.dbt_valid_from < source_data.updated_at)
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.updated_at)
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:46.169258 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.402 seconds
+[0m11:11:46.173457 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.data_pipeline.customers"
+[0m11:11:46.173457 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241935BEFC0>]}
+[0m11:11:46.182643 [info ] [Thread-2 (]: 2 of 24 OK loaded seed file dbt_schema.customers ............................... [[32mINSERT 4[0m in 2.63s]
+[0m11:11:46.182643 [debug] [Thread-2 (]: Finished running node seed.data_pipeline.customers
+[0m11:11:46.182643 [debug] [Thread-4 (]: Began running node snapshot.data_pipeline.customer_snapshot_check
+[0m11:11:46.182643 [info ] [Thread-4 (]: 9 of 24 START snapshot snapshots.customer_snapshot_check ....................... [RUN]
+[0m11:11:46.182643 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b, now snapshot.data_pipeline.customer_snapshot_check)
+[0m11:11:46.182643 [debug] [Thread-4 (]: Began compiling node snapshot.data_pipeline.customer_snapshot_check
+[0m11:11:46.188175 [debug] [Thread-4 (]: Began executing node snapshot.data_pipeline.customer_snapshot_check
+[0m11:11:46.207162 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:46.207162 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        select customer_name, customer_status from (
+                
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+            ) subq
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:46.207162 [debug] [Thread-3 (]: SQL status: SUCCESS 0 in 0.267 seconds
+[0m11:11:46.207162 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:46.207162 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:46.499254 [debug] [Thread-4 (]: SQL status: SUCCESS 0 in 0.289 seconds
+[0m11:11:46.499254 [debug] [Thread-3 (]: SQL status: SUCCESS 0 in 0.287 seconds
+[0m11:11:46.499254 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:46.499254 [debug] [Thread-3 (]: Writing runtime sql for node "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:46.499254 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:46.511826 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:46.511826 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:46.662590 [debug] [Thread-4 (]: SQL status: SUCCESS 7 in 0.153 seconds
+[0m11:11:46.662590 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.152 seconds
+[0m11:11:46.665203 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:46.665203 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:46.665203 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:46.665203 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: merge into "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT" as DBT_INTERNAL_DEST
+    using "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
+
+    when matched
+     
+       and DBT_INTERNAL_DEST.dbt_valid_to is null
+     
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "UPDATED_AT", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "UPDATED_AT", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */;
+[0m11:11:46.774395 [debug] [Thread-4 (]: SQL status: SUCCESS 7 in 0.108 seconds
+[0m11:11:46.774395 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:46.774395 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: create or replace temporary table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+as (
+    
+    
+    with snapshot_query as (
+
+        
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            
+  
+  coalesce(nullif(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())), to_timestamp_ntz(convert_timezone('UTC', current_timestamp()))), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */;
+[0m11:11:47.156830 [debug] [Thread-3 (]: SQL status: SUCCESS 0 in 0.487 seconds
+[0m11:11:47.157832 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:11:47.157832 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:11:47.417545 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.634 seconds
+[0m11:11:47.421573 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:47.421573 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:47.497831 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.339 seconds
+[0m11:11:47.501995 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002419229E150>]}
+[0m11:11:47.502995 [info ] [Thread-3 (]: 3 of 24 OK snapshotted snapshots.customer_snapshot ............................. [[32mSUCCESS 0[0m in 3.96s]
+[0m11:11:47.504227 [debug] [Thread-3 (]: Finished running node snapshot.data_pipeline.customer_snapshot
+[0m11:11:47.504995 [debug] [Thread-6 (]: Began running node test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414
+[0m11:11:47.506009 [debug] [Thread-9 (]: Began running node test.data_pipeline.unique_current_customer
+[0m11:11:47.506995 [info ] [Thread-6 (]: 10 of 24 START test not_null_customer_snapshot_customer_id ..................... [RUN]
+[0m11:11:47.507995 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2, now test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414)
+[0m11:11:47.506995 [info ] [Thread-9 (]: 11 of 24 START test unique_current_customer .................................... [RUN]
+[0m11:11:47.507995 [debug] [Thread-6 (]: Began compiling node test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414
+[0m11:11:47.508995 [debug] [Thread-9 (]: Acquiring new snowflake connection 'test.data_pipeline.unique_current_customer'
+[0m11:11:47.511995 [debug] [Thread-6 (]: Writing injected SQL for node "test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414"
+[0m11:11:47.512995 [debug] [Thread-9 (]: Began compiling node test.data_pipeline.unique_current_customer
+[0m11:11:47.516361 [debug] [Thread-9 (]: Writing injected SQL for node "test.data_pipeline.unique_current_customer"
+[0m11:11:47.517371 [debug] [Thread-6 (]: Began executing node test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414
+[0m11:11:47.518372 [debug] [Thread-9 (]: Began executing node test.data_pipeline.unique_current_customer
+[0m11:11:47.520669 [debug] [Thread-6 (]: Writing runtime sql for node "test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414"
+[0m11:11:47.522669 [debug] [Thread-9 (]: Writing runtime sql for node "test.data_pipeline.unique_current_customer"
+[0m11:11:47.523669 [debug] [Thread-9 (]: Using snowflake connection "test.data_pipeline.unique_current_customer"
+[0m11:11:47.523669 [debug] [Thread-6 (]: Using snowflake connection "test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414"
+[0m11:11:47.525051 [debug] [Thread-9 (]: On test.data_pipeline.unique_current_customer: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Test: Ensure there is only one current record per customer in the snapshot
+
+SELECT 
+    customer_id
+FROM dbt_db.snapshots.customer_snapshot
+WHERE dbt_valid_to IS NULL
+GROUP BY customer_id
+HAVING COUNT(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.unique_current_customer"} */
+[0m11:11:47.525051 [debug] [Thread-6 (]: On test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from dbt_db.snapshots.customer_snapshot
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414"} */
+[0m11:11:47.525051 [debug] [Thread-9 (]: Opening a new connection, currently in state init
+[0m11:11:47.538262 [debug] [Thread-4 (]: SQL status: SUCCESS 9 in 0.117 seconds
+[0m11:11:47.541662 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:47.542662 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:47.744434 [debug] [Thread-4 (]: SQL status: SUCCESS 7 in 0.202 seconds
+[0m11:11:47.748435 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:47.749434 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.223 seconds
+[0m11:11:47.749434 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:47.751434 [info ] [Thread-6 (]: 10 of 24 PASS not_null_customer_snapshot_customer_id ........................... [[32mPASS[0m in 0.24s]
+[0m11:11:47.752425 [debug] [Thread-6 (]: Finished running node test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414
+[0m11:11:47.993662 [debug] [Thread-4 (]: SQL status: SUCCESS 9 in 0.242 seconds
+[0m11:11:47.996709 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:47.997721 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:48.164391 [debug] [Thread-4 (]: SQL status: SUCCESS 7 in 0.166 seconds
+[0m11:11:48.167389 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:48.168389 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:48.306713 [debug] [Thread-4 (]: SQL status: SUCCESS 9 in 0.139 seconds
+[0m11:11:48.311797 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:48.312796 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        
+    
+    with snapshot_query as (
+
+        
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            
+  
+  coalesce(nullif(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())), to_timestamp_ntz(convert_timezone('UTC', current_timestamp()))), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:48.745646 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 1.220 seconds
+[0m11:11:48.745646 [debug] [Thread-4 (]: SQL status: SUCCESS 0 in 0.433 seconds
+[0m11:11:48.748892 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:48.747891 [info ] [Thread-9 (]: 11 of 24 PASS unique_current_customer .......................................... [[32mPASS[0m in 1.24s]
+[0m11:11:48.749892 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:48.749892 [debug] [Thread-9 (]: Finished running node test.data_pipeline.unique_current_customer
+[0m11:11:48.750893 [debug] [Thread-8 (]: Began running node model.data_pipeline.customer_activity
+[0m11:11:48.751892 [info ] [Thread-8 (]: 12 of 24 START sql table model dbt_schema_snapshot_data.customer_activity ...... [RUN]
+[0m11:11:48.752891 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly model.data_pipeline.stg_tpch_orders, now model.data_pipeline.customer_activity)
+[0m11:11:48.752891 [debug] [Thread-8 (]: Began compiling node model.data_pipeline.customer_activity
+[0m11:11:48.755889 [debug] [Thread-8 (]: Writing injected SQL for node "model.data_pipeline.customer_activity"
+[0m11:11:48.756900 [debug] [Thread-8 (]: Began executing node model.data_pipeline.customer_activity
+[0m11:11:48.760899 [debug] [Thread-8 (]: Writing runtime sql for node "model.data_pipeline.customer_activity"
+[0m11:11:48.762899 [debug] [Thread-8 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m11:11:48.762899 [debug] [Thread-8 (]: On model.data_pipeline.customer_activity: create or replace transient table dbt_db.dbt_schema_snapshot_data.customer_activity
+    
+    
+    
+    as (-- This model demonstrates how to use snapshot data for current and historical insights
+
+WITH snapshot_data AS (
+    SELECT 
+        customer_id,
+        customer_name,
+        customer_status,
+        dbt_valid_from,
+        dbt_valid_to,
+        CASE 
+            WHEN dbt_valid_to IS NULL THEN 'current'
+            ELSE 'historical'
+        END AS record_status
+    FROM dbt_db.snapshots.customer_snapshot
+)
+
+SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    record_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM snapshot_data
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */;
+[0m11:11:48.979754 [debug] [Thread-4 (]: SQL status: SUCCESS 0 in 0.229 seconds
+[0m11:11:48.979754 [debug] [Thread-4 (]: Writing runtime sql for node "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:48.981922 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:48.981922 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:49.129196 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.146 seconds
+[0m11:11:49.129196 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:49.130196 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: merge into "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK" as DBT_INTERNAL_DEST
+    using "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
+
+    when matched
+     
+       and DBT_INTERNAL_DEST.dbt_valid_to is null
+     
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */;
+[0m11:11:49.634684 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 0.872 seconds
+[0m11:11:49.718067 [debug] [Thread-8 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418C5C90D0>]}
+[0m11:11:49.719070 [info ] [Thread-8 (]: 12 of 24 OK created sql table model dbt_schema_snapshot_data.customer_activity . [[32mSUCCESS 1[0m in 0.97s]
+[0m11:11:49.720072 [debug] [Thread-8 (]: Finished running node model.data_pipeline.customer_activity
+[0m11:11:50.295751 [debug] [Thread-4 (]: SQL status: SUCCESS 0 in 1.165 seconds
+[0m11:11:50.295751 [debug] [Thread-4 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:11:50.296749 [debug] [Thread-4 (]: On snapshot.data_pipeline.customer_snapshot_check: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:11:50.572707 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.276 seconds
+[0m11:11:50.575889 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002419362BD40>]}
+[0m11:11:50.575889 [info ] [Thread-4 (]: 9 of 24 OK snapshotted snapshots.customer_snapshot_check ....................... [[32mSUCCESS 0[0m in 4.39s]
+[0m11:11:50.576888 [debug] [Thread-4 (]: Finished running node snapshot.data_pipeline.customer_snapshot_check
+[0m11:11:50.577888 [debug] [Thread-2 (]: Began running node test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32
+[0m11:11:50.578893 [debug] [Thread-5 (]: Began running node test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba
+[0m11:11:50.578893 [info ] [Thread-2 (]: 13 of 24 START test not_null_customer_snapshot_check_customer_id ............... [RUN]
+[0m11:11:50.579891 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly seed.data_pipeline.customers, now test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32)
+[0m11:11:50.579891 [info ] [Thread-5 (]: 14 of 24 START test unique_customer_snapshot_check_customer_id ................. [RUN]
+[0m11:11:50.580888 [debug] [Thread-2 (]: Began compiling node test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32
+[0m11:11:50.580888 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d, now test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba)
+[0m11:11:50.584888 [debug] [Thread-2 (]: Writing injected SQL for node "test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32"
+[0m11:11:50.584888 [debug] [Thread-5 (]: Began compiling node test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba
+[0m11:11:50.589146 [debug] [Thread-5 (]: Writing injected SQL for node "test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba"
+[0m11:11:50.589146 [debug] [Thread-5 (]: Began executing node test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba
+[0m11:11:50.590577 [debug] [Thread-2 (]: Began executing node test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32
+[0m11:11:50.593578 [debug] [Thread-5 (]: Writing runtime sql for node "test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba"
+[0m11:11:50.595577 [debug] [Thread-2 (]: Writing runtime sql for node "test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32"
+[0m11:11:50.597579 [debug] [Thread-5 (]: Using snowflake connection "test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba"
+[0m11:11:50.597579 [debug] [Thread-2 (]: Using snowflake connection "test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32"
+[0m11:11:50.598577 [debug] [Thread-5 (]: On test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    customer_id as unique_field,
+    count(*) as n_records
+
+from dbt_db.snapshots.customer_snapshot_check
+where customer_id is not null
+group by customer_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba"} */
+[0m11:11:50.598577 [debug] [Thread-2 (]: On test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from dbt_db.snapshots.customer_snapshot_check
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32"} */
+[0m11:11:50.626885 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 4.993 seconds
+[0m11:11:50.628987 [debug] [Thread-10 ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000241922CC1A0>]}
+[0m11:11:50.628987 [info ] [Thread-10 ]: 8 of 24 OK created sql table model dbt_schema.int_order_items .................. [[32mSUCCESS 1[0m in 5.02s]
+[0m11:11:50.630016 [debug] [Thread-10 ]: Finished running node model.data_pipeline.int_order_items
+[0m11:11:50.630016 [debug] [Thread-1 (]: Began running node model.data_pipeline.int_order_items_summary
+[0m11:11:50.631079 [info ] [Thread-1 (]: 15 of 24 START sql table model dbt_schema.int_order_items_summary .............. [RUN]
+[0m11:11:50.631079 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.data_pipeline.stg_tpch_line_items, now model.data_pipeline.int_order_items_summary)
+[0m11:11:50.632132 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.int_order_items_summary
+[0m11:11:50.634132 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.int_order_items_summary"
+[0m11:11:50.635429 [debug] [Thread-1 (]: Began executing node model.data_pipeline.int_order_items_summary
+[0m11:11:50.637564 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.int_order_items_summary"
+[0m11:11:50.639714 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.int_order_items_summary"
+[0m11:11:50.639714 [debug] [Thread-1 (]: On model.data_pipeline.int_order_items_summary: create or replace transient table dbt_db.dbt_schema.int_order_items_summary
+    
+    
+    
+    as (select 
+    order_key,
+    sum(extended_price) as gross_item_sales_amount,
+    sum(item_discount_amount) as item_discount_amount
+from
+    dbt_db.dbt_schema.int_order_items
+group by
+    order_key
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.int_order_items_summary"} */;
+[0m11:11:50.913439 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.313 seconds
+[0m11:11:50.914437 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.315 seconds
+[0m11:11:50.915436 [info ] [Thread-2 (]: 13 of 24 PASS not_null_customer_snapshot_check_customer_id ..................... [[32mPASS[0m in 0.34s]
+[0m11:11:50.917440 [debug] [Thread-2 (]: Finished running node test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32
+[0m11:11:50.917440 [error] [Thread-5 (]: 14 of 24 FAIL 1 unique_customer_snapshot_check_customer_id ..................... [[31mFAIL 1[0m in 0.34s]
+[0m11:11:50.918439 [debug] [Thread-5 (]: Finished running node test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba
+[0m11:11:50.919437 [debug] [Thread-13 ]: Marking all children of 'test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba' to be skipped because of status 'fail'.  Reason: Got 1 result, configured to fail if != 0.
+[0m11:11:50.919437 [debug] [Thread-9 (]: Began running node model.data_pipeline.current_customers
+[0m11:11:50.920439 [debug] [Thread-7 (]: Began running node model.data_pipeline.historical_customers
+[0m11:11:50.920439 [info ] [Thread-9 (]: 16 of 24 SKIP relation dbt_schema_snapshot_data.current_customers .............. [[33mSKIP[0m]
+[0m11:11:50.921438 [debug] [Thread-9 (]: Finished running node model.data_pipeline.current_customers
+[0m11:11:50.921438 [debug] [Thread-13 ]: Marking all children of 'model.data_pipeline.current_customers' to be skipped because of status 'skipped'. 
+[0m11:11:50.921438 [info ] [Thread-7 (]: 17 of 24 SKIP relation dbt_schema_snapshot_data.historical_customers ........... [[33mSKIP[0m]
+[0m11:11:50.922438 [debug] [Thread-7 (]: Finished running node model.data_pipeline.historical_customers
+[0m11:11:50.922438 [debug] [Thread-13 ]: Marking all children of 'model.data_pipeline.historical_customers' to be skipped because of status 'skipped'. 
+[0m11:11:51.587572 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.947 seconds
+[0m11:11:51.589599 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024191DAC620>]}
+[0m11:11:51.590928 [info ] [Thread-1 (]: 15 of 24 OK created sql table model dbt_schema.int_order_items_summary ......... [[32mSUCCESS 1[0m in 0.96s]
+[0m11:11:51.591962 [debug] [Thread-1 (]: Finished running node model.data_pipeline.int_order_items_summary
+[0m11:11:51.592958 [debug] [Thread-4 (]: Began running node model.data_pipeline.fct_orders
+[0m11:11:51.592958 [info ] [Thread-4 (]: 18 of 24 START sql table model dbt_schema.fct_orders ........................... [RUN]
+[0m11:11:51.593954 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly snapshot.data_pipeline.customer_snapshot_check, now model.data_pipeline.fct_orders)
+[0m11:11:51.594954 [debug] [Thread-4 (]: Began compiling node model.data_pipeline.fct_orders
+[0m11:11:51.597954 [debug] [Thread-4 (]: Writing injected SQL for node "model.data_pipeline.fct_orders"
+[0m11:11:51.598954 [debug] [Thread-4 (]: Began executing node model.data_pipeline.fct_orders
+[0m11:11:51.601318 [debug] [Thread-4 (]: Writing runtime sql for node "model.data_pipeline.fct_orders"
+[0m11:11:51.602326 [debug] [Thread-4 (]: Using snowflake connection "model.data_pipeline.fct_orders"
+[0m11:11:51.602326 [debug] [Thread-4 (]: On model.data_pipeline.fct_orders: create or replace transient table dbt_db.dbt_schema.fct_orders
+    
+    
+    
+    as (select
+    orders.*,
+    order_item_summary.gross_item_sales_amount,
+    order_item_summary.item_discount_amount
+from
+    dbt_db.dbt_schema.stg_tpch_orders as orders
+join
+    dbt_db.dbt_schema.int_order_items_summary as order_item_summary
+        on orders.order_key = order_item_summary.order_key
+order by order_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.fct_orders"} */;
+[0m11:11:52.870863 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 1.267 seconds
+[0m11:11:52.872862 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6055105-f488-40d0-bb3a-9a05990d86a2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002419233BE90>]}
+[0m11:11:52.872862 [info ] [Thread-4 (]: 18 of 24 OK created sql table model dbt_schema.fct_orders ...................... [[32mSUCCESS 1[0m in 1.28s]
+[0m11:11:52.873863 [debug] [Thread-4 (]: Finished running node model.data_pipeline.fct_orders
+[0m11:11:52.874862 [debug] [Thread-10 ]: Began running node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m11:11:52.875858 [debug] [Thread-6 (]: Began running node test.data_pipeline.fct_orders_date_valid
+[0m11:11:52.875858 [debug] [Thread-2 (]: Began running node test.data_pipeline.fct_orders_discount
+[0m11:11:52.875858 [info ] [Thread-10 ]: 19 of 24 START test accepted_values_fct_orders_status_code__P__O__F ............ [RUN]
+[0m11:11:52.876875 [debug] [Thread-5 (]: Began running node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m11:11:52.877875 [debug] [Thread-8 (]: Began running node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m11:11:52.876875 [info ] [Thread-6 (]: 20 of 24 START test fct_orders_date_valid ...................................... [RUN]
+[0m11:11:52.877875 [debug] [Thread-9 (]: Began running node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m11:11:52.878874 [info ] [Thread-2 (]: 21 of 24 START test fct_orders_discount ........................................ [RUN]
+[0m11:11:52.878874 [debug] [Thread-10 ]: Re-using an available connection from the pool (formerly model.data_pipeline.int_order_items, now test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048)
+[0m11:11:52.879878 [info ] [Thread-5 (]: 22 of 24 START test not_null_fct_orders_order_key .............................. [RUN]
+[0m11:11:52.880878 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414, now test.data_pipeline.fct_orders_date_valid)
+[0m11:11:52.879878 [info ] [Thread-8 (]: 23 of 24 START test relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_  [RUN]
+[0m11:11:52.884081 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32, now test.data_pipeline.fct_orders_discount)
+[0m11:11:52.885082 [debug] [Thread-10 ]: Began compiling node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m11:11:52.880878 [info ] [Thread-9 (]: 24 of 24 START test unique_fct_orders_order_key ................................ [RUN]
+[0m11:11:52.886081 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.data_pipeline.unique_customer_snapshot_check_customer_id.1c524749ba, now test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15)
+[0m11:11:52.886081 [debug] [Thread-6 (]: Began compiling node test.data_pipeline.fct_orders_date_valid
+[0m11:11:52.887275 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly model.data_pipeline.customer_activity, now test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce)
+[0m11:11:52.887275 [debug] [Thread-2 (]: Began compiling node test.data_pipeline.fct_orders_discount
+[0m11:11:52.896782 [debug] [Thread-10 ]: Writing injected SQL for node "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m11:11:52.897790 [debug] [Thread-9 (]: Re-using an available connection from the pool (formerly test.data_pipeline.unique_current_customer, now test.data_pipeline.unique_fct_orders_order_key.f5e7a90273)
+[0m11:11:52.897790 [debug] [Thread-5 (]: Began compiling node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m11:11:52.900789 [debug] [Thread-6 (]: Writing injected SQL for node "test.data_pipeline.fct_orders_date_valid"
+[0m11:11:52.901789 [debug] [Thread-8 (]: Began compiling node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m11:11:52.904986 [debug] [Thread-2 (]: Writing injected SQL for node "test.data_pipeline.fct_orders_discount"
+[0m11:11:52.904986 [debug] [Thread-9 (]: Began compiling node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m11:11:52.909045 [debug] [Thread-5 (]: Writing injected SQL for node "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m11:11:52.915077 [debug] [Thread-8 (]: Writing injected SQL for node "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m11:11:52.919546 [debug] [Thread-9 (]: Writing injected SQL for node "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m11:11:52.919546 [debug] [Thread-10 ]: Began executing node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m11:11:52.920558 [debug] [Thread-2 (]: Began executing node test.data_pipeline.fct_orders_discount
+[0m11:11:52.920558 [debug] [Thread-6 (]: Began executing node test.data_pipeline.fct_orders_date_valid
+[0m11:11:52.923567 [debug] [Thread-10 ]: Writing runtime sql for node "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m11:11:52.925908 [debug] [Thread-2 (]: Writing runtime sql for node "test.data_pipeline.fct_orders_discount"
+[0m11:11:52.926919 [debug] [Thread-5 (]: Began executing node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m11:11:52.928919 [debug] [Thread-6 (]: Writing runtime sql for node "test.data_pipeline.fct_orders_date_valid"
+[0m11:11:52.929921 [debug] [Thread-8 (]: Began executing node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m11:11:52.929921 [debug] [Thread-9 (]: Began executing node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m11:11:52.933430 [debug] [Thread-5 (]: Writing runtime sql for node "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m11:11:52.936489 [debug] [Thread-8 (]: Writing runtime sql for node "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m11:11:52.938800 [debug] [Thread-9 (]: Writing runtime sql for node "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m11:11:52.939803 [debug] [Thread-10 ]: Using snowflake connection "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m11:11:52.941106 [debug] [Thread-2 (]: Using snowflake connection "test.data_pipeline.fct_orders_discount"
+[0m11:11:52.942106 [debug] [Thread-6 (]: Using snowflake connection "test.data_pipeline.fct_orders_date_valid"
+[0m11:11:52.942106 [debug] [Thread-10 ]: On test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status_code as value_field,
+        count(*) as n_records
+
+    from dbt_db.dbt_schema.fct_orders
+    group by status_code
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'P','O','F'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"} */
+[0m11:11:52.943269 [debug] [Thread-2 (]: On test.data_pipeline.fct_orders_discount: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    *
+from
+    dbt_db.dbt_schema.fct_orders
+where
+    item_discount_amount > 0
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.fct_orders_discount"} */
+[0m11:11:52.944264 [debug] [Thread-6 (]: On test.data_pipeline.fct_orders_date_valid: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    *
+from
+    dbt_db.dbt_schema.fct_orders
+where
+    date(order_date) > CURRENT_DATE()
+    or date(order_date) < date('1990-01-01')
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.fct_orders_date_valid"} */
+[0m11:11:52.944264 [debug] [Thread-5 (]: Using snowflake connection "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m11:11:52.945487 [debug] [Thread-9 (]: Using snowflake connection "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m11:11:52.946487 [debug] [Thread-8 (]: Using snowflake connection "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m11:11:52.949899 [debug] [Thread-5 (]: On test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_key
+from dbt_db.dbt_schema.fct_orders
+where order_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"} */
+[0m11:11:52.950899 [debug] [Thread-9 (]: On test.data_pipeline.unique_fct_orders_order_key.f5e7a90273: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_key as unique_field,
+    count(*) as n_records
+
+from dbt_db.dbt_schema.fct_orders
+where order_key is not null
+group by order_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"} */
+[0m11:11:52.951922 [debug] [Thread-8 (]: On test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select order_key as from_field
+    from dbt_db.dbt_schema.fct_orders
+    where order_key is not null
+),
+
+parent as (
+    select order_key as to_field
+    from dbt_db.dbt_schema.stg_tpch_orders
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"} */
+[0m11:11:53.138160 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.185 seconds
+[0m11:11:53.142176 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.193 seconds
+[0m11:11:53.141189 [info ] [Thread-5 (]: 22 of 24 PASS not_null_fct_orders_order_key .................................... [[32mPASS[0m in 0.25s]
+[0m11:11:53.144174 [debug] [Thread-5 (]: Finished running node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m11:11:53.144174 [info ] [Thread-6 (]: 20 of 24 PASS fct_orders_date_valid ............................................ [[32mPASS[0m in 0.26s]
+[0m11:11:53.145402 [debug] [Thread-6 (]: Finished running node test.data_pipeline.fct_orders_date_valid
+[0m11:11:53.300391 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.352 seconds
+[0m11:11:53.300391 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 0.348 seconds
+[0m11:11:53.301401 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 0.356 seconds
+[0m11:11:53.302904 [info ] [Thread-2 (]: 21 of 24 PASS fct_orders_discount .............................................. [[32mPASS[0m in 0.42s]
+[0m11:11:53.304909 [info ] [Thread-9 (]: 24 of 24 PASS unique_fct_orders_order_key ...................................... [[32mPASS[0m in 0.41s]
+[0m11:11:53.306341 [debug] [Thread-2 (]: Finished running node test.data_pipeline.fct_orders_discount
+[0m11:11:53.307356 [debug] [Thread-9 (]: Finished running node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m11:11:53.306341 [info ] [Thread-10 ]: 19 of 24 PASS accepted_values_fct_orders_status_code__P__O__F .................. [[32mPASS[0m in 0.43s]
+[0m11:11:53.308351 [debug] [Thread-10 ]: Finished running node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m11:11:53.842256 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 0.888 seconds
+[0m11:11:53.844719 [info ] [Thread-8 (]: 23 of 24 PASS relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_  [[32mPASS[0m in 0.96s]
+[0m11:11:53.846719 [debug] [Thread-8 (]: Finished running node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m11:11:53.848719 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:11:53.849718 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:11:53.849718 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:11:54.044148 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:11:54.044148 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:11:54.226951 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:11:54.227948 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:11:54.453738 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m11:11:54.453738 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m11:11:54.702878 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema_snapshot_data' was left open.
+[0m11:11:54.706888 [debug] [MainThread]: On list_dbt_db_dbt_schema_snapshot_data: Close
+[0m11:11:54.946554 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m11:11:54.946554 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m11:11:55.185094 [debug] [MainThread]: Connection 'model.data_pipeline.int_order_items_summary' was left open.
+[0m11:11:55.185094 [debug] [MainThread]: On model.data_pipeline.int_order_items_summary: Close
+[0m11:11:55.556536 [debug] [MainThread]: Connection 'test.data_pipeline.fct_orders_discount' was left open.
+[0m11:11:55.556536 [debug] [MainThread]: On test.data_pipeline.fct_orders_discount: Close
+[0m11:11:55.778867 [debug] [MainThread]: Connection 'snapshot.data_pipeline.customer_snapshot' was left open.
+[0m11:11:55.778867 [debug] [MainThread]: On snapshot.data_pipeline.customer_snapshot: Close
+[0m11:11:56.021107 [debug] [MainThread]: Connection 'model.data_pipeline.fct_orders' was left open.
+[0m11:11:56.021107 [debug] [MainThread]: On model.data_pipeline.fct_orders: Close
+[0m11:11:56.362446 [debug] [MainThread]: Connection 'test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15' was left open.
+[0m11:11:56.363452 [debug] [MainThread]: On test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15: Close
+[0m11:11:56.530669 [debug] [MainThread]: Connection 'test.data_pipeline.fct_orders_date_valid' was left open.
+[0m11:11:56.530669 [debug] [MainThread]: On test.data_pipeline.fct_orders_date_valid: Close
+[0m11:11:57.003541 [debug] [MainThread]: Connection 'test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce' was left open.
+[0m11:11:57.004850 [debug] [MainThread]: On test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce: Close
+[0m11:11:57.176473 [debug] [MainThread]: Connection 'test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048' was left open.
+[0m11:11:57.177473 [debug] [MainThread]: On test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048: Close
+[0m11:11:57.589081 [debug] [MainThread]: Connection 'test.data_pipeline.unique_fct_orders_order_key.f5e7a90273' was left open.
+[0m11:11:57.590108 [debug] [MainThread]: On test.data_pipeline.unique_fct_orders_order_key.f5e7a90273: Close
+[0m11:11:57.832498 [info ] [MainThread]: 
+[0m11:11:57.832498 [info ] [MainThread]: Finished running 1 seed, 2 snapshots, 6 table models, 13 data tests, 2 view models in 0 hours 0 minutes and 17.49 seconds (17.49s).
+[0m11:11:57.836494 [debug] [MainThread]: Command end result
+[0m11:11:57.862641 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:11:57.865110 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:11:57.872239 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m11:11:57.873238 [info ] [MainThread]: 
+[0m11:11:57.873238 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:11:57.873238 [info ] [MainThread]: 
+[0m11:11:57.874616 [error] [MainThread]: [31mFailure in test unique_customer_snapshot_check_customer_id (snapshots\snapshot_schema.yml)[0m
+[0m11:11:57.874616 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m11:11:57.875631 [info ] [MainThread]: 
+[0m11:11:57.875631 [info ] [MainThread]:   compiled code at target\compiled\data_pipeline\snapshots\snapshot_schema.yml\unique_customer_snapshot_check_customer_id.sql
+[0m11:11:57.875631 [info ] [MainThread]: 
+[0m11:11:57.876626 [info ] [MainThread]: Done. PASS=21 WARN=0 ERROR=1 SKIP=2 NO-OP=0 TOTAL=24
+[0m11:11:57.877625 [debug] [MainThread]: Command `dbt build` failed at 11:11:57.877625 after 19.02 seconds
+[0m11:11:57.877625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418F17E2A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418F581A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002418F581CD0>]}
+[0m11:11:57.877625 [debug] [MainThread]: Flushing usage events
+[0m11:11:59.378839 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:12:49.606308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216736F7DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002167451A660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002167404FF20>]}
+
+
+============================== 11:12:49.611468 | b344bdb2-248f-491c-8da4-3377b5c0de9e ==============================
+[0m11:12:49.611468 [info ] [MainThread]: Running with dbt=1.10.5
+[0m11:12:49.612470 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt build', 'send_anonymous_usage_stats': 'True'}
+[0m11:12:50.078633 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216769E6990>]}
+[0m11:12:50.132508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216761AA270>]}
+[0m11:12:50.133508 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m11:12:50.398244 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m11:12:50.654234 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m11:12:50.655233 [debug] [MainThread]: Partial parsing: updated file: data_pipeline://snapshots\snapshot_schema.yml
+[0m11:12:51.001783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021676F9D160>]}
+[0m11:12:51.099018 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:12:51.101027 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:12:51.136407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021677285E80>]}
+[0m11:12:51.136407 [info ] [MainThread]: Found 8 models, 2 snapshots, 12 data tests, 1 seed, 3 sources, 594 macros
+[0m11:12:51.140408 [info ] [MainThread]: 
+[0m11:12:51.140408 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:12:51.140408 [info ] [MainThread]: 
+[0m11:12:51.141408 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:12:51.146411 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:12:51.146411 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:12:51.160107 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:12:51.221835 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:12:51.221835 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:12:51.222834 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:12:51.223105 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:12:51.223105 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:12:51.223795 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:12:51.223795 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:12:51.223795 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:12:51.224808 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:12:52.889787 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.665 seconds
+[0m11:12:52.891792 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 1.668 seconds
+[0m11:12:53.297902 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.074 seconds
+[0m11:12:53.300576 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema_snapshot_data'
+[0m11:12:53.309779 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m11:12:53.311880 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema_snapshot_data"
+[0m11:12:53.311880 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m11:12:53.311880 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m11:12:53.311880 [debug] [ThreadPool]: On list_dbt_db_dbt_schema_snapshot_data: show objects in dbt_db.dbt_schema_snapshot_data
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema_snapshot_data"} */;
+[0m11:12:53.311880 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m11:12:53.311880 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m11:12:53.311880 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:12:53.311880 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:12:53.311880 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m11:12:53.311880 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:12:54.084913 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.768 seconds
+[0m11:12:54.116993 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.798 seconds
+[0m11:12:54.203156 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.884 seconds
+[0m11:12:54.203156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021677502030>]}
+[0m11:12:54.213540 [debug] [Thread-1 (]: Began running node model.data_pipeline.stg_tpch_line_items
+[0m11:12:54.213540 [debug] [Thread-2 (]: Began running node seed.data_pipeline.customers
+[0m11:12:54.213540 [debug] [Thread-3 (]: Began running node snapshot.data_pipeline.customer_snapshot
+[0m11:12:54.213540 [debug] [Thread-4 (]: Began running node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m11:12:54.213540 [info ] [Thread-1 (]: 1 of 23 START sql view model dbt_schema.stg_tpch_line_items .................... [RUN]
+[0m11:12:54.219919 [debug] [Thread-5 (]: Began running node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m11:12:54.219919 [debug] [Thread-6 (]: Began running node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m11:12:54.213540 [info ] [Thread-2 (]: 2 of 23 START seed file dbt_schema.customers ................................... [RUN]
+[0m11:12:54.221336 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_line_items'
+[0m11:12:54.219919 [info ] [Thread-3 (]: 3 of 23 START snapshot snapshots.customer_snapshot ............................. [RUN]
+[0m11:12:54.221336 [info ] [Thread-4 (]: 4 of 23 START test source_not_null_tpch_orders_o_orderkey ...................... [RUN]
+[0m11:12:54.221336 [debug] [Thread-2 (]: Acquiring new snowflake connection 'seed.data_pipeline.customers'
+[0m11:12:54.221336 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.stg_tpch_line_items
+[0m11:12:54.221336 [info ] [Thread-5 (]: 5 of 23 START test source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_  [RUN]
+[0m11:12:54.221336 [debug] [Thread-3 (]: Acquiring new snowflake connection 'snapshot.data_pipeline.customer_snapshot'
+[0m11:12:54.221336 [info ] [Thread-6 (]: 6 of 23 START test source_unique_tpch_orders_o_orderkey ........................ [RUN]
+[0m11:12:54.225028 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b'
+[0m11:12:54.225028 [debug] [Thread-2 (]: Began compiling node seed.data_pipeline.customers
+[0m11:12:54.239365 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_line_items"
+[0m11:12:54.241107 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d'
+[0m11:12:54.241107 [debug] [Thread-3 (]: Began compiling node snapshot.data_pipeline.customer_snapshot
+[0m11:12:54.241107 [debug] [Thread-6 (]: Acquiring new snowflake connection 'test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2'
+[0m11:12:54.241107 [debug] [Thread-4 (]: Began compiling node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m11:12:54.241107 [debug] [Thread-2 (]: Began executing node seed.data_pipeline.customers
+[0m11:12:54.243480 [debug] [Thread-5 (]: Began compiling node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m11:12:54.245163 [debug] [Thread-3 (]: Began executing node snapshot.data_pipeline.customer_snapshot
+[0m11:12:54.245163 [debug] [Thread-6 (]: Began compiling node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m11:12:54.245163 [debug] [Thread-4 (]: Writing injected SQL for node "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m11:12:54.265276 [debug] [Thread-1 (]: Began executing node model.data_pipeline.stg_tpch_line_items
+[0m11:12:54.277386 [debug] [Thread-5 (]: Writing injected SQL for node "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m11:12:54.318178 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:54.323449 [debug] [Thread-6 (]: Writing injected SQL for node "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m11:12:54.340112 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_line_items"
+[0m11:12:54.345195 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:12:54.345195 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:54.345195 [debug] [Thread-4 (]: Began executing node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m11:12:54.345195 [debug] [Thread-2 (]: On seed.data_pipeline.customers: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m11:12:54.345195 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:12:54.353190 [debug] [Thread-5 (]: Began executing node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m11:12:54.359873 [debug] [Thread-6 (]: Began executing node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m11:12:54.359873 [debug] [Thread-4 (]: Writing runtime sql for node "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m11:12:54.359873 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:12:54.359873 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.stg_tpch_line_items"
+[0m11:12:54.359873 [debug] [Thread-5 (]: Writing runtime sql for node "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m11:12:54.359873 [debug] [Thread-6 (]: Writing runtime sql for node "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m11:12:54.377027 [debug] [Thread-1 (]: On model.data_pipeline.stg_tpch_line_items: create or replace   view dbt_db.dbt_schema.stg_tpch_line_items
+  
+  
+  
+  
+  as (
+    select
+    md5(cast(coalesce(cast(l_orderkey as TEXT), '_dbt_utils_surrogate_key_null_') || '-' || coalesce(cast(l_linenumber as TEXT), '_dbt_utils_surrogate_key_null_') as TEXT)) as order_item_key,
+	l_orderkey as order_key,
+	l_partkey as part_key,
+	l_linenumber as line_number,
+	l_quantity as quantity,
+	l_extendedprice as extended_price,
+	l_discount as discount_percentage,
+	l_tax as tax_rate
+from
+    snowflake_sample_data.tpch_sf1.lineitem
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_line_items"} */;
+[0m11:12:54.378448 [debug] [Thread-4 (]: Using snowflake connection "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"
+[0m11:12:54.378448 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:12:54.378448 [debug] [Thread-4 (]: On test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select o_orderkey
+from snowflake_sample_data.tpch_sf1.orders
+where o_orderkey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b"} */
+[0m11:12:54.380081 [debug] [Thread-5 (]: Using snowflake connection "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"
+[0m11:12:54.381406 [debug] [Thread-6 (]: Using snowflake connection "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"
+[0m11:12:54.381406 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:12:54.381406 [debug] [Thread-5 (]: On test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select l_orderkey as from_field
+    from snowflake_sample_data.tpch_sf1.lineitem
+    where l_orderkey is not null
+),
+
+parent as (
+    select o_orderkey as to_field
+    from snowflake_sample_data.tpch_sf1.orders
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d"} */
+[0m11:12:54.383163 [debug] [Thread-6 (]: On test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    o_orderkey as unique_field,
+    count(*) as n_records
+
+from snowflake_sample_data.tpch_sf1.orders
+where o_orderkey is not null
+group by o_orderkey
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2"} */
+[0m11:12:54.383163 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m11:12:54.383163 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m11:12:54.946149 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.561 seconds
+[0m11:12:54.954212 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.572 seconds
+[0m11:12:54.954212 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.571 seconds
+[0m11:12:54.953203 [info ] [Thread-6 (]: 6 of 23 PASS source_unique_tpch_orders_o_orderkey .............................. [[32mPASS[0m in 0.71s]
+[0m11:12:54.957754 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.589 seconds
+[0m11:12:54.956730 [info ] [Thread-4 (]: 4 of 23 PASS source_not_null_tpch_orders_o_orderkey ............................ [[32mPASS[0m in 0.73s]
+[0m11:12:54.959831 [debug] [Thread-6 (]: Finished running node test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2
+[0m11:12:54.959312 [info ] [Thread-5 (]: 5 of 23 PASS source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_  [[32mPASS[0m in 0.72s]
+[0m11:12:54.960361 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:12:54.960885 [debug] [Thread-4 (]: Finished running node test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b
+[0m11:12:54.961924 [debug] [Thread-5 (]: Finished running node test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d
+[0m11:12:54.961924 [debug] [Thread-2 (]: On seed.data_pipeline.customers: truncate table "DBT_DB"."DBT_SCHEMA"."CUSTOMERS"
+  
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */;
+[0m11:12:54.963492 [debug] [Thread-8 (]: Began running node model.data_pipeline.stg_tpch_orders
+[0m11:12:54.964015 [info ] [Thread-8 (]: 7 of 23 START sql view model dbt_schema.stg_tpch_orders ........................ [RUN]
+[0m11:12:54.965089 [debug] [Thread-8 (]: Acquiring new snowflake connection 'model.data_pipeline.stg_tpch_orders'
+[0m11:12:54.965625 [debug] [Thread-8 (]: Began compiling node model.data_pipeline.stg_tpch_orders
+[0m11:12:54.969413 [debug] [Thread-8 (]: Writing injected SQL for node "model.data_pipeline.stg_tpch_orders"
+[0m11:12:54.970456 [debug] [Thread-8 (]: Began executing node model.data_pipeline.stg_tpch_orders
+[0m11:12:54.973088 [debug] [Thread-8 (]: Writing runtime sql for node "model.data_pipeline.stg_tpch_orders"
+[0m11:12:54.974648 [debug] [Thread-8 (]: Using snowflake connection "model.data_pipeline.stg_tpch_orders"
+[0m11:12:54.974648 [debug] [Thread-8 (]: On model.data_pipeline.stg_tpch_orders: create or replace   view dbt_db.dbt_schema.stg_tpch_orders
+  
+  
+  
+  
+  as (
+    select
+    o_orderkey as order_key,
+    o_custkey as customer_key,
+    o_orderstatus as status_code,
+    o_totalprice as total_price,
+    o_orderdate as order_date
+from
+    snowflake_sample_data.tpch_sf1.orders
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.stg_tpch_orders"} */;
+[0m11:12:54.975175 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m11:12:55.195784 [debug] [Thread-3 (]: SQL status: SUCCESS 8 in 0.843 seconds
+[0m11:12:55.322269 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:55.323272 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: create or replace temporary table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp"
+as (
+    
+    
+    with snapshot_query as (
+
+        
+
+
+
+SELECT
+    customer_id,
+    customer_name,
+    customer_status,
+    updated_at
+FROM dbt_db.dbt_schema.customers  -- must match YAML source name
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            
+  
+  coalesce(nullif(updated_at, updated_at), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            updated_at as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data.dbt_valid_from < source_data.updated_at)
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.updated_at)
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */;
+[0m11:12:55.324270 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.361 seconds
+[0m11:12:55.325293 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:12:55.326272 [debug] [Thread-2 (]: On seed.data_pipeline.customers: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m11:12:55.689844 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.363 seconds
+[0m11:12:55.689844 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.311 seconds
+[0m11:12:55.701451 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:12:55.717393 [debug] [Thread-2 (]: On seed.data_pipeline.customers: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m11:12:55.718448 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021673B207D0>]}
+[0m11:12:55.719640 [info ] [Thread-1 (]: 1 of 23 OK created sql view model dbt_schema.stg_tpch_line_items ............... [[32mSUCCESS 1[0m in 1.49s]
+[0m11:12:55.719640 [debug] [Thread-1 (]: Finished running node model.data_pipeline.stg_tpch_line_items
+[0m11:12:55.814729 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.490 seconds
+[0m11:12:55.817086 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:55.817086 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:55.851465 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.134 seconds
+[0m11:12:55.852463 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:12:55.852463 [debug] [Thread-2 (]: On seed.data_pipeline.customers: insert into dbt_db.dbt_schema.customers (customer_id, customer_name, customer_status, updated_at) values
+            (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */...
+[0m11:12:56.181749 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 1.207 seconds
+[0m11:12:56.182749 [debug] [Thread-3 (]: SQL status: SUCCESS 10 in 0.365 seconds
+[0m11:12:56.185749 [debug] [Thread-8 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021678AAA0F0>]}
+[0m11:12:56.188749 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:56.189826 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:56.189826 [info ] [Thread-8 (]: 7 of 23 OK created sql view model dbt_schema.stg_tpch_orders ................... [[32mSUCCESS 1[0m in 1.22s]
+[0m11:12:56.191857 [debug] [Thread-8 (]: Finished running node model.data_pipeline.stg_tpch_orders
+[0m11:12:56.192893 [debug] [Thread-10 ]: Began running node model.data_pipeline.int_order_items
+[0m11:12:56.192893 [info ] [Thread-10 ]: 8 of 23 START sql table model dbt_schema.int_order_items ....................... [RUN]
+[0m11:12:56.193872 [debug] [Thread-10 ]: Acquiring new snowflake connection 'model.data_pipeline.int_order_items'
+[0m11:12:56.194869 [debug] [Thread-10 ]: Began compiling node model.data_pipeline.int_order_items
+[0m11:12:56.198867 [debug] [Thread-10 ]: Writing injected SQL for node "model.data_pipeline.int_order_items"
+[0m11:12:56.198867 [debug] [Thread-10 ]: Began executing node model.data_pipeline.int_order_items
+[0m11:12:56.213871 [debug] [Thread-10 ]: Writing runtime sql for node "model.data_pipeline.int_order_items"
+[0m11:12:56.214873 [debug] [Thread-2 (]: SQL status: SUCCESS 4 in 0.362 seconds
+[0m11:12:56.215871 [debug] [Thread-2 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m11:12:56.215871 [debug] [Thread-2 (]: On seed.data_pipeline.customers: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m11:12:56.216871 [debug] [Thread-10 ]: Using snowflake connection "model.data_pipeline.int_order_items"
+[0m11:12:56.217871 [debug] [Thread-10 ]: On model.data_pipeline.int_order_items: create or replace transient table dbt_db.dbt_schema.int_order_items
+    
+    
+    
+    as (select
+    line_item.order_item_key,
+    line_item.part_key,
+    line_item.line_number,
+    line_item.extended_price,
+    orders.order_key,
+    orders.customer_key,
+    orders.order_date,
+    
+    (-1 * line_item.extended_price * line_item.discount_percentage)::decimal(16, 2)
+ as item_discount_amount
+from
+    dbt_db.dbt_schema.stg_tpch_orders as orders
+join
+    dbt_db.dbt_schema.stg_tpch_line_items as line_item
+        on orders.order_key = line_item.order_key
+order by
+    orders.order_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.int_order_items"} */;
+[0m11:12:56.217871 [debug] [Thread-10 ]: Opening a new connection, currently in state init
+[0m11:12:56.426868 [debug] [Thread-3 (]: SQL status: SUCCESS 8 in 0.236 seconds
+[0m11:12:56.430463 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:56.431467 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:56.728807 [debug] [Thread-3 (]: SQL status: SUCCESS 10 in 0.297 seconds
+[0m11:12:56.733934 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:56.734935 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:56.735934 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.520 seconds
+[0m11:12:56.746509 [debug] [Thread-2 (]: Writing runtime SQL for node "seed.data_pipeline.customers"
+[0m11:12:56.750511 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021676C316D0>]}
+[0m11:12:56.751699 [info ] [Thread-2 (]: 2 of 23 OK loaded seed file dbt_schema.customers ............................... [[32mINSERT 4[0m in 2.53s]
+[0m11:12:56.752969 [debug] [Thread-2 (]: Finished running node seed.data_pipeline.customers
+[0m11:12:56.753969 [debug] [Thread-6 (]: Began running node snapshot.data_pipeline.customer_snapshot_check
+[0m11:12:56.755219 [info ] [Thread-6 (]: 9 of 23 START snapshot snapshots.customer_snapshot_check ....................... [RUN]
+[0m11:12:56.756220 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.data_pipeline.source_unique_tpch_orders_o_orderkey.374f048af2, now snapshot.data_pipeline.customer_snapshot_check)
+[0m11:12:56.756220 [debug] [Thread-6 (]: Began compiling node snapshot.data_pipeline.customer_snapshot_check
+[0m11:12:56.761520 [debug] [Thread-6 (]: Began executing node snapshot.data_pipeline.customer_snapshot_check
+[0m11:12:56.799140 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:56.800140 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        select customer_name, customer_status from (
+                
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+            ) subq
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:57.003492 [debug] [Thread-3 (]: SQL status: SUCCESS 8 in 0.267 seconds
+[0m11:12:57.010805 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:57.010805 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:57.019474 [debug] [Thread-6 (]: SQL status: SUCCESS 0 in 0.220 seconds
+[0m11:12:57.023558 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:57.024716 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:57.422405 [debug] [Thread-6 (]: SQL status: SUCCESS 7 in 0.395 seconds
+[0m11:12:57.424584 [debug] [Thread-3 (]: SQL status: SUCCESS 10 in 0.413 seconds
+[0m11:12:57.427929 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:57.453082 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:57.453082 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:57.455939 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: select * from (
+        
+    
+    with snapshot_query as (
+
+        
+
+
+
+SELECT
+    customer_id,
+    customer_name,
+    customer_status,
+    updated_at
+FROM dbt_db.dbt_schema.customers  -- must match YAML source name
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            
+  
+  coalesce(nullif(updated_at, updated_at), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(updated_at as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            updated_at as dbt_updated_at,
+            updated_at as dbt_valid_from,
+            updated_at as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data.dbt_valid_from < source_data.updated_at)
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data.dbt_valid_from < source_data.updated_at)
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:57.572544 [debug] [Thread-6 (]: SQL status: SUCCESS 7 in 0.117 seconds
+[0m11:12:57.572544 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:57.572544 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: create or replace temporary table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+as (
+    
+    
+    with snapshot_query as (
+
+        
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            
+  
+  coalesce(nullif(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())), to_timestamp_ntz(convert_timezone('UTC', current_timestamp()))), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */;
+[0m11:12:57.826500 [debug] [Thread-3 (]: SQL status: SUCCESS 0 in 0.370 seconds
+[0m11:12:57.826500 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:57.826500 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:57.939954 [debug] [Thread-3 (]: SQL status: SUCCESS 0 in 0.107 seconds
+[0m11:12:57.940474 [debug] [Thread-3 (]: Writing runtime sql for node "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:57.941592 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:57.941592 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:58.154836 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.212 seconds
+[0m11:12:58.154836 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:58.156843 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: merge into "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT" as DBT_INTERNAL_DEST
+    using "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
+
+    when matched
+     
+       and DBT_INTERNAL_DEST.dbt_valid_to is null
+     
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "UPDATED_AT", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "UPDATED_AT", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */;
+[0m11:12:58.312689 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.741 seconds
+[0m11:12:58.312689 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:58.312689 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:58.646395 [debug] [Thread-6 (]: SQL status: SUCCESS 9 in 0.325 seconds
+[0m11:12:58.655216 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:58.655216 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:58.814663 [debug] [Thread-6 (]: SQL status: SUCCESS 7 in 0.158 seconds
+[0m11:12:58.818677 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:58.818677 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:58.880343 [debug] [Thread-3 (]: SQL status: SUCCESS 0 in 0.732 seconds
+[0m11:12:58.880343 [debug] [Thread-3 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot"
+[0m11:12:58.880343 [debug] [Thread-3 (]: On snapshot.data_pipeline.customer_snapshot: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot"} */
+[0m11:12:58.977963 [debug] [Thread-6 (]: SQL status: SUCCESS 9 in 0.160 seconds
+[0m11:12:58.982287 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:58.982287 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:59.075912 [debug] [Thread-6 (]: SQL status: SUCCESS 7 in 0.105 seconds
+[0m11:12:59.091932 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:59.091932 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:59.307752 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.417 seconds
+[0m11:12:59.311464 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021676DBD4F0>]}
+[0m11:12:59.313057 [debug] [Thread-6 (]: SQL status: SUCCESS 9 in 0.220 seconds
+[0m11:12:59.312004 [info ] [Thread-3 (]: 3 of 23 OK snapshotted snapshots.customer_snapshot ............................. [[32mSUCCESS 0[0m in 5.09s]
+[0m11:12:59.317723 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:59.318240 [debug] [Thread-3 (]: Finished running node snapshot.data_pipeline.customer_snapshot
+[0m11:12:59.318764 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        
+    
+    with snapshot_query as (
+
+        
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            
+  
+  coalesce(nullif(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())), to_timestamp_ntz(convert_timezone('UTC', current_timestamp()))), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:59.319818 [debug] [Thread-5 (]: Began running node test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414
+[0m11:12:59.320330 [debug] [Thread-9 (]: Began running node test.data_pipeline.unique_current_customer
+[0m11:12:59.320841 [info ] [Thread-5 (]: 10 of 23 START test not_null_customer_snapshot_customer_id ..................... [RUN]
+[0m11:12:59.321879 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.data_pipeline.source_relationships_tpch_lineitem_l_orderkey__o_orderkey__source_tpch_orders_.f722cb898d, now test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414)
+[0m11:12:59.321356 [info ] [Thread-9 (]: 11 of 23 START test unique_current_customer .................................... [RUN]
+[0m11:12:59.322919 [debug] [Thread-5 (]: Began compiling node test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414
+[0m11:12:59.323525 [debug] [Thread-9 (]: Acquiring new snowflake connection 'test.data_pipeline.unique_current_customer'
+[0m11:12:59.327671 [debug] [Thread-5 (]: Writing injected SQL for node "test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414"
+[0m11:12:59.328194 [debug] [Thread-9 (]: Began compiling node test.data_pipeline.unique_current_customer
+[0m11:12:59.329216 [debug] [Thread-9 (]: Writing injected SQL for node "test.data_pipeline.unique_current_customer"
+[0m11:12:59.329216 [debug] [Thread-5 (]: Began executing node test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414
+[0m11:12:59.329216 [debug] [Thread-9 (]: Began executing node test.data_pipeline.unique_current_customer
+[0m11:12:59.329216 [debug] [Thread-5 (]: Writing runtime sql for node "test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414"
+[0m11:12:59.329216 [debug] [Thread-9 (]: Writing runtime sql for node "test.data_pipeline.unique_current_customer"
+[0m11:12:59.336064 [debug] [Thread-5 (]: Using snowflake connection "test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414"
+[0m11:12:59.336064 [debug] [Thread-9 (]: Using snowflake connection "test.data_pipeline.unique_current_customer"
+[0m11:12:59.337952 [debug] [Thread-5 (]: On test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from dbt_db.snapshots.customer_snapshot
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414"} */
+[0m11:12:59.337952 [debug] [Thread-9 (]: On test.data_pipeline.unique_current_customer: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  -- Test: Ensure there is only one current record per customer in the snapshot
+
+SELECT 
+    customer_id
+FROM dbt_db.snapshots.customer_snapshot
+WHERE dbt_valid_to IS NULL
+GROUP BY customer_id
+HAVING COUNT(*) > 1
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.unique_current_customer"} */
+[0m11:12:59.339463 [debug] [Thread-9 (]: Opening a new connection, currently in state init
+[0m11:12:59.504737 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.180 seconds
+[0m11:12:59.520651 [info ] [Thread-5 (]: 10 of 23 PASS not_null_customer_snapshot_customer_id ........................... [[32mPASS[0m in 0.20s]
+[0m11:12:59.520651 [debug] [Thread-5 (]: Finished running node test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414
+[0m11:12:59.798304 [debug] [Thread-6 (]: SQL status: SUCCESS 0 in 0.482 seconds
+[0m11:12:59.802286 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:59.802286 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:12:59.960506 [debug] [Thread-6 (]: SQL status: SUCCESS 0 in 0.164 seconds
+[0m11:12:59.967725 [debug] [Thread-6 (]: Writing runtime sql for node "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:59.967725 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:12:59.969731 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:13:00.205196 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.243 seconds
+[0m11:13:00.213843 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:13:00.213843 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: merge into "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK" as DBT_INTERNAL_DEST
+    using "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
+
+    when matched
+     
+       and DBT_INTERNAL_DEST.dbt_valid_to is null
+     
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */;
+[0m11:13:00.277247 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 0.938 seconds
+[0m11:13:00.279254 [info ] [Thread-9 (]: 11 of 23 PASS unique_current_customer .......................................... [[32mPASS[0m in 0.96s]
+[0m11:13:00.279254 [debug] [Thread-9 (]: Finished running node test.data_pipeline.unique_current_customer
+[0m11:13:00.279254 [debug] [Thread-8 (]: Began running node model.data_pipeline.customer_activity
+[0m11:13:00.279254 [info ] [Thread-8 (]: 12 of 23 START sql table model dbt_schema_snapshot_data.customer_activity ...... [RUN]
+[0m11:13:00.279254 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly model.data_pipeline.stg_tpch_orders, now model.data_pipeline.customer_activity)
+[0m11:13:00.279254 [debug] [Thread-8 (]: Began compiling node model.data_pipeline.customer_activity
+[0m11:13:00.287921 [debug] [Thread-8 (]: Writing injected SQL for node "model.data_pipeline.customer_activity"
+[0m11:13:00.287921 [debug] [Thread-8 (]: Began executing node model.data_pipeline.customer_activity
+[0m11:13:00.291916 [debug] [Thread-8 (]: Writing runtime sql for node "model.data_pipeline.customer_activity"
+[0m11:13:00.291916 [debug] [Thread-8 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m11:13:00.291916 [debug] [Thread-8 (]: On model.data_pipeline.customer_activity: create or replace transient table dbt_db.dbt_schema_snapshot_data.customer_activity
+    
+    
+    
+    as (-- This model demonstrates how to use snapshot data for current and historical insights
+
+WITH snapshot_data AS (
+    SELECT 
+        customer_id,
+        customer_name,
+        customer_status,
+        dbt_valid_from,
+        dbt_valid_to,
+        CASE 
+            WHEN dbt_valid_to IS NULL THEN 'current'
+            ELSE 'historical'
+        END AS record_status
+    FROM dbt_db.snapshots.customer_snapshot
+)
+
+SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    record_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM snapshot_data
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */;
+[0m11:13:01.032209 [debug] [Thread-6 (]: SQL status: SUCCESS 0 in 0.819 seconds
+[0m11:13:01.033202 [debug] [Thread-6 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m11:13:01.033202 [debug] [Thread-6 (]: On snapshot.data_pipeline.customer_snapshot_check: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m11:13:01.566852 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.533 seconds
+[0m11:13:01.567840 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 5.349 seconds
+[0m11:13:01.569720 [debug] [Thread-6 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216788F0AD0>]}
+[0m11:13:01.570720 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 1.276 seconds
+[0m11:13:01.572809 [debug] [Thread-10 ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021676F2FDA0>]}
+[0m11:13:01.575208 [debug] [Thread-8 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216788F14F0>]}
+[0m11:13:01.573821 [info ] [Thread-6 (]: 9 of 23 OK snapshotted snapshots.customer_snapshot_check ....................... [[32mSUCCESS 0[0m in 4.81s]
+[0m11:13:01.575208 [info ] [Thread-10 ]: 8 of 23 OK created sql table model dbt_schema.int_order_items .................. [[32mSUCCESS 1[0m in 5.38s]
+[0m11:13:01.577211 [debug] [Thread-6 (]: Finished running node snapshot.data_pipeline.customer_snapshot_check
+[0m11:13:01.577211 [debug] [Thread-10 ]: Finished running node model.data_pipeline.int_order_items
+[0m11:13:01.576209 [info ] [Thread-8 (]: 12 of 23 OK created sql table model dbt_schema_snapshot_data.customer_activity . [[32mSUCCESS 1[0m in 1.30s]
+[0m11:13:01.578209 [debug] [Thread-8 (]: Finished running node model.data_pipeline.customer_activity
+[0m11:13:01.579381 [debug] [Thread-2 (]: Began running node test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32
+[0m11:13:01.579381 [debug] [Thread-8 (]: Began running node model.data_pipeline.int_order_items_summary
+[0m11:13:01.580379 [info ] [Thread-2 (]: 13 of 23 START test not_null_customer_snapshot_check_customer_id ............... [RUN]
+[0m11:13:01.581387 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly seed.data_pipeline.customers, now test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32)
+[0m11:13:01.580379 [info ] [Thread-8 (]: 14 of 23 START sql table model dbt_schema.int_order_items_summary .............. [RUN]
+[0m11:13:01.581387 [debug] [Thread-2 (]: Began compiling node test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32
+[0m11:13:01.582381 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly model.data_pipeline.customer_activity, now model.data_pipeline.int_order_items_summary)
+[0m11:13:01.586375 [debug] [Thread-2 (]: Writing injected SQL for node "test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32"
+[0m11:13:01.586878 [debug] [Thread-8 (]: Began compiling node model.data_pipeline.int_order_items_summary
+[0m11:13:01.588881 [debug] [Thread-8 (]: Writing injected SQL for node "model.data_pipeline.int_order_items_summary"
+[0m11:13:01.589881 [debug] [Thread-8 (]: Began executing node model.data_pipeline.int_order_items_summary
+[0m11:13:01.589881 [debug] [Thread-2 (]: Began executing node test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32
+[0m11:13:01.592881 [debug] [Thread-8 (]: Writing runtime sql for node "model.data_pipeline.int_order_items_summary"
+[0m11:13:01.594881 [debug] [Thread-2 (]: Writing runtime sql for node "test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32"
+[0m11:13:01.595884 [debug] [Thread-8 (]: Using snowflake connection "model.data_pipeline.int_order_items_summary"
+[0m11:13:01.595884 [debug] [Thread-8 (]: On model.data_pipeline.int_order_items_summary: create or replace transient table dbt_db.dbt_schema.int_order_items_summary
+    
+    
+    
+    as (select 
+    order_key,
+    sum(extended_price) as gross_item_sales_amount,
+    sum(item_discount_amount) as item_discount_amount
+from
+    dbt_db.dbt_schema.int_order_items
+group by
+    order_key
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.int_order_items_summary"} */;
+[0m11:13:01.596885 [debug] [Thread-2 (]: Using snowflake connection "test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32"
+[0m11:13:01.597883 [debug] [Thread-2 (]: On test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select customer_id
+from dbt_db.snapshots.customer_snapshot_check
+where customer_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32"} */
+[0m11:13:01.957686 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.359 seconds
+[0m11:13:01.959686 [info ] [Thread-2 (]: 13 of 23 PASS not_null_customer_snapshot_check_customer_id ..................... [[32mPASS[0m in 0.38s]
+[0m11:13:01.960697 [debug] [Thread-2 (]: Finished running node test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32
+[0m11:13:01.961214 [debug] [Thread-3 (]: Began running node model.data_pipeline.current_customers
+[0m11:13:01.961214 [debug] [Thread-1 (]: Began running node model.data_pipeline.historical_customers
+[0m11:13:01.962228 [info ] [Thread-3 (]: 15 of 23 START sql table model dbt_schema_snapshot_data.current_customers ...... [RUN]
+[0m11:13:01.963226 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly snapshot.data_pipeline.customer_snapshot, now model.data_pipeline.current_customers)
+[0m11:13:01.962228 [info ] [Thread-1 (]: 16 of 23 START sql table model dbt_schema_snapshot_data.historical_customers ... [RUN]
+[0m11:13:01.963226 [debug] [Thread-3 (]: Began compiling node model.data_pipeline.current_customers
+[0m11:13:01.964421 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.data_pipeline.stg_tpch_line_items, now model.data_pipeline.historical_customers)
+[0m11:13:01.967658 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_pipeline.current_customers"
+[0m11:13:01.967658 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.historical_customers
+[0m11:13:01.970656 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.historical_customers"
+[0m11:13:01.971655 [debug] [Thread-3 (]: Began executing node model.data_pipeline.current_customers
+[0m11:13:01.972655 [debug] [Thread-1 (]: Began executing node model.data_pipeline.historical_customers
+[0m11:13:01.974655 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_pipeline.current_customers"
+[0m11:13:01.978655 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.historical_customers"
+[0m11:13:01.979655 [debug] [Thread-3 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m11:13:01.979655 [debug] [Thread-3 (]: On model.data_pipeline.current_customers: create or replace transient table dbt_db.dbt_schema_snapshot_data.current_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NULL
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */;
+[0m11:13:01.980654 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m11:13:01.980654 [debug] [Thread-1 (]: On model.data_pipeline.historical_customers: create or replace transient table dbt_db.dbt_schema_snapshot_data.historical_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NOT NULL
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */;
+[0m11:13:02.670528 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.690 seconds
+[0m11:13:02.673564 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216770101A0>]}
+[0m11:13:02.674793 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 1.077 seconds
+[0m11:13:02.675564 [info ] [Thread-3 (]: 15 of 23 OK created sql table model dbt_schema_snapshot_data.current_customers . [[32mSUCCESS 1[0m in 0.71s]
+[0m11:13:02.677564 [debug] [Thread-8 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021677324BC0>]}
+[0m11:13:02.678578 [debug] [Thread-3 (]: Finished running node model.data_pipeline.current_customers
+[0m11:13:02.679574 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.698 seconds
+[0m11:13:02.680551 [info ] [Thread-8 (]: 14 of 23 OK created sql table model dbt_schema.int_order_items_summary ......... [[32mSUCCESS 1[0m in 1.10s]
+[0m11:13:02.681551 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021676E8C0E0>]}
+[0m11:13:02.682549 [debug] [Thread-8 (]: Finished running node model.data_pipeline.int_order_items_summary
+[0m11:13:02.683560 [info ] [Thread-1 (]: 16 of 23 OK created sql table model dbt_schema_snapshot_data.historical_customers  [[32mSUCCESS 1[0m in 0.72s]
+[0m11:13:02.684685 [debug] [Thread-1 (]: Finished running node model.data_pipeline.historical_customers
+[0m11:13:02.685189 [debug] [Thread-9 (]: Began running node model.data_pipeline.fct_orders
+[0m11:13:02.685692 [info ] [Thread-9 (]: 17 of 23 START sql table model dbt_schema.fct_orders ........................... [RUN]
+[0m11:13:02.686194 [debug] [Thread-9 (]: Re-using an available connection from the pool (formerly test.data_pipeline.unique_current_customer, now model.data_pipeline.fct_orders)
+[0m11:13:02.686697 [debug] [Thread-9 (]: Began compiling node model.data_pipeline.fct_orders
+[0m11:13:02.689208 [debug] [Thread-9 (]: Writing injected SQL for node "model.data_pipeline.fct_orders"
+[0m11:13:02.690211 [debug] [Thread-9 (]: Began executing node model.data_pipeline.fct_orders
+[0m11:13:02.692220 [debug] [Thread-9 (]: Writing runtime sql for node "model.data_pipeline.fct_orders"
+[0m11:13:02.693224 [debug] [Thread-9 (]: Using snowflake connection "model.data_pipeline.fct_orders"
+[0m11:13:02.693726 [debug] [Thread-9 (]: On model.data_pipeline.fct_orders: create or replace transient table dbt_db.dbt_schema.fct_orders
+    
+    
+    
+    as (select
+    orders.*,
+    order_item_summary.gross_item_sales_amount,
+    order_item_summary.item_discount_amount
+from
+    dbt_db.dbt_schema.stg_tpch_orders as orders
+join
+    dbt_db.dbt_schema.int_order_items_summary as order_item_summary
+        on orders.order_key = order_item_summary.order_key
+order by order_date
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.fct_orders"} */;
+[0m11:13:04.316270 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 1.622 seconds
+[0m11:13:04.316270 [debug] [Thread-9 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b344bdb2-248f-491c-8da4-3377b5c0de9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021678A8B800>]}
+[0m11:13:04.316270 [info ] [Thread-9 (]: 17 of 23 OK created sql table model dbt_schema.fct_orders ...................... [[32mSUCCESS 1[0m in 1.63s]
+[0m11:13:04.316270 [debug] [Thread-9 (]: Finished running node model.data_pipeline.fct_orders
+[0m11:13:04.321006 [debug] [Thread-6 (]: Began running node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m11:13:04.321006 [debug] [Thread-10 ]: Began running node test.data_pipeline.fct_orders_date_valid
+[0m11:13:04.321006 [debug] [Thread-4 (]: Began running node test.data_pipeline.fct_orders_discount
+[0m11:13:04.321006 [debug] [Thread-2 (]: Began running node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m11:13:04.321006 [info ] [Thread-6 (]: 18 of 23 START test accepted_values_fct_orders_status_code__P__O__F ............ [RUN]
+[0m11:13:04.323657 [debug] [Thread-5 (]: Began running node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m11:13:04.323657 [debug] [Thread-3 (]: Began running node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m11:13:04.323657 [info ] [Thread-10 ]: 19 of 23 START test fct_orders_date_valid ...................................... [RUN]
+[0m11:13:04.325164 [info ] [Thread-4 (]: 20 of 23 START test fct_orders_discount ........................................ [RUN]
+[0m11:13:04.326600 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly snapshot.data_pipeline.customer_snapshot_check, now test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048)
+[0m11:13:04.325164 [info ] [Thread-2 (]: 21 of 23 START test not_null_fct_orders_order_key .............................. [RUN]
+[0m11:13:04.326600 [info ] [Thread-5 (]: 22 of 23 START test relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_  [RUN]
+[0m11:13:04.327952 [debug] [Thread-10 ]: Re-using an available connection from the pool (formerly model.data_pipeline.int_order_items, now test.data_pipeline.fct_orders_date_valid)
+[0m11:13:04.327561 [info ] [Thread-3 (]: 23 of 23 START test unique_fct_orders_order_key ................................ [RUN]
+[0m11:13:04.327952 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.data_pipeline.source_not_null_tpch_orders_o_orderkey.ebd571817b, now test.data_pipeline.fct_orders_discount)
+[0m11:13:04.327952 [debug] [Thread-6 (]: Began compiling node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m11:13:04.327952 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.data_pipeline.not_null_customer_snapshot_check_customer_id.14c11eab32, now test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15)
+[0m11:13:04.327952 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.data_pipeline.not_null_customer_snapshot_customer_id.0e40d02414, now test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce)
+[0m11:13:04.327952 [debug] [Thread-10 ]: Began compiling node test.data_pipeline.fct_orders_date_valid
+[0m11:13:04.327952 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.data_pipeline.current_customers, now test.data_pipeline.unique_fct_orders_order_key.f5e7a90273)
+[0m11:13:04.327952 [debug] [Thread-4 (]: Began compiling node test.data_pipeline.fct_orders_discount
+[0m11:13:04.327952 [debug] [Thread-6 (]: Writing injected SQL for node "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m11:13:04.327952 [debug] [Thread-2 (]: Began compiling node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m11:13:04.327952 [debug] [Thread-5 (]: Began compiling node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m11:13:04.341074 [debug] [Thread-10 ]: Writing injected SQL for node "test.data_pipeline.fct_orders_date_valid"
+[0m11:13:04.341074 [debug] [Thread-3 (]: Began compiling node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m11:13:04.343079 [debug] [Thread-4 (]: Writing injected SQL for node "test.data_pipeline.fct_orders_discount"
+[0m11:13:04.347084 [debug] [Thread-2 (]: Writing injected SQL for node "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m11:13:04.350828 [debug] [Thread-5 (]: Writing injected SQL for node "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m11:13:04.352830 [debug] [Thread-3 (]: Writing injected SQL for node "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m11:13:04.354831 [debug] [Thread-6 (]: Began executing node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m11:13:04.354831 [debug] [Thread-10 ]: Began executing node test.data_pipeline.fct_orders_date_valid
+[0m11:13:04.354831 [debug] [Thread-4 (]: Began executing node test.data_pipeline.fct_orders_discount
+[0m11:13:04.359361 [debug] [Thread-6 (]: Writing runtime sql for node "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m11:13:04.362109 [debug] [Thread-10 ]: Writing runtime sql for node "test.data_pipeline.fct_orders_date_valid"
+[0m11:13:04.362109 [debug] [Thread-2 (]: Began executing node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m11:13:04.362109 [debug] [Thread-5 (]: Began executing node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m11:13:04.364113 [debug] [Thread-4 (]: Writing runtime sql for node "test.data_pipeline.fct_orders_discount"
+[0m11:13:04.366118 [debug] [Thread-3 (]: Began executing node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m11:13:04.368120 [debug] [Thread-2 (]: Writing runtime sql for node "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m11:13:04.370124 [debug] [Thread-5 (]: Writing runtime sql for node "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m11:13:04.372128 [debug] [Thread-3 (]: Writing runtime sql for node "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m11:13:04.372841 [debug] [Thread-10 ]: Using snowflake connection "test.data_pipeline.fct_orders_date_valid"
+[0m11:13:04.374831 [debug] [Thread-6 (]: Using snowflake connection "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"
+[0m11:13:04.374831 [debug] [Thread-10 ]: On test.data_pipeline.fct_orders_date_valid: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    *
+from
+    dbt_db.dbt_schema.fct_orders
+where
+    date(order_date) > CURRENT_DATE()
+    or date(order_date) < date('1990-01-01')
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.fct_orders_date_valid"} */
+[0m11:13:04.376176 [debug] [Thread-4 (]: Using snowflake connection "test.data_pipeline.fct_orders_discount"
+[0m11:13:04.376176 [debug] [Thread-6 (]: On test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        status_code as value_field,
+        count(*) as n_records
+
+    from dbt_db.dbt_schema.fct_orders
+    group by status_code
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'P','O','F'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048"} */
+[0m11:13:04.376176 [debug] [Thread-2 (]: Using snowflake connection "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"
+[0m11:13:04.376176 [debug] [Thread-3 (]: Using snowflake connection "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"
+[0m11:13:04.376176 [debug] [Thread-4 (]: On test.data_pipeline.fct_orders_discount: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+    *
+from
+    dbt_db.dbt_schema.fct_orders
+where
+    item_discount_amount > 0
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.fct_orders_discount"} */
+[0m11:13:04.376176 [debug] [Thread-5 (]: Using snowflake connection "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"
+[0m11:13:04.376176 [debug] [Thread-2 (]: On test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select order_key
+from dbt_db.dbt_schema.fct_orders
+where order_key is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15"} */
+[0m11:13:04.376176 [debug] [Thread-3 (]: On test.data_pipeline.unique_fct_orders_order_key.f5e7a90273: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    order_key as unique_field,
+    count(*) as n_records
+
+from dbt_db.dbt_schema.fct_orders
+where order_key is not null
+group by order_key
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.unique_fct_orders_order_key.f5e7a90273"} */
+[0m11:13:04.376176 [debug] [Thread-5 (]: On test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select order_key as from_field
+    from dbt_db.dbt_schema.fct_orders
+    where order_key is not null
+),
+
+parent as (
+    select order_key as to_field
+    from dbt_db.dbt_schema.stg_tpch_orders
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce"} */
+[0m11:13:04.554347 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 0.185 seconds
+[0m11:13:04.554347 [info ] [Thread-10 ]: 19 of 23 PASS fct_orders_date_valid ............................................ [[32mPASS[0m in 0.23s]
+[0m11:13:04.554347 [debug] [Thread-10 ]: Finished running node test.data_pipeline.fct_orders_date_valid
+[0m11:13:04.567515 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.190 seconds
+[0m11:13:04.567515 [info ] [Thread-2 (]: 21 of 23 PASS not_null_fct_orders_order_key .................................... [[32mPASS[0m in 0.24s]
+[0m11:13:04.567515 [debug] [Thread-2 (]: Finished running node test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15
+[0m11:13:04.805628 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.428 seconds
+[0m11:13:04.805628 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.429 seconds
+[0m11:13:04.805628 [info ] [Thread-4 (]: 20 of 23 PASS fct_orders_discount .............................................. [[32mPASS[0m in 0.48s]
+[0m11:13:04.805628 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.435 seconds
+[0m11:13:04.805628 [info ] [Thread-3 (]: 23 of 23 PASS unique_fct_orders_order_key ...................................... [[32mPASS[0m in 0.48s]
+[0m11:13:04.805628 [debug] [Thread-4 (]: Finished running node test.data_pipeline.fct_orders_discount
+[0m11:13:04.817526 [debug] [Thread-3 (]: Finished running node test.data_pipeline.unique_fct_orders_order_key.f5e7a90273
+[0m11:13:04.817526 [info ] [Thread-6 (]: 18 of 23 PASS accepted_values_fct_orders_status_code__P__O__F .................. [[32mPASS[0m in 0.48s]
+[0m11:13:04.817526 [debug] [Thread-6 (]: Finished running node test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048
+[0m11:13:05.544898 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 1.167 seconds
+[0m11:13:05.552413 [info ] [Thread-5 (]: 22 of 23 PASS relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_  [[32mPASS[0m in 1.22s]
+[0m11:13:05.552413 [debug] [Thread-5 (]: Finished running node test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce
+[0m11:13:05.555494 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:13:05.555494 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:13:05.557334 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:13:05.880447 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:13:05.880447 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:13:06.070314 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:13:06.070314 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:13:06.454000 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema_snapshot_data' was left open.
+[0m11:13:06.454000 [debug] [MainThread]: On list_dbt_db_dbt_schema_snapshot_data: Close
+[0m11:13:06.802550 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m11:13:06.802550 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m11:13:07.145112 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m11:13:07.145112 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m11:13:07.448915 [debug] [MainThread]: Connection 'model.data_pipeline.historical_customers' was left open.
+[0m11:13:07.448915 [debug] [MainThread]: On model.data_pipeline.historical_customers: Close
+[0m11:13:07.689950 [debug] [MainThread]: Connection 'test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15' was left open.
+[0m11:13:07.689950 [debug] [MainThread]: On test.data_pipeline.not_null_fct_orders_order_key.6a6f83ab15: Close
+[0m11:13:07.953653 [debug] [MainThread]: Connection 'test.data_pipeline.unique_fct_orders_order_key.f5e7a90273' was left open.
+[0m11:13:07.953653 [debug] [MainThread]: On test.data_pipeline.unique_fct_orders_order_key.f5e7a90273: Close
+[0m11:13:08.269627 [debug] [MainThread]: Connection 'test.data_pipeline.fct_orders_discount' was left open.
+[0m11:13:08.283310 [debug] [MainThread]: On test.data_pipeline.fct_orders_discount: Close
+[0m11:13:08.598827 [debug] [MainThread]: Connection 'test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce' was left open.
+[0m11:13:08.598827 [debug] [MainThread]: On test.data_pipeline.relationships_fct_orders_order_key__order_key__ref_stg_tpch_orders_.05b89e79ce: Close
+[0m11:13:08.927379 [debug] [MainThread]: Connection 'test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048' was left open.
+[0m11:13:08.927379 [debug] [MainThread]: On test.data_pipeline.accepted_values_fct_orders_status_code__P__O__F.2c062f3048: Close
+[0m11:13:09.256758 [debug] [MainThread]: Connection 'model.data_pipeline.int_order_items_summary' was left open.
+[0m11:13:09.256758 [debug] [MainThread]: On model.data_pipeline.int_order_items_summary: Close
+[0m11:13:09.589247 [debug] [MainThread]: Connection 'test.data_pipeline.fct_orders_date_valid' was left open.
+[0m11:13:09.589247 [debug] [MainThread]: On test.data_pipeline.fct_orders_date_valid: Close
+[0m11:13:09.830697 [debug] [MainThread]: Connection 'model.data_pipeline.fct_orders' was left open.
+[0m11:13:09.830697 [debug] [MainThread]: On model.data_pipeline.fct_orders: Close
+[0m11:13:10.006849 [info ] [MainThread]: 
+[0m11:13:10.006849 [info ] [MainThread]: Finished running 1 seed, 2 snapshots, 6 table models, 12 data tests, 2 view models in 0 hours 0 minutes and 18.87 seconds (18.87s).
+[0m11:13:10.024159 [debug] [MainThread]: Command end result
+[0m11:13:10.042960 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:13:10.042960 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:13:10.057487 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m11:13:10.057487 [info ] [MainThread]: 
+[0m11:13:10.058497 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:13:10.059005 [info ] [MainThread]: 
+[0m11:13:10.059005 [info ] [MainThread]: Done. PASS=23 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=23
+[0m11:13:10.060217 [debug] [MainThread]: Command `dbt build` succeeded at 11:13:10.060217 after 20.57 seconds
+[0m11:13:10.060217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002167466D790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216714D7920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021673B4E000>]}
+[0m11:13:10.060217 [debug] [MainThread]: Flushing usage events
+[0m11:13:12.620546 [debug] [MainThread]: An error was encountered while trying to flush usage events

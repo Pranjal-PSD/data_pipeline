@@ -1,9 +1,7 @@
 
     
     
-    
-    create table dbt_db.dbt_schema.customers (customer_id integer,customer_name text,customer_status text,updated_at timestamp without time zone)
-  ;
+    truncate table "DBT_DB"."DBT_SCHEMA"."CUSTOMERS";
     -- dbt seed --
     
             insert into dbt_db.dbt_schema.customers (customer_id, customer_name, customer_status, updated_at) values
