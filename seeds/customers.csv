@@ -1,0 +1,5 @@
+customer_id,customer_name,customer_status,updated_at
+1,Alice,Active,2025-10-19 10:00:00
+2,Bob,Active,2025-10-15 11:00:00
+3,Charlie,Inactive,2025-10-15 12:00:00
+4,Adam,Inactive,2025-10-16 12:00:00

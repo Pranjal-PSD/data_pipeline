@@ -1,0 +1,11 @@
+version: 2
+
+snapshots:
+  - name: customer_snapshot
+    description: "Snapshot to track changes in customer data over time"
+    tests:
+      - not_null:
+          column_name: customer_id
+      # Remove or modify this one:
+      # - unique:
+      #     column_name: customer_id

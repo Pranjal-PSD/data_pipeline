@@ -1,0 +1,30 @@
+# ------------------------------------------------------------
+# YAML key to CLI equivalent reference
+# ------------------------------------------------------------
+# children: true        → model+      (select model and downstream)
+# parents: true         → +model      (select model and upstream)
+# children: true plus children_depth: 2 → model+2 (limits how far downstream)
+# childrens_parents: true → @model    (children and parents of those children)
+# ------------------------------------------------------------
+
+selectors:
+  - name: staging_models
+    definition:
+      method: path
+      value: models/staging
+      children: false
+
+  - name: marts_models
+    definition:
+      method: path
+      value: models/marts
+      children: false
+
+  - name: core_pipeline
+    definition:
+      union:
+        - method: path
+          value: models/staging
+        - method: path
+          value: models/marts
+

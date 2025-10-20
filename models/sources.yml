@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: raw             # This is the "source name" used in source()
+    schema: dbt_schema    # The schema where your seed table is loaded
+    tables:
+      - name: customers   # The seed table name
