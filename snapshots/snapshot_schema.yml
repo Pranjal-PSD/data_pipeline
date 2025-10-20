@@ -9,3 +9,11 @@ snapshots:
       # Remove or modify this one:
       # - unique:
       #     column_name: customer_id
+
+  - name: customer_snapshot_check
+    description: "Snapshot using check strategy to track name or status changes."
+    tests:
+      - not_null:
+          column_name: customer_id
+      - unique:
+          column_name: customer_id

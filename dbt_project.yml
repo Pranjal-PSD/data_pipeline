@@ -38,6 +38,10 @@ models:
     marts:
       +materialized: table
       snowflake_warehouse: dbt_wh
+    snapshot_check_data:       # all models inside this folder
+      +schema: snapshot_data   # override schema
+      +materialized: table
+      snowflake_warehouse: dbt_wh     
 
 packages:
   - package: dbt-labs/dbt_utils

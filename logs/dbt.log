@@ -6708,3 +6708,1883 @@ HAVING COUNT(*) > 1
 [0m10:41:39.004665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EDB61F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EF58E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163EF58E270>]}
 [0m10:41:39.004665 [debug] [MainThread]: Flushing usage events
 [0m10:41:40.387077 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:47:06.743845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BED88C01D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BED7E27E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BED7E27EF0>]}
+
+
+============================== 10:47:06.753614 | a367b617-2743-440c-9ebc-7080b8206d05 ==============================
+[0m10:47:06.753614 [info ] [MainThread]: Running with dbt=1.10.5
+[0m10:47:06.755623 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt snapshot --select customer_snapshot_check', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m10:47:07.496343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a367b617-2743-440c-9ebc-7080b8206d05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BEDAF8ABD0>]}
+[0m10:47:07.574100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a367b617-2743-440c-9ebc-7080b8206d05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BED8B88770>]}
+[0m10:47:07.574100 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m10:47:07.973602 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m10:47:08.390329 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m10:47:08.390329 [debug] [MainThread]: Partial parsing: added file: data_pipeline://snapshots\customer_snapshot_check.sql
+[0m10:47:08.390329 [debug] [MainThread]: Partial parsing: updated file: data_pipeline://snapshots\snapshot_schema.yml
+[0m10:47:08.895717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a367b617-2743-440c-9ebc-7080b8206d05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BEDB779C40>]}
+[0m10:47:09.055001 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:47:09.059243 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:47:09.091255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a367b617-2743-440c-9ebc-7080b8206d05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BEDB409010>]}
+[0m10:47:09.092267 [info ] [MainThread]: Found 6 models, 13 data tests, 1 seed, 2 snapshots, 3 sources, 594 macros
+[0m10:47:09.093266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a367b617-2743-440c-9ebc-7080b8206d05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BEDB42A690>]}
+[0m10:47:09.095265 [info ] [MainThread]: 
+[0m10:47:09.096268 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m10:47:09.096268 [info ] [MainThread]: 
+[0m10:47:09.097269 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:47:09.098339 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m10:47:09.183464 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m10:47:09.183464 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m10:47:09.184877 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:47:11.944424 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.760 seconds
+[0m10:47:11.952805 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m10:47:11.964954 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m10:47:11.964954 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m10:47:11.965953 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m10:47:11.967954 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m10:47:11.968953 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:47:11.968953 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m10:47:11.969953 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:47:12.570875 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.602 seconds
+[0m10:47:12.735477 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.766 seconds
+[0m10:47:12.738488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a367b617-2743-440c-9ebc-7080b8206d05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BED8F42CC0>]}
+[0m10:47:12.745792 [debug] [Thread-1 (]: Began running node snapshot.data_pipeline.customer_snapshot_check
+[0m10:47:12.746802 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshots.customer_snapshot_check ........................ [RUN]
+[0m10:47:12.747804 [debug] [Thread-1 (]: Acquiring new snowflake connection 'snapshot.data_pipeline.customer_snapshot_check'
+[0m10:47:12.748805 [debug] [Thread-1 (]: Began compiling node snapshot.data_pipeline.customer_snapshot_check
+[0m10:47:12.756804 [debug] [Thread-1 (]: Began executing node snapshot.data_pipeline.customer_snapshot_check
+[0m10:47:12.876295 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:47:12.877298 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        
+    
+
+    select *,
+        md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as varchar ), '')
+        ) as dbt_scd_id,
+        to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+        to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+        
+  
+  coalesce(nullif(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())), to_timestamp_ntz(convert_timezone('UTC', current_timestamp()))), null)
+  as dbt_valid_to
+from (
+        
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+    ) sbq
+
+
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:47:12.877298 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:47:13.643016 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.765 seconds
+[0m10:47:13.643016 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:47:13.643016 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:47:13.762045 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.115 seconds
+[0m10:47:13.764055 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:47:13.764055 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:47:13.764055 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: create or replace transient table dbt_db.snapshots.customer_snapshot_check
+    
+    
+    
+    as (
+    
+
+    select *,
+        md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as varchar ), '')
+        ) as dbt_scd_id,
+        to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+        to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+        
+  
+  coalesce(nullif(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())), to_timestamp_ntz(convert_timezone('UTC', current_timestamp()))), null)
+  as dbt_valid_to
+from (
+        
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+    ) sbq
+
+
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */;
+[0m10:47:14.542811 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.783 seconds
+[0m10:47:14.570742 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a367b617-2743-440c-9ebc-7080b8206d05', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BEDBE96B40>]}
+[0m10:47:14.572293 [info ] [Thread-1 (]: 1 of 1 OK snapshotted snapshots.customer_snapshot_check ........................ [[32mSUCCESS 1[0m in 1.82s]
+[0m10:47:14.572293 [debug] [Thread-1 (]: Finished running node snapshot.data_pipeline.customer_snapshot_check
+[0m10:47:14.574586 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:47:14.574586 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m10:47:14.574586 [debug] [MainThread]: On list_dbt_db: Close
+[0m10:47:14.791674 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m10:47:14.791674 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m10:47:15.011845 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m10:47:15.012844 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m10:47:15.288276 [debug] [MainThread]: Connection 'snapshot.data_pipeline.customer_snapshot_check' was left open.
+[0m10:47:15.288276 [debug] [MainThread]: On snapshot.data_pipeline.customer_snapshot_check: Close
+[0m10:47:15.455036 [info ] [MainThread]: 
+[0m10:47:15.456038 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 6.36 seconds (6.36s).
+[0m10:47:15.457034 [debug] [MainThread]: Command end result
+[0m10:47:15.489471 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:47:15.515332 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:47:15.523332 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m10:47:15.523332 [info ] [MainThread]: 
+[0m10:47:15.524333 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:47:15.524333 [info ] [MainThread]: 
+[0m10:47:15.525334 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:47:15.526592 [debug] [MainThread]: Command `dbt snapshot` succeeded at 10:47:15.525334 after 8.97 seconds
+[0m10:47:15.526592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BED8F41FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BED8F42210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002BED8F41E50>]}
+[0m10:47:15.527603 [debug] [MainThread]: Flushing usage events
+[0m10:47:16.672341 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:49:20.053600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C715A1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C9637EF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C9634E60>]}
+
+
+============================== 10:49:20.070618 | 812338da-5ad6-411b-90cf-16e44b528502 ==============================
+[0m10:49:20.070618 [info ] [MainThread]: Running with dbt=1.10.5
+[0m10:49:20.070618 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt seed --full-refresh', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:49:20.914783 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '812338da-5ad6-411b-90cf-16e44b528502', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C9716B70>]}
+[0m10:49:20.968057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '812338da-5ad6-411b-90cf-16e44b528502', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C5A013A0>]}
+[0m10:49:20.970063 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m10:49:21.404178 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m10:49:23.229063 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:49:23.229063 [debug] [MainThread]: Partial parsing: updated file: data_pipeline://seeds\customers.csv
+[0m10:49:23.437021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '812338da-5ad6-411b-90cf-16e44b528502', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4CCB62570>]}
+[0m10:49:23.531225 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:49:23.531225 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:49:23.563296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '812338da-5ad6-411b-90cf-16e44b528502', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4CCB167E0>]}
+[0m10:49:23.563296 [info ] [MainThread]: Found 6 models, 13 data tests, 2 snapshots, 1 seed, 3 sources, 594 macros
+[0m10:49:23.563296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '812338da-5ad6-411b-90cf-16e44b528502', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4CCB58770>]}
+[0m10:49:23.563296 [info ] [MainThread]: 
+[0m10:49:23.563296 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m10:49:23.563296 [info ] [MainThread]: 
+[0m10:49:23.563296 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:49:23.573310 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m10:49:25.951714 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m10:49:25.951714 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m10:49:25.960659 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:28.125205 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.165 seconds
+[0m10:49:28.132208 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m10:49:28.144640 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m10:49:28.145640 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m10:49:28.145640 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m10:49:28.148640 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m10:49:28.148640 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:28.149640 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m10:49:28.149640 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:28.865306 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.716 seconds
+[0m10:49:28.947725 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.799 seconds
+[0m10:49:28.950239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '812338da-5ad6-411b-90cf-16e44b528502', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4CC5A4A10>]}
+[0m10:49:28.956018 [debug] [Thread-1 (]: Began running node seed.data_pipeline.customers
+[0m10:49:28.956018 [info ] [Thread-1 (]: 1 of 1 START seed file dbt_schema.customers .................................... [RUN]
+[0m10:49:28.958536 [debug] [Thread-1 (]: Acquiring new snowflake connection 'seed.data_pipeline.customers'
+[0m10:49:28.958536 [debug] [Thread-1 (]: Began compiling node seed.data_pipeline.customers
+[0m10:49:28.959533 [debug] [Thread-1 (]: Began executing node seed.data_pipeline.customers
+[0m10:49:28.996701 [debug] [Thread-1 (]: Applying DROP to: "DBT_DB"."DBT_SCHEMA"."CUSTOMERS"
+[0m10:49:29.001701 [debug] [Thread-1 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m10:49:29.001701 [debug] [Thread-1 (]: On seed.data_pipeline.customers: drop table if exists "DBT_DB"."DBT_SCHEMA"."CUSTOMERS" cascade
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m10:49:29.002701 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:49:29.606322 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.604 seconds
+[0m10:49:29.614331 [debug] [Thread-1 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m10:49:29.614331 [debug] [Thread-1 (]: On seed.data_pipeline.customers: create table dbt_db.dbt_schema.customers (customer_id integer,customer_name text,customer_status text,updated_at timestamp without time zone)
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m10:49:29.935599 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.321 seconds
+[0m10:49:29.949611 [debug] [Thread-1 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m10:49:29.950612 [debug] [Thread-1 (]: On seed.data_pipeline.customers: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m10:49:30.099684 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.150 seconds
+[0m10:49:30.100946 [debug] [Thread-1 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m10:49:30.100946 [debug] [Thread-1 (]: On seed.data_pipeline.customers: insert into dbt_db.dbt_schema.customers (customer_id, customer_name, customer_status, updated_at) values
+            (%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s),(%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */...
+[0m10:49:30.511381 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 0.409 seconds
+[0m10:49:30.512373 [debug] [Thread-1 (]: Using snowflake connection "seed.data_pipeline.customers"
+[0m10:49:30.512373 [debug] [Thread-1 (]: On seed.data_pipeline.customers: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "seed.data_pipeline.customers"} */
+[0m10:49:30.758221 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.245 seconds
+[0m10:49:30.764533 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.data_pipeline.customers"
+[0m10:49:30.796058 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '812338da-5ad6-411b-90cf-16e44b528502', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C725A420>]}
+[0m10:49:30.796058 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file dbt_schema.customers ................................ [[32mCREATE 4[0m in 1.84s]
+[0m10:49:30.797052 [debug] [Thread-1 (]: Finished running node seed.data_pipeline.customers
+[0m10:49:30.799055 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:49:30.799055 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m10:49:30.800054 [debug] [MainThread]: On list_dbt_db: Close
+[0m10:49:31.011467 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m10:49:31.011467 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m10:49:31.187607 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m10:49:31.189461 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m10:49:31.347457 [debug] [MainThread]: Connection 'seed.data_pipeline.customers' was left open.
+[0m10:49:31.347457 [debug] [MainThread]: On seed.data_pipeline.customers: Close
+[0m10:49:31.582473 [info ] [MainThread]: 
+[0m10:49:31.582473 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 8.02 seconds (8.02s).
+[0m10:49:31.582473 [debug] [MainThread]: Command end result
+[0m10:49:31.605801 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:49:31.605801 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:49:31.623261 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m10:49:31.623261 [info ] [MainThread]: 
+[0m10:49:31.623261 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:49:31.623261 [info ] [MainThread]: 
+[0m10:49:31.623261 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:49:31.623261 [debug] [MainThread]: Command `dbt seed` succeeded at 10:49:31.623261 after 11.78 seconds
+[0m10:49:31.623261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4C9BE0FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4CA1B14C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4CA1B0260>]}
+[0m10:49:31.623261 [debug] [MainThread]: Flushing usage events
+[0m10:49:32.814323 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:49:40.031462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002586F2EE510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258723C5820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258723C4BC0>]}
+
+
+============================== 10:49:40.036538 | 90d4d3b8-614c-46f7-975f-47933d5a3562 ==============================
+[0m10:49:40.036538 [info ] [MainThread]: Running with dbt=1.10.5
+[0m10:49:40.036538 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt snapshot --select customer_snapshot_check', 'send_anonymous_usage_stats': 'True'}
+[0m10:49:40.471763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '90d4d3b8-614c-46f7-975f-47933d5a3562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587457A900>]}
+[0m10:49:40.519113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '90d4d3b8-614c-46f7-975f-47933d5a3562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025873595070>]}
+[0m10:49:40.520860 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m10:49:40.767294 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m10:49:41.029272 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:49:41.029804 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:49:41.085781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '90d4d3b8-614c-46f7-975f-47933d5a3562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587446E510>]}
+[0m10:49:41.181175 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:49:41.181175 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:49:41.212296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '90d4d3b8-614c-46f7-975f-47933d5a3562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025874ABF260>]}
+[0m10:49:41.212296 [info ] [MainThread]: Found 6 models, 13 data tests, 2 snapshots, 1 seed, 3 sources, 594 macros
+[0m10:49:41.212296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '90d4d3b8-614c-46f7-975f-47933d5a3562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025870E4E0F0>]}
+[0m10:49:41.214130 [info ] [MainThread]: 
+[0m10:49:41.214130 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m10:49:41.214130 [info ] [MainThread]: 
+[0m10:49:41.214130 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:49:41.214130 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m10:49:41.295684 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m10:49:41.296685 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m10:49:41.297686 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:43.277687 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 1.980 seconds
+[0m10:49:43.283687 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m10:49:43.295684 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m10:49:43.295684 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m10:49:43.296687 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m10:49:43.298671 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m10:49:43.299810 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:43.300196 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m10:49:43.300536 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:49:44.060506 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.761 seconds
+[0m10:49:44.063542 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.764 seconds
+[0m10:49:44.067559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '90d4d3b8-614c-46f7-975f-47933d5a3562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025874BB37A0>]}
+[0m10:49:44.072253 [debug] [Thread-1 (]: Began running node snapshot.data_pipeline.customer_snapshot_check
+[0m10:49:44.072253 [info ] [Thread-1 (]: 1 of 1 START snapshot snapshots.customer_snapshot_check ........................ [RUN]
+[0m10:49:44.073347 [debug] [Thread-1 (]: Acquiring new snowflake connection 'snapshot.data_pipeline.customer_snapshot_check'
+[0m10:49:44.074347 [debug] [Thread-1 (]: Began compiling node snapshot.data_pipeline.customer_snapshot_check
+[0m10:49:44.081351 [debug] [Thread-1 (]: Began executing node snapshot.data_pipeline.customer_snapshot_check
+[0m10:49:44.130114 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:44.131113 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        select customer_name, customer_status from (
+                
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+            ) subq
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:44.131113 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:49:44.934912 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.803 seconds
+[0m10:49:44.943912 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:44.946386 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:45.061124 [debug] [Thread-1 (]: SQL status: SUCCESS 7 in 0.114 seconds
+[0m10:49:45.069149 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:45.069149 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:45.189768 [debug] [Thread-1 (]: SQL status: SUCCESS 7 in 0.124 seconds
+[0m10:49:45.233879 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:45.234879 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: create or replace temporary table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+as (
+    
+    
+    with snapshot_query as (
+
+        
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            
+  
+  coalesce(nullif(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())), to_timestamp_ntz(convert_timezone('UTC', current_timestamp()))), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */;
+[0m10:49:46.303355 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.070 seconds
+[0m10:49:46.303355 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:46.303355 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:46.468874 [debug] [Thread-1 (]: SQL status: SUCCESS 9 in 0.169 seconds
+[0m10:49:46.480553 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:46.480553 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:46.579989 [debug] [Thread-1 (]: SQL status: SUCCESS 7 in 0.106 seconds
+[0m10:49:46.579989 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:46.579989 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:46.723027 [debug] [Thread-1 (]: SQL status: SUCCESS 9 in 0.133 seconds
+[0m10:49:46.723027 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:46.723027 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:46.886897 [debug] [Thread-1 (]: SQL status: SUCCESS 7 in 0.156 seconds
+[0m10:49:46.890487 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:46.890487 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: describe table "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp"
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:47.025583 [debug] [Thread-1 (]: SQL status: SUCCESS 9 in 0.129 seconds
+[0m10:49:47.044140 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:47.044140 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        
+    
+    with snapshot_query as (
+
+        
+  
+
+  SELECT
+      customer_id,
+      customer_name,
+      customer_status
+  FROM dbt_db.dbt_schema.customers
+
+
+    ),
+
+    snapshotted_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+
+        from "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK"
+        where
+            
+                dbt_valid_to is null
+            
+
+    ),
+
+    insertions_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            
+  
+  coalesce(nullif(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())), to_timestamp_ntz(convert_timezone('UTC', current_timestamp()))), null)
+  as dbt_valid_to
+,
+            md5(coalesce(cast(customer_id as varchar ), '')
+         || '|' || coalesce(cast(to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as varchar ), '')
+        ) as dbt_scd_id
+
+        from snapshot_query
+    ),
+
+    updates_source_data as (
+
+        select *, 
+    
+        customer_id as dbt_unique_key
+    
+,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_updated_at,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_from,
+            to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_valid_to
+
+        from snapshot_query
+    ),
+
+    insertions as (
+
+        select
+            'insert' as dbt_change_type,
+            source_data.*
+
+        from insertions_source_data as source_data
+        left outer join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+            where 
+    
+        snapshotted_data.dbt_unique_key is null
+    
+
+            or (
+    
+        snapshotted_data.dbt_unique_key is not null
+    
+ and (
+               (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+            )
+
+        )
+
+    ),
+
+    updates as (
+
+        select
+            'update' as dbt_change_type,
+            source_data.*,
+            snapshotted_data.dbt_scd_id
+
+        from updates_source_data as source_data
+        join snapshotted_data
+            on 
+    
+        snapshotted_data.dbt_unique_key = source_data.dbt_unique_key
+    
+
+        where (
+            (snapshotted_data."CUSTOMER_NAME" != source_data."CUSTOMER_NAME"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_NAME" is null) and not (source_data."CUSTOMER_NAME" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_NAME" is null) and (source_data."CUSTOMER_NAME" is null))
+        ) or snapshotted_data."CUSTOMER_STATUS" != source_data."CUSTOMER_STATUS"
+        or
+        (
+            ((snapshotted_data."CUSTOMER_STATUS" is null) and not (source_data."CUSTOMER_STATUS" is null))
+            or
+            ((not snapshotted_data."CUSTOMER_STATUS" is null) and (source_data."CUSTOMER_STATUS" is null))
+        ))
+        )
+    )
+
+    select * from insertions
+    union all
+    select * from updates
+
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:47.381613 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.337 seconds
+[0m10:49:47.385618 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:47.385618 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: select * from (
+        select to_timestamp_ntz(convert_timezone('UTC', current_timestamp())) as dbt_snapshot_time
+    ) as __dbt_sbq
+    where false
+    limit 0
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:47.498273 [debug] [Thread-1 (]: SQL status: SUCCESS 0 in 0.112 seconds
+[0m10:49:47.498273 [debug] [Thread-1 (]: Writing runtime sql for node "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:47.500741 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:47.500741 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:47.628569 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.128 seconds
+[0m10:49:47.629569 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:47.629569 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: merge into "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK" as DBT_INTERNAL_DEST
+    using "DBT_DB"."SNAPSHOTS"."CUSTOMER_SNAPSHOT_CHECK__dbt_tmp" as DBT_INTERNAL_SOURCE
+    on DBT_INTERNAL_SOURCE.dbt_scd_id = DBT_INTERNAL_DEST.dbt_scd_id
+
+    when matched
+     
+       and DBT_INTERNAL_DEST.dbt_valid_to is null
+     
+     and DBT_INTERNAL_SOURCE.dbt_change_type in ('update', 'delete')
+        then update
+        set dbt_valid_to = DBT_INTERNAL_SOURCE.dbt_valid_to
+
+    when not matched
+     and DBT_INTERNAL_SOURCE.dbt_change_type = 'insert'
+        then insert ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+        values ("CUSTOMER_ID", "CUSTOMER_NAME", "CUSTOMER_STATUS", "DBT_UPDATED_AT", "DBT_VALID_FROM", "DBT_VALID_TO", "DBT_SCD_ID")
+
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */;
+[0m10:49:48.129934 [debug] [Thread-1 (]: SQL status: SUCCESS 2 in 0.499 seconds
+[0m10:49:48.130934 [debug] [Thread-1 (]: Using snowflake connection "snapshot.data_pipeline.customer_snapshot_check"
+[0m10:49:48.130934 [debug] [Thread-1 (]: On snapshot.data_pipeline.customer_snapshot_check: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "snapshot.data_pipeline.customer_snapshot_check"} */
+[0m10:49:48.406594 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.275 seconds
+[0m10:49:48.427264 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '90d4d3b8-614c-46f7-975f-47933d5a3562', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587183CFB0>]}
+[0m10:49:48.427264 [info ] [Thread-1 (]: 1 of 1 OK snapshotted snapshots.customer_snapshot_check ........................ [[32mSUCCESS 2[0m in 4.35s]
+[0m10:49:48.428264 [debug] [Thread-1 (]: Finished running node snapshot.data_pipeline.customer_snapshot_check
+[0m10:49:48.429587 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:49:48.430689 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m10:49:48.430689 [debug] [MainThread]: On list_dbt_db: Close
+[0m10:49:48.781229 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m10:49:48.781229 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m10:49:48.972367 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m10:49:48.972367 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m10:49:49.182464 [debug] [MainThread]: Connection 'snapshot.data_pipeline.customer_snapshot_check' was left open.
+[0m10:49:49.182464 [debug] [MainThread]: On snapshot.data_pipeline.customer_snapshot_check: Close
+[0m10:49:49.523010 [info ] [MainThread]: 
+[0m10:49:49.523010 [info ] [MainThread]: Finished running 1 snapshot in 0 hours 0 minutes and 8.31 seconds (8.31s).
+[0m10:49:49.523010 [debug] [MainThread]: Command end result
+[0m10:49:49.541436 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:49:49.541436 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:49:49.556330 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m10:49:49.556330 [info ] [MainThread]: 
+[0m10:49:49.556330 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:49:49.556330 [info ] [MainThread]: 
+[0m10:49:49.556330 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:49:49.556330 [debug] [MainThread]: Command `dbt snapshot` succeeded at 10:49:49.556330 after 9.63 seconds
+[0m10:49:49.556330 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587252D0A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258723F13D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025874BB1310>]}
+[0m10:49:49.556330 [debug] [MainThread]: Flushing usage events
+[0m10:49:50.836098 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:52:49.852338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC8791F860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC87C82660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC84317F20>]}
+
+
+============================== 10:52:49.857482 | 12460486-ae23-4ef3-a71a-ca0f1f914668 ==============================
+[0m10:52:49.857482 [info ] [MainThread]: Running with dbt=1.10.5
+[0m10:52:49.858482 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run --select current_customers historical_customers', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:52:50.339410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '12460486-ae23-4ef3-a71a-ca0f1f914668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC87E52900>]}
+[0m10:52:50.390920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '12460486-ae23-4ef3-a71a-ca0f1f914668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC89D9E930>]}
+[0m10:52:50.392459 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m10:52:50.673866 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m10:52:50.925392 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m10:52:50.925392 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\marts\current_customers.sql
+[0m10:52:50.926391 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\marts\historical_customers.sql
+[0m10:52:51.169631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '12460486-ae23-4ef3-a71a-ca0f1f914668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC8A2C4290>]}
+[0m10:52:51.264669 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:52:51.277693 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:52:51.299890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '12460486-ae23-4ef3-a71a-ca0f1f914668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC8A7056D0>]}
+[0m10:52:51.299890 [info ] [MainThread]: Found 8 models, 13 data tests, 2 snapshots, 1 seed, 3 sources, 594 macros
+[0m10:52:51.299890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12460486-ae23-4ef3-a71a-ca0f1f914668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC8A6ABF50>]}
+[0m10:52:51.301796 [info ] [MainThread]: 
+[0m10:52:51.301796 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m10:52:51.301796 [info ] [MainThread]: 
+[0m10:52:51.301796 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:52:51.301796 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m10:52:51.378854 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m10:52:51.378854 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m10:52:51.378854 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:52:53.521319 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.142 seconds
+[0m10:52:53.521319 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m10:52:53.521319 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m10:52:53.537001 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m10:52:53.537001 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m10:52:53.537001 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m10:52:53.537001 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m10:52:53.537001 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:52:53.537001 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:52:54.248628 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.715 seconds
+[0m10:52:54.248628 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.720 seconds
+[0m10:52:54.260321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12460486-ae23-4ef3-a71a-ca0f1f914668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC8A6A7410>]}
+[0m10:52:54.263954 [debug] [Thread-1 (]: Began running node model.data_pipeline.current_customers
+[0m10:52:54.263954 [debug] [Thread-2 (]: Began running node model.data_pipeline.historical_customers
+[0m10:52:54.263954 [info ] [Thread-1 (]: 1 of 2 START sql table model dbt_schema.current_customers ...................... [RUN]
+[0m10:52:54.263954 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.current_customers'
+[0m10:52:54.263954 [info ] [Thread-2 (]: 2 of 2 START sql table model dbt_schema.historical_customers ................... [RUN]
+[0m10:52:54.263954 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.current_customers
+[0m10:52:54.263954 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.data_pipeline.historical_customers'
+[0m10:52:54.263954 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.current_customers"
+[0m10:52:54.263954 [debug] [Thread-2 (]: Began compiling node model.data_pipeline.historical_customers
+[0m10:52:54.263954 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_pipeline.historical_customers"
+[0m10:52:54.278856 [debug] [Thread-1 (]: Began executing node model.data_pipeline.current_customers
+[0m10:52:54.284897 [debug] [Thread-2 (]: Began executing node model.data_pipeline.historical_customers
+[0m10:52:54.306406 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_pipeline.historical_customers"
+[0m10:52:54.315165 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.current_customers"
+[0m10:52:54.316826 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m10:52:54.316826 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m10:52:54.318071 [debug] [Thread-1 (]: On model.data_pipeline.current_customers: create or replace transient table dbt_db.dbt_schema.current_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NULL
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */;
+[0m10:52:54.318071 [debug] [Thread-2 (]: On model.data_pipeline.historical_customers: create or replace transient table dbt_db.dbt_schema.historical_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NOT NULL
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */;
+[0m10:52:54.318071 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:52:54.318071 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:52:55.289112 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.970 seconds
+[0m10:52:55.309318 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.990 seconds
+[0m10:52:55.311518 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '12460486-ae23-4ef3-a71a-ca0f1f914668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC84D2A6C0>]}
+[0m10:52:55.311518 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '12460486-ae23-4ef3-a71a-ca0f1f914668', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC8715C710>]}
+[0m10:52:55.312757 [info ] [Thread-2 (]: 2 of 2 OK created sql table model dbt_schema.historical_customers .............. [[32mSUCCESS 1[0m in 1.04s]
+[0m10:52:55.312757 [debug] [Thread-2 (]: Finished running node model.data_pipeline.historical_customers
+[0m10:52:55.312757 [info ] [Thread-1 (]: 1 of 2 OK created sql table model dbt_schema.current_customers ................. [[32mSUCCESS 1[0m in 1.05s]
+[0m10:52:55.314058 [debug] [Thread-1 (]: Finished running node model.data_pipeline.current_customers
+[0m10:52:55.314058 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:52:55.316132 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m10:52:55.316132 [debug] [MainThread]: On list_dbt_db: Close
+[0m10:52:55.493192 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m10:52:55.493192 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m10:52:55.688448 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m10:52:55.688448 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m10:52:55.958429 [debug] [MainThread]: Connection 'model.data_pipeline.current_customers' was left open.
+[0m10:52:55.958429 [debug] [MainThread]: On model.data_pipeline.current_customers: Close
+[0m10:52:56.128634 [debug] [MainThread]: Connection 'model.data_pipeline.historical_customers' was left open.
+[0m10:52:56.128634 [debug] [MainThread]: On model.data_pipeline.historical_customers: Close
+[0m10:52:56.306568 [info ] [MainThread]: 
+[0m10:52:56.306568 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 5.00 seconds (5.00s).
+[0m10:52:56.306568 [debug] [MainThread]: Command end result
+[0m10:52:56.339874 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:52:56.339874 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:52:56.347000 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m10:52:56.347000 [info ] [MainThread]: 
+[0m10:52:56.347000 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:52:56.347000 [info ] [MainThread]: 
+[0m10:52:56.347000 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m10:52:56.351709 [debug] [MainThread]: Command `dbt run` succeeded at 10:52:56.347000 after 6.67 seconds
+[0m10:52:56.351709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC87749730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC87103680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC871036B0>]}
+[0m10:52:56.351709 [debug] [MainThread]: Flushing usage events
+[0m10:52:57.706662 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:58:52.768833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E290C22750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E290B6A960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E290C21580>]}
+
+
+============================== 10:58:52.775669 | fb82aabd-d9de-4f5a-ac10-85a6e3a7f423 ==============================
+[0m10:58:52.775669 [info ] [MainThread]: Running with dbt=1.10.5
+[0m10:58:52.775669 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --select snapshot_check_data', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m10:58:53.282020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E29327A810>]}
+[0m10:58:53.335891 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E28E450C80>]}
+[0m10:58:53.336891 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m10:58:53.621625 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m10:58:53.895212 [debug] [MainThread]: Partial parsing enabled: 3 files deleted, 3 files added, 0 files changed.
+[0m10:58:53.896212 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\snapshot_check_data\customer_activity.sql
+[0m10:58:53.896212 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\snapshot_check_data\historical_customers.sql
+[0m10:58:53.896212 [debug] [MainThread]: Partial parsing: added file: data_pipeline://models\snapshot_check_data\current_customers.sql
+[0m10:58:53.897212 [debug] [MainThread]: Partial parsing: deleted file: data_pipeline://models\marts\customer_activity.sql
+[0m10:58:53.897212 [debug] [MainThread]: Partial parsing: deleted file: data_pipeline://models\marts\historical_customers.sql
+[0m10:58:53.897212 [debug] [MainThread]: Partial parsing: deleted file: data_pipeline://models\marts\current_customers.sql
+[0m10:58:54.145216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E293907080>]}
+[0m10:58:54.245123 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:58:54.247124 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:58:54.268123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2937671A0>]}
+[0m10:58:54.269124 [info ] [MainThread]: Found 8 models, 13 data tests, 2 snapshots, 1 seed, 3 sources, 594 macros
+[0m10:58:54.269124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2937BCEC0>]}
+[0m10:58:54.271120 [info ] [MainThread]: 
+[0m10:58:54.272123 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m10:58:54.272123 [info ] [MainThread]: 
+[0m10:58:54.273120 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m10:58:54.277452 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m10:58:54.349719 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m10:58:54.349719 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m10:58:54.349719 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:58:56.509668 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.167 seconds
+[0m10:58:56.509668 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m10:58:56.525352 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m10:58:56.532008 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m10:58:56.532008 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m10:58:56.532008 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m10:58:56.532008 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m10:58:56.532008 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:58:56.537831 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:58:57.095450 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.558 seconds
+[0m10:58:57.333937 [debug] [ThreadPool]: SQL status: SUCCESS 11 in 0.806 seconds
+[0m10:58:57.348058 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2938C9430>]}
+[0m10:58:57.352596 [debug] [Thread-1 (]: Began running node model.data_pipeline.current_customers
+[0m10:58:57.352596 [debug] [Thread-2 (]: Began running node model.data_pipeline.customer_activity
+[0m10:58:57.352596 [debug] [Thread-3 (]: Began running node model.data_pipeline.historical_customers
+[0m10:58:57.352596 [info ] [Thread-1 (]: 1 of 3 START sql view model dbt_schema.current_customers ....................... [RUN]
+[0m10:58:57.352596 [info ] [Thread-2 (]: 2 of 3 START sql view model dbt_schema.customer_activity ....................... [RUN]
+[0m10:58:57.352596 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.current_customers'
+[0m10:58:57.352596 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.data_pipeline.customer_activity'
+[0m10:58:57.352596 [info ] [Thread-3 (]: 3 of 3 START sql view model dbt_schema.historical_customers .................... [RUN]
+[0m10:58:57.352596 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.current_customers
+[0m10:58:57.352596 [debug] [Thread-2 (]: Began compiling node model.data_pipeline.customer_activity
+[0m10:58:57.352596 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.data_pipeline.historical_customers'
+[0m10:58:57.364426 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.current_customers"
+[0m10:58:57.367964 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_pipeline.customer_activity"
+[0m10:58:57.367964 [debug] [Thread-3 (]: Began compiling node model.data_pipeline.historical_customers
+[0m10:58:57.371977 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_pipeline.historical_customers"
+[0m10:58:57.372978 [debug] [Thread-1 (]: Began executing node model.data_pipeline.current_customers
+[0m10:58:57.383525 [debug] [Thread-1 (]: Dropping relation "DBT_DB"."DBT_SCHEMA"."CURRENT_CUSTOMERS" because it is of type table
+[0m10:58:57.383525 [debug] [Thread-3 (]: Began executing node model.data_pipeline.historical_customers
+[0m10:58:57.400070 [debug] [Thread-1 (]: Applying DROP to: "DBT_DB"."DBT_SCHEMA"."CURRENT_CUSTOMERS"
+[0m10:58:57.400571 [debug] [Thread-3 (]: Dropping relation "DBT_DB"."DBT_SCHEMA"."HISTORICAL_CUSTOMERS" because it is of type table
+[0m10:58:57.400571 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m10:58:57.400571 [debug] [Thread-2 (]: Began executing node model.data_pipeline.customer_activity
+[0m10:58:57.400571 [debug] [Thread-3 (]: Applying DROP to: "DBT_DB"."DBT_SCHEMA"."HISTORICAL_CUSTOMERS"
+[0m10:58:57.400571 [debug] [Thread-1 (]: On model.data_pipeline.current_customers: drop table if exists "DBT_DB"."DBT_SCHEMA"."CURRENT_CUSTOMERS" cascade
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */
+[0m10:58:57.400571 [debug] [Thread-2 (]: Dropping relation "DBT_DB"."DBT_SCHEMA"."CUSTOMER_ACTIVITY" because it is of type table
+[0m10:58:57.400571 [debug] [Thread-3 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m10:58:57.400571 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:58:57.417910 [debug] [Thread-2 (]: Applying DROP to: "DBT_DB"."DBT_SCHEMA"."CUSTOMER_ACTIVITY"
+[0m10:58:57.417910 [debug] [Thread-3 (]: On model.data_pipeline.historical_customers: drop table if exists "DBT_DB"."DBT_SCHEMA"."HISTORICAL_CUSTOMERS" cascade
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */
+[0m10:58:57.417910 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m10:58:57.417910 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:58:57.420053 [debug] [Thread-2 (]: On model.data_pipeline.customer_activity: drop table if exists "DBT_DB"."DBT_SCHEMA"."CUSTOMER_ACTIVITY" cascade
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */
+[0m10:58:57.421413 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:58:58.084761 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.665 seconds
+[0m10:58:58.084761 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.670 seconds
+[0m10:58:58.086427 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.664 seconds
+[0m10:58:58.098062 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_pipeline.historical_customers"
+[0m10:58:58.098062 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.current_customers"
+[0m10:58:58.098062 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_pipeline.customer_activity"
+[0m10:58:58.109045 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m10:58:58.109045 [debug] [Thread-1 (]: On model.data_pipeline.current_customers: create or replace   view dbt_db.dbt_schema.current_customers
+  
+  
+  
+  
+  as (
+    SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NULL
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */;
+[0m10:58:58.109045 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m10:58:58.112305 [debug] [Thread-3 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m10:58:58.112305 [debug] [Thread-2 (]: On model.data_pipeline.customer_activity: create or replace   view dbt_db.dbt_schema.customer_activity
+  
+  
+  
+  
+  as (
+    -- This model demonstrates how to use snapshot data for current and historical insights
+
+WITH snapshot_data AS (
+    SELECT 
+        customer_id,
+        customer_name,
+        customer_status,
+        dbt_valid_from,
+        dbt_valid_to,
+        CASE 
+            WHEN dbt_valid_to IS NULL THEN 'current'
+            ELSE 'historical'
+        END AS record_status
+    FROM dbt_db.snapshots.customer_snapshot
+)
+
+SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    record_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM snapshot_data
+ORDER BY customer_id, dbt_valid_from
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */;
+[0m10:58:58.112305 [debug] [Thread-3 (]: On model.data_pipeline.historical_customers: create or replace   view dbt_db.dbt_schema.historical_customers
+  
+  
+  
+  
+  as (
+    SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NOT NULL
+ORDER BY customer_id, dbt_valid_from
+  )
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */;
+[0m10:58:58.321696 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.221 seconds
+[0m10:58:58.321696 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.219 seconds
+[0m10:58:58.321696 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.220 seconds
+[0m10:58:58.351895 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E294045E20>]}
+[0m10:58:58.351895 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2950DF320>]}
+[0m10:58:58.351895 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fb82aabd-d9de-4f5a-ac10-85a6e3a7f423', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2950C7EF0>]}
+[0m10:58:58.351895 [info ] [Thread-3 (]: 3 of 3 OK created sql view model dbt_schema.historical_customers ............... [[32mSUCCESS 1[0m in 1.00s]
+[0m10:58:58.351895 [info ] [Thread-1 (]: 1 of 3 OK created sql view model dbt_schema.current_customers .................. [[32mSUCCESS 1[0m in 1.00s]
+[0m10:58:58.358172 [debug] [Thread-3 (]: Finished running node model.data_pipeline.historical_customers
+[0m10:58:58.358172 [debug] [Thread-1 (]: Finished running node model.data_pipeline.current_customers
+[0m10:58:58.358172 [info ] [Thread-2 (]: 2 of 3 OK created sql view model dbt_schema.customer_activity .................. [[32mSUCCESS 1[0m in 1.00s]
+[0m10:58:58.358172 [debug] [Thread-2 (]: Finished running node model.data_pipeline.customer_activity
+[0m10:58:58.358172 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:58:58.358172 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m10:58:58.362190 [debug] [MainThread]: On list_dbt_db: Close
+[0m10:58:58.578138 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m10:58:58.578138 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m10:58:58.770503 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m10:58:58.770503 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m10:58:58.998117 [debug] [MainThread]: Connection 'model.data_pipeline.current_customers' was left open.
+[0m10:58:58.999109 [debug] [MainThread]: On model.data_pipeline.current_customers: Close
+[0m10:58:59.168157 [debug] [MainThread]: Connection 'model.data_pipeline.customer_activity' was left open.
+[0m10:58:59.168157 [debug] [MainThread]: On model.data_pipeline.customer_activity: Close
+[0m10:58:59.404996 [debug] [MainThread]: Connection 'model.data_pipeline.historical_customers' was left open.
+[0m10:58:59.404996 [debug] [MainThread]: On model.data_pipeline.historical_customers: Close
+[0m10:58:59.570581 [info ] [MainThread]: 
+[0m10:58:59.571677 [info ] [MainThread]: Finished running 3 view models in 0 hours 0 minutes and 5.30 seconds (5.30s).
+[0m10:58:59.572634 [debug] [MainThread]: Command end result
+[0m10:58:59.597017 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m10:58:59.599017 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m10:58:59.604339 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m10:58:59.605340 [info ] [MainThread]: 
+[0m10:58:59.605340 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:58:59.606343 [info ] [MainThread]: 
+[0m10:58:59.606343 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m10:58:59.607341 [debug] [MainThread]: Command `dbt run` succeeded at 10:58:59.607341 after 7.01 seconds
+[0m10:58:59.607341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E29124E510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E28DF37B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E290C679E0>]}
+[0m10:58:59.607341 [debug] [MainThread]: Flushing usage events
+[0m10:59:00.961772 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:02:06.591563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199CB3EAE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021999F9A390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021999E87D10>]}
+
+
+============================== 11:02:06.596955 | 4b880c21-1beb-4055-8b19-4739ac4c8e7a ==============================
+[0m11:02:06.596955 [info ] [MainThread]: Running with dbt=1.10.5
+[0m11:02:06.597956 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --select snapshot_check_data', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:02:07.058458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199CB6FC80>]}
+[0m11:02:07.104756 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199CABB080>]}
+[0m11:02:07.104756 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m11:02:07.383991 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m11:02:07.575736 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m11:02:07.575736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199F803290>]}
+[0m11:02:09.438259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199FD62780>]}
+[0m11:02:09.544687 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:02:09.546687 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:02:09.570201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199FC93620>]}
+[0m11:02:09.570201 [info ] [MainThread]: Found 8 models, 2 snapshots, 13 data tests, 1 seed, 3 sources, 594 macros
+[0m11:02:09.571497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199F6E9940>]}
+[0m11:02:09.573121 [info ] [MainThread]: 
+[0m11:02:09.573121 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:02:09.574154 [info ] [MainThread]: 
+[0m11:02:09.574750 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:02:09.578850 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:02:09.647106 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:02:09.647106 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:02:09.647106 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:02:11.984381 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.333 seconds
+[0m11:02:11.988632 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m11:02:12.000999 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m11:02:12.000999 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m11:02:12.000999 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m11:02:12.003132 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m11:02:12.003916 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:02:12.004232 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m11:02:12.004232 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:02:12.558394 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.555 seconds
+[0m11:02:12.566359 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.562 seconds
+[0m11:02:12.569359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199F344E00>]}
+[0m11:02:12.573769 [debug] [Thread-1 (]: Began running node model.data_pipeline.current_customers
+[0m11:02:12.575041 [debug] [Thread-2 (]: Began running node model.data_pipeline.customer_activity
+[0m11:02:12.575041 [debug] [Thread-3 (]: Began running node model.data_pipeline.historical_customers
+[0m11:02:12.576161 [info ] [Thread-1 (]: 1 of 3 START sql table model dbt_schema.current_customers ...................... [RUN]
+[0m11:02:12.577307 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.current_customers'
+[0m11:02:12.576161 [info ] [Thread-2 (]: 2 of 3 START sql table model dbt_schema.customer_activity ...................... [RUN]
+[0m11:02:12.577307 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.current_customers
+[0m11:02:12.578421 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.data_pipeline.customer_activity'
+[0m11:02:12.576161 [info ] [Thread-3 (]: 3 of 3 START sql table model dbt_schema.historical_customers ................... [RUN]
+[0m11:02:12.586106 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.current_customers"
+[0m11:02:12.586628 [debug] [Thread-2 (]: Began compiling node model.data_pipeline.customer_activity
+[0m11:02:12.587152 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.data_pipeline.historical_customers'
+[0m11:02:12.589763 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_pipeline.customer_activity"
+[0m11:02:12.590281 [debug] [Thread-3 (]: Began compiling node model.data_pipeline.historical_customers
+[0m11:02:12.592893 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_pipeline.historical_customers"
+[0m11:02:12.593412 [debug] [Thread-1 (]: Began executing node model.data_pipeline.current_customers
+[0m11:02:12.609072 [debug] [Thread-1 (]:  adapter: Dropping relation "DBT_DB"."DBT_SCHEMA"."CURRENT_CUSTOMERS" because it is a view and target relation dbt_db.dbt_schema.current_customers is of type table.
+[0m11:02:12.615186 [debug] [Thread-1 (]: Applying DROP to: "DBT_DB"."DBT_SCHEMA"."CURRENT_CUSTOMERS"
+[0m11:02:12.616186 [debug] [Thread-2 (]: Began executing node model.data_pipeline.customer_activity
+[0m11:02:12.621186 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m11:02:12.623186 [debug] [Thread-2 (]:  adapter: Dropping relation "DBT_DB"."DBT_SCHEMA"."CUSTOMER_ACTIVITY" because it is a view and target relation dbt_db.dbt_schema.customer_activity is of type table.
+[0m11:02:12.624186 [debug] [Thread-3 (]: Began executing node model.data_pipeline.historical_customers
+[0m11:02:12.624186 [debug] [Thread-1 (]: On model.data_pipeline.current_customers: drop view if exists "DBT_DB"."DBT_SCHEMA"."CURRENT_CUSTOMERS" cascade
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */
+[0m11:02:12.626186 [debug] [Thread-2 (]: Applying DROP to: "DBT_DB"."DBT_SCHEMA"."CUSTOMER_ACTIVITY"
+[0m11:02:12.628186 [debug] [Thread-3 (]:  adapter: Dropping relation "DBT_DB"."DBT_SCHEMA"."HISTORICAL_CUSTOMERS" because it is a view and target relation dbt_db.dbt_schema.historical_customers is of type table.
+[0m11:02:12.628186 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:02:12.629187 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m11:02:12.631186 [debug] [Thread-3 (]: Applying DROP to: "DBT_DB"."DBT_SCHEMA"."HISTORICAL_CUSTOMERS"
+[0m11:02:12.631186 [debug] [Thread-2 (]: On model.data_pipeline.customer_activity: drop view if exists "DBT_DB"."DBT_SCHEMA"."CUSTOMER_ACTIVITY" cascade
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */
+[0m11:02:12.632186 [debug] [Thread-3 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m11:02:12.633186 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:02:12.633186 [debug] [Thread-3 (]: On model.data_pipeline.historical_customers: drop view if exists "DBT_DB"."DBT_SCHEMA"."HISTORICAL_CUSTOMERS" cascade
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */
+[0m11:02:12.635186 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:02:13.218129 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.586 seconds
+[0m11:02:13.233798 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_pipeline.customer_activity"
+[0m11:02:13.233798 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m11:02:13.233798 [debug] [Thread-2 (]: On model.data_pipeline.customer_activity: create or replace transient table dbt_db.dbt_schema.customer_activity
+    
+    
+    
+    as (-- This model demonstrates how to use snapshot data for current and historical insights
+
+WITH snapshot_data AS (
+    SELECT 
+        customer_id,
+        customer_name,
+        customer_status,
+        dbt_valid_from,
+        dbt_valid_to,
+        CASE 
+            WHEN dbt_valid_to IS NULL THEN 'current'
+            ELSE 'historical'
+        END AS record_status
+    FROM dbt_db.snapshots.customer_snapshot
+)
+
+SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    record_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM snapshot_data
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */;
+[0m11:02:13.238721 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.621 seconds
+[0m11:02:13.249876 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.current_customers"
+[0m11:02:13.249876 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m11:02:13.249876 [debug] [Thread-1 (]: On model.data_pipeline.current_customers: create or replace transient table dbt_db.dbt_schema.current_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NULL
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */;
+[0m11:02:14.222735 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.588 seconds
+[0m11:02:14.224745 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_pipeline.historical_customers"
+[0m11:02:14.224745 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.972 seconds
+[0m11:02:14.237860 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.008 seconds
+[0m11:02:14.237860 [debug] [Thread-3 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m11:02:14.237860 [debug] [Thread-3 (]: On model.data_pipeline.historical_customers: create or replace transient table dbt_db.dbt_schema.historical_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NOT NULL
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */;
+[0m11:02:14.237860 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199A09A5D0>]}
+[0m11:02:14.237860 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A12850D0>]}
+[0m11:02:14.237860 [info ] [Thread-1 (]: 1 of 3 OK created sql table model dbt_schema.current_customers ................. [[32mSUCCESS 1[0m in 1.66s]
+[0m11:02:14.237860 [debug] [Thread-1 (]: Finished running node model.data_pipeline.current_customers
+[0m11:02:14.237860 [info ] [Thread-2 (]: 2 of 3 OK created sql table model dbt_schema.customer_activity ................. [[32mSUCCESS 1[0m in 1.66s]
+[0m11:02:14.237860 [debug] [Thread-2 (]: Finished running node model.data_pipeline.customer_activity
+[0m11:02:15.647365 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.400 seconds
+[0m11:02:15.649858 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b880c21-1beb-4055-8b19-4739ac4c8e7a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219A128FC50>]}
+[0m11:02:15.649858 [info ] [Thread-3 (]: 3 of 3 OK created sql table model dbt_schema.historical_customers .............. [[32mSUCCESS 1[0m in 3.06s]
+[0m11:02:15.650879 [debug] [Thread-3 (]: Finished running node model.data_pipeline.historical_customers
+[0m11:02:15.652865 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:02:15.653863 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:02:15.653863 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:02:15.831388 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m11:02:15.832384 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m11:02:16.121070 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m11:02:16.121070 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m11:02:16.449784 [debug] [MainThread]: Connection 'model.data_pipeline.current_customers' was left open.
+[0m11:02:16.449784 [debug] [MainThread]: On model.data_pipeline.current_customers: Close
+[0m11:02:16.643950 [debug] [MainThread]: Connection 'model.data_pipeline.customer_activity' was left open.
+[0m11:02:16.644905 [debug] [MainThread]: On model.data_pipeline.customer_activity: Close
+[0m11:02:17.030111 [debug] [MainThread]: Connection 'model.data_pipeline.historical_customers' was left open.
+[0m11:02:17.030111 [debug] [MainThread]: On model.data_pipeline.historical_customers: Close
+[0m11:02:17.354870 [info ] [MainThread]: 
+[0m11:02:17.354870 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 7.78 seconds (7.78s).
+[0m11:02:17.357373 [debug] [MainThread]: Command end result
+[0m11:02:17.382060 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:02:17.383606 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:02:17.383606 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m11:02:17.383606 [info ] [MainThread]: 
+[0m11:02:17.383606 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:02:17.383606 [info ] [MainThread]: 
+[0m11:02:17.383606 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m11:02:17.383606 [debug] [MainThread]: Command `dbt run` succeeded at 11:02:17.383606 after 10.95 seconds
+[0m11:02:17.383606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199C46D640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199C46FCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002199FD62060>]}
+[0m11:02:17.383606 [debug] [MainThread]: Flushing usage events
+[0m11:02:18.823105 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:06:08.835898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD6E4EE40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD6E4DBE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD685EC90>]}
+
+
+============================== 11:06:08.841892 | 2eadcfdf-1f6a-4113-b409-ed5bd881bf89 ==============================
+[0m11:06:08.841892 [info ] [MainThread]: Running with dbt=1.10.5
+[0m11:06:08.841892 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --select snapshot_check_data', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:06:09.306472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD9549D90>]}
+[0m11:06:09.359416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD9012030>]}
+[0m11:06:09.359416 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m11:06:09.628933 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m11:06:09.825057 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m11:06:09.825057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD9A632F0>]}
+[0m11:06:11.571771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD9E5F4A0>]}
+[0m11:06:11.670954 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:06:11.670954 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:06:11.686681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD9E532C0>]}
+[0m11:06:11.686681 [info ] [MainThread]: Found 8 models, 2 snapshots, 13 data tests, 1 seed, 3 sources, 594 macros
+[0m11:06:11.702659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD9DAAA20>]}
+[0m11:06:11.702659 [info ] [MainThread]: 
+[0m11:06:11.702659 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:06:11.702659 [info ] [MainThread]: 
+[0m11:06:11.702659 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:06:11.702659 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:06:11.775103 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:06:11.775103 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:06:11.775103 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:06:13.984192 [debug] [ThreadPool]: SQL status: SUCCESS 4 in 2.198 seconds
+[0m11:06:13.986219 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dbt_db, now create_dbt_db_dbt_schema_snapshot_data)
+[0m11:06:13.986219 [debug] [ThreadPool]: Creating schema "database: "dbt_db"
+schema: "dbt_schema_snapshot_data"
+"
+[0m11:06:13.991219 [debug] [ThreadPool]: Using snowflake connection "create_dbt_db_dbt_schema_snapshot_data"
+[0m11:06:13.991219 [debug] [ThreadPool]: On create_dbt_db_dbt_schema_snapshot_data: create schema if not exists dbt_db.dbt_schema_snapshot_data
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "create_dbt_db_dbt_schema_snapshot_data"} */
+[0m11:06:14.158256 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.167 seconds
+[0m11:06:14.161708 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m11:06:14.172805 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m11:06:14.173805 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema_snapshot_data'
+[0m11:06:14.174808 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m11:06:14.175683 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m11:06:14.176693 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema_snapshot_data"
+[0m11:06:14.176693 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:06:14.178693 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m11:06:14.178693 [debug] [ThreadPool]: On list_dbt_db_dbt_schema_snapshot_data: show objects in dbt_db.dbt_schema_snapshot_data
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema_snapshot_data"} */;
+[0m11:06:14.179702 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m11:06:14.179702 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:06:14.180693 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:06:14.962426 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.797 seconds
+[0m11:06:14.978228 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.797 seconds
+[0m11:06:15.123490 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.952 seconds
+[0m11:06:15.123490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CDA33CD40>]}
+[0m11:06:15.139179 [debug] [Thread-1 (]: Began running node model.data_pipeline.current_customers
+[0m11:06:15.139179 [debug] [Thread-2 (]: Began running node model.data_pipeline.customer_activity
+[0m11:06:15.139179 [debug] [Thread-3 (]: Began running node model.data_pipeline.historical_customers
+[0m11:06:15.139179 [info ] [Thread-1 (]: 1 of 3 START sql table model dbt_schema_snapshot_data.current_customers ........ [RUN]
+[0m11:06:15.139179 [info ] [Thread-2 (]: 2 of 3 START sql table model dbt_schema_snapshot_data.customer_activity ........ [RUN]
+[0m11:06:15.143403 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.current_customers'
+[0m11:06:15.143403 [info ] [Thread-3 (]: 3 of 3 START sql table model dbt_schema_snapshot_data.historical_customers ..... [RUN]
+[0m11:06:15.143403 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.data_pipeline.customer_activity'
+[0m11:06:15.143403 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.current_customers
+[0m11:06:15.143403 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.data_pipeline.historical_customers'
+[0m11:06:15.143403 [debug] [Thread-2 (]: Began compiling node model.data_pipeline.customer_activity
+[0m11:06:15.143403 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.current_customers"
+[0m11:06:15.143403 [debug] [Thread-3 (]: Began compiling node model.data_pipeline.historical_customers
+[0m11:06:15.155035 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_pipeline.customer_activity"
+[0m11:06:15.158458 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_pipeline.historical_customers"
+[0m11:06:15.160447 [debug] [Thread-1 (]: Began executing node model.data_pipeline.current_customers
+[0m11:06:15.176464 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.current_customers"
+[0m11:06:15.176464 [debug] [Thread-2 (]: Began executing node model.data_pipeline.customer_activity
+[0m11:06:15.188599 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_pipeline.customer_activity"
+[0m11:06:15.188599 [debug] [Thread-3 (]: Began executing node model.data_pipeline.historical_customers
+[0m11:06:15.191689 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_pipeline.historical_customers"
+[0m11:06:15.192692 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m11:06:15.192692 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m11:06:15.194826 [debug] [Thread-2 (]: On model.data_pipeline.customer_activity: create or replace transient table dbt_db.dbt_schema_snapshot_data.customer_activity
+    
+    
+    
+    as (-- This model demonstrates how to use snapshot data for current and historical insights
+
+WITH snapshot_data AS (
+    SELECT 
+        customer_id,
+        customer_name,
+        customer_status,
+        dbt_valid_from,
+        dbt_valid_to,
+        CASE 
+            WHEN dbt_valid_to IS NULL THEN 'current'
+            ELSE 'historical'
+        END AS record_status
+    FROM dbt_db.snapshots.customer_snapshot
+)
+
+SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    record_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM snapshot_data
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */;
+[0m11:06:15.194826 [debug] [Thread-3 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m11:06:15.194826 [debug] [Thread-1 (]: On model.data_pipeline.current_customers: create or replace transient table dbt_db.dbt_schema_snapshot_data.current_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NULL
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */;
+[0m11:06:15.194826 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:06:15.194826 [debug] [Thread-3 (]: On model.data_pipeline.historical_customers: create or replace transient table dbt_db.dbt_schema_snapshot_data.historical_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NOT NULL
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */;
+[0m11:06:15.194826 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:06:15.194826 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:06:16.449400 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.253 seconds
+[0m11:06:16.468410 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.273 seconds
+[0m11:06:16.472868 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD43AA5D0>]}
+[0m11:06:16.472868 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CDB550230>]}
+[0m11:06:16.472868 [info ] [Thread-2 (]: 2 of 3 OK created sql table model dbt_schema_snapshot_data.customer_activity ... [[32mSUCCESS 1[0m in 1.32s]
+[0m11:06:16.472868 [debug] [Thread-2 (]: Finished running node model.data_pipeline.customer_activity
+[0m11:06:16.472868 [info ] [Thread-1 (]: 1 of 3 OK created sql table model dbt_schema_snapshot_data.current_customers ... [[32mSUCCESS 1[0m in 1.33s]
+[0m11:06:16.472868 [debug] [Thread-1 (]: Finished running node model.data_pipeline.current_customers
+[0m11:06:16.860909 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.665 seconds
+[0m11:06:16.860909 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2eadcfdf-1f6a-4113-b409-ed5bd881bf89', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CDB5AA150>]}
+[0m11:06:16.860909 [info ] [Thread-3 (]: 3 of 3 OK created sql table model dbt_schema_snapshot_data.historical_customers  [[32mSUCCESS 1[0m in 1.72s]
+[0m11:06:16.860909 [debug] [Thread-3 (]: Finished running node model.data_pipeline.historical_customers
+[0m11:06:16.860909 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:06:16.860909 [debug] [MainThread]: Connection 'create_dbt_db_dbt_schema_snapshot_data' was left open.
+[0m11:06:16.860909 [debug] [MainThread]: On create_dbt_db_dbt_schema_snapshot_data: Close
+[0m11:06:17.273604 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m11:06:17.273604 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m11:06:17.522848 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema_snapshot_data' was left open.
+[0m11:06:17.522848 [debug] [MainThread]: On list_dbt_db_dbt_schema_snapshot_data: Close
+[0m11:06:17.929813 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m11:06:17.930903 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m11:06:18.269348 [debug] [MainThread]: Connection 'model.data_pipeline.current_customers' was left open.
+[0m11:06:18.270351 [debug] [MainThread]: On model.data_pipeline.current_customers: Close
+[0m11:06:18.509012 [debug] [MainThread]: Connection 'model.data_pipeline.customer_activity' was left open.
+[0m11:06:18.509012 [debug] [MainThread]: On model.data_pipeline.customer_activity: Close
+[0m11:06:19.000724 [debug] [MainThread]: Connection 'model.data_pipeline.historical_customers' was left open.
+[0m11:06:19.000724 [debug] [MainThread]: On model.data_pipeline.historical_customers: Close
+[0m11:06:19.182941 [info ] [MainThread]: 
+[0m11:06:19.184325 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 7.48 seconds (7.48s).
+[0m11:06:19.185351 [debug] [MainThread]: Command end result
+[0m11:06:19.210364 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:06:19.212364 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:06:19.217364 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m11:06:19.218364 [info ] [MainThread]: 
+[0m11:06:19.218364 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:06:19.219364 [info ] [MainThread]: 
+[0m11:06:19.219364 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m11:06:19.220366 [debug] [MainThread]: Command `dbt run` succeeded at 11:06:19.220366 after 10.55 seconds
+[0m11:06:19.220366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD707DAC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD732D370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012CD4D52B70>]}
+[0m11:06:19.221364 [debug] [MainThread]: Flushing usage events
+[0m11:06:20.635736 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:08:35.490537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F0B37EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F148F860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F1674C80>]}
+
+
+============================== 11:08:35.496142 | 2a1a1d95-7764-4915-aad3-52c4c6f22e43 ==============================
+[0m11:08:35.496142 [info ] [MainThread]: Running with dbt=1.10.5
+[0m11:08:35.496142 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --select snapshot_check_data', 'send_anonymous_usage_stats': 'True'}
+[0m11:08:35.982664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2a1a1d95-7764-4915-aad3-52c4c6f22e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F0B37EC0>]}
+[0m11:08:36.034031 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2a1a1d95-7764-4915-aad3-52c4c6f22e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F38321B0>]}
+[0m11:08:36.034031 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m11:08:36.329969 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m11:08:36.518060 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m11:08:36.518060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2a1a1d95-7764-4915-aad3-52c4c6f22e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F15FEFC0>]}
+[0m11:08:38.220608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2a1a1d95-7764-4915-aad3-52c4c6f22e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F43F3620>]}
+[0m11:08:38.316684 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:08:38.318682 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:08:38.339682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2a1a1d95-7764-4915-aad3-52c4c6f22e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F47FF9E0>]}
+[0m11:08:38.339682 [info ] [MainThread]: Found 8 models, 2 snapshots, 13 data tests, 1 seed, 3 sources, 594 macros
+[0m11:08:38.340686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a1a1d95-7764-4915-aad3-52c4c6f22e43', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F3E768A0>]}
+[0m11:08:38.341682 [info ] [MainThread]: 
+[0m11:08:38.342682 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:08:38.342682 [info ] [MainThread]: 
+[0m11:08:38.343688 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:08:38.347688 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_your_snowflake_database_name'
+[0m11:08:38.419039 [debug] [ThreadPool]: Using snowflake connection "list_your_snowflake_database_name"
+[0m11:08:38.420039 [debug] [ThreadPool]: On list_your_snowflake_database_name: show terse schemas in database your_snowflake_database_name
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_your_snowflake_database_name"} */
+[0m11:08:38.420039 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:08:40.870824 [debug] [ThreadPool]: Snowflake adapter: Snowflake query id: 01bfd472-3202-0771-0010-8a1200033342
+[0m11:08:40.870824 [debug] [ThreadPool]: Snowflake adapter: Snowflake error: 002043 (02000): SQL compilation error:
+Object does not exist, or operation cannot be performed.
+[0m11:08:40.871944 [debug] [ThreadPool]: Snowflake adapter: Error running SQL: macro list_schemas
+[0m11:08:40.871944 [debug] [ThreadPool]: Snowflake adapter: Rolling back transaction.
+[0m11:08:40.872957 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:08:40.872957 [debug] [MainThread]: Connection 'list_your_snowflake_database_name' was left open.
+[0m11:08:40.873954 [debug] [MainThread]: On list_your_snowflake_database_name: Close
+[0m11:08:41.054713 [info ] [MainThread]: 
+[0m11:08:41.054713 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 2.71 seconds (2.71s).
+[0m11:08:41.055728 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Database error while listing schemas in database "your_snowflake_database_name"
+  Database Error
+    002043 (02000): SQL compilation error:
+    Object does not exist, or operation cannot be performed.
+[0m11:08:41.057714 [debug] [MainThread]: Command `dbt run` failed at 11:08:41.056712 after 5.73 seconds
+[0m11:08:41.057714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F1702360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F4566CF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174F4316690>]}
+[0m11:08:41.057714 [debug] [MainThread]: Flushing usage events
+[0m11:08:42.256505 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:09:06.813544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BBE7133E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BBE44FFB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BBE44EED0>]}
+
+
+============================== 11:09:06.818228 | f66c9d35-1b48-4931-bce0-639f62ca9698 ==============================
+[0m11:09:06.818228 [info ] [MainThread]: Running with dbt=1.10.5
+[0m11:09:06.818228 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'invocation_command': 'dbt run --select snapshot_check_data', 'send_anonymous_usage_stats': 'True'}
+[0m11:09:07.275464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BBED8E990>]}
+[0m11:09:07.327152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC09F2180>]}
+[0m11:09:07.328155 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m11:09:07.591835 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m11:09:07.791484 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m11:09:07.791865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC0DA75F0>]}
+[0m11:09:09.520509 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC14EFB90>]}
+[0m11:09:09.613055 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:09:09.613055 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:09:09.629020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC1680110>]}
+[0m11:09:09.629020 [info ] [MainThread]: Found 8 models, 2 snapshots, 13 data tests, 1 seed, 3 sources, 594 macros
+[0m11:09:09.629020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC1437CB0>]}
+[0m11:09:09.629020 [info ] [MainThread]: 
+[0m11:09:09.629020 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:09:09.629020 [info ] [MainThread]: 
+[0m11:09:09.629020 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:09:09.646138 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:09:09.704762 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:09:09.717922 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:09:09.717922 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:09:12.013058 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.300 seconds
+[0m11:09:12.019244 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m11:09:12.028838 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m11:09:12.028838 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m11:09:12.028838 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m11:09:12.037415 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema_snapshot_data'
+[0m11:09:12.037415 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m11:09:12.037415 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m11:09:12.038939 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema_snapshot_data"
+[0m11:09:12.038939 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:09:12.038939 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:09:12.038939 [debug] [ThreadPool]: On list_dbt_db_dbt_schema_snapshot_data: show objects in dbt_db.dbt_schema_snapshot_data
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema_snapshot_data"} */;
+[0m11:09:12.041089 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:09:12.788151 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.753 seconds
+[0m11:09:12.956474 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.914 seconds
+[0m11:09:12.978108 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.939 seconds
+[0m11:09:12.981582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC174B6E0>]}
+[0m11:09:12.987089 [debug] [Thread-1 (]: Began running node model.data_pipeline.current_customers
+[0m11:09:12.987089 [debug] [Thread-2 (]: Began running node model.data_pipeline.customer_activity
+[0m11:09:12.988594 [debug] [Thread-3 (]: Began running node model.data_pipeline.historical_customers
+[0m11:09:12.987089 [info ] [Thread-1 (]: 1 of 3 START sql table model dbt_schema_snapshot_data.current_customers ........ [RUN]
+[0m11:09:12.988594 [info ] [Thread-2 (]: 2 of 3 START sql table model dbt_schema_snapshot_data.customer_activity ........ [RUN]
+[0m11:09:12.989617 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.current_customers'
+[0m11:09:12.989617 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.data_pipeline.customer_activity'
+[0m11:09:12.988594 [info ] [Thread-3 (]: 3 of 3 START sql table model dbt_schema_snapshot_data.historical_customers ..... [RUN]
+[0m11:09:12.990615 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.current_customers
+[0m11:09:12.990615 [debug] [Thread-2 (]: Began compiling node model.data_pipeline.customer_activity
+[0m11:09:12.991615 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.data_pipeline.historical_customers'
+[0m11:09:12.996617 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.current_customers"
+[0m11:09:12.999614 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_pipeline.customer_activity"
+[0m11:09:12.999614 [debug] [Thread-3 (]: Began compiling node model.data_pipeline.historical_customers
+[0m11:09:13.001614 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_pipeline.historical_customers"
+[0m11:09:13.002619 [debug] [Thread-2 (]: Began executing node model.data_pipeline.customer_activity
+[0m11:09:13.008938 [debug] [Thread-1 (]: Began executing node model.data_pipeline.current_customers
+[0m11:09:13.032594 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.current_customers"
+[0m11:09:13.038594 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_pipeline.customer_activity"
+[0m11:09:13.039595 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m11:09:13.039595 [debug] [Thread-3 (]: Began executing node model.data_pipeline.historical_customers
+[0m11:09:13.040734 [debug] [Thread-2 (]: On model.data_pipeline.customer_activity: create or replace transient table dbt_db.dbt_schema_snapshot_data.customer_activity
+    
+    
+    
+    as (-- This model demonstrates how to use snapshot data for current and historical insights
+
+WITH snapshot_data AS (
+    SELECT 
+        customer_id,
+        customer_name,
+        customer_status,
+        dbt_valid_from,
+        dbt_valid_to,
+        CASE 
+            WHEN dbt_valid_to IS NULL THEN 'current'
+            ELSE 'historical'
+        END AS record_status
+    FROM dbt_db.snapshots.customer_snapshot
+)
+
+SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    record_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM snapshot_data
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */;
+[0m11:09:13.040734 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m11:09:13.043742 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_pipeline.historical_customers"
+[0m11:09:13.043742 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:09:13.043742 [debug] [Thread-1 (]: On model.data_pipeline.current_customers: create or replace transient table dbt_db.dbt_schema_snapshot_data.current_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NULL
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */;
+[0m11:09:13.045741 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:09:13.046741 [debug] [Thread-3 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m11:09:13.047742 [debug] [Thread-3 (]: On model.data_pipeline.historical_customers: create or replace transient table dbt_db.dbt_schema_snapshot_data.historical_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NOT NULL
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */;
+[0m11:09:13.048741 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:09:14.192043 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.147 seconds
+[0m11:09:14.193043 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.150 seconds
+[0m11:09:14.215968 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BBBC3A870>]}
+[0m11:09:14.215968 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC15936B0>]}
+[0m11:09:14.217077 [info ] [Thread-1 (]: 1 of 3 OK created sql table model dbt_schema_snapshot_data.current_customers ... [[32mSUCCESS 1[0m in 1.22s]
+[0m11:09:14.217077 [debug] [Thread-1 (]: Finished running node model.data_pipeline.current_customers
+[0m11:09:14.217077 [info ] [Thread-2 (]: 2 of 3 OK created sql table model dbt_schema_snapshot_data.customer_activity ... [[32mSUCCESS 1[0m in 1.23s]
+[0m11:09:14.218388 [debug] [Thread-2 (]: Finished running node model.data_pipeline.customer_activity
+[0m11:09:14.520163 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.472 seconds
+[0m11:09:14.522161 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f66c9d35-1b48-4931-bce0-639f62ca9698', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC2E1A2A0>]}
+[0m11:09:14.523172 [info ] [Thread-3 (]: 3 of 3 OK created sql table model dbt_schema_snapshot_data.historical_customers  [[32mSUCCESS 1[0m in 1.53s]
+[0m11:09:14.524234 [debug] [Thread-3 (]: Finished running node model.data_pipeline.historical_customers
+[0m11:09:14.525251 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:09:14.525251 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:09:14.526247 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:09:14.724727 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m11:09:14.724727 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m11:09:15.098502 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m11:09:15.099502 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m11:09:15.509951 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema_snapshot_data' was left open.
+[0m11:09:15.510951 [debug] [MainThread]: On list_dbt_db_dbt_schema_snapshot_data: Close
+[0m11:09:15.699679 [debug] [MainThread]: Connection 'model.data_pipeline.current_customers' was left open.
+[0m11:09:15.700676 [debug] [MainThread]: On model.data_pipeline.current_customers: Close
+[0m11:09:15.921902 [debug] [MainThread]: Connection 'model.data_pipeline.customer_activity' was left open.
+[0m11:09:15.922429 [debug] [MainThread]: On model.data_pipeline.customer_activity: Close
+[0m11:09:16.331422 [debug] [MainThread]: Connection 'model.data_pipeline.historical_customers' was left open.
+[0m11:09:16.331422 [debug] [MainThread]: On model.data_pipeline.historical_customers: Close
+[0m11:09:16.509056 [info ] [MainThread]: 
+[0m11:09:16.510057 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 6.88 seconds (6.88s).
+[0m11:09:16.511059 [debug] [MainThread]: Command end result
+[0m11:09:16.534565 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:09:16.537565 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:09:16.542121 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m11:09:16.542121 [info ] [MainThread]: 
+[0m11:09:16.543123 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:09:16.543123 [info ] [MainThread]: 
+[0m11:09:16.544121 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m11:09:16.545128 [debug] [MainThread]: Command `dbt run` succeeded at 11:09:16.545128 after 9.86 seconds
+[0m11:09:16.545128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BBE4C4B60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BBEBBD6A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024BC121F5C0>]}
+[0m11:09:16.545128 [debug] [MainThread]: Flushing usage events
+[0m11:09:18.142263 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:09:39.356217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCF92CDA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCF8A9C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCFE71100>]}
+
+
+============================== 11:09:39.361516 | a1394dc9-b2ff-42d3-b8da-6968ccc2e71d ==============================
+[0m11:09:39.361516 [info ] [MainThread]: Running with dbt=1.10.5
+[0m11:09:39.362526 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\lenovo\\data_pipeline\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run --select snapshot_check_data', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:09:39.860322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD1B3AF90>]}
+[0m11:09:39.910893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD2007290>]}
+[0m11:09:39.912898 [info ] [MainThread]: Registered adapter: snowflake=1.10.0
+[0m11:09:40.205732 [debug] [MainThread]: checksum: fa4c2685620973c5adba0a491aa9c06e8cf48c9113a5280b45b6efa706ae8f4b, vars: {}, profile: , target: , version: 1.10.5
+[0m11:09:40.393021 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m11:09:40.394556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD254BEC0>]}
+[0m11:09:42.202490 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD26EEB10>]}
+[0m11:09:42.302357 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:09:42.304761 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:09:42.324398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD2885700>]}
+[0m11:09:42.324398 [info ] [MainThread]: Found 8 models, 2 snapshots, 13 data tests, 1 seed, 3 sources, 594 macros
+[0m11:09:42.324398 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD24C4740>]}
+[0m11:09:42.324398 [info ] [MainThread]: 
+[0m11:09:42.324398 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:09:42.324398 [info ] [MainThread]: 
+[0m11:09:42.330400 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:09:42.330400 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db'
+[0m11:09:42.404631 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db"
+[0m11:09:42.404631 [debug] [ThreadPool]: On list_dbt_db: show terse schemas in database dbt_db
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db"} */
+[0m11:09:42.404631 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:09:45.236252 [debug] [ThreadPool]: SQL status: SUCCESS 5 in 2.845 seconds
+[0m11:09:45.252561 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema'
+[0m11:09:45.252561 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema"
+[0m11:09:45.252561 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_dbt_schema_snapshot_data'
+[0m11:09:45.252561 [debug] [ThreadPool]: On list_dbt_db_dbt_schema: show objects in dbt_db.dbt_schema
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema"} */;
+[0m11:09:45.268302 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_db_snapshots'
+[0m11:09:45.268302 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_dbt_schema_snapshot_data"
+[0m11:09:45.268302 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:09:45.268302 [debug] [ThreadPool]: Using snowflake connection "list_dbt_db_snapshots"
+[0m11:09:45.268302 [debug] [ThreadPool]: On list_dbt_db_dbt_schema_snapshot_data: show objects in dbt_db.dbt_schema_snapshot_data
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_dbt_schema_snapshot_data"} */;
+[0m11:09:45.268302 [debug] [ThreadPool]: On list_dbt_db_snapshots: show objects in dbt_db.snapshots
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "connection_name": "list_dbt_db_snapshots"} */;
+[0m11:09:45.268302 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:09:45.268302 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:09:45.954118 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.696 seconds
+[0m11:09:46.288990 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.016 seconds
+[0m11:09:46.523957 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.260 seconds
+[0m11:09:46.535008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD26EF350>]}
+[0m11:09:46.535008 [debug] [Thread-1 (]: Began running node model.data_pipeline.current_customers
+[0m11:09:46.535008 [debug] [Thread-2 (]: Began running node model.data_pipeline.customer_activity
+[0m11:09:46.535008 [info ] [Thread-1 (]: 1 of 3 START sql table model dbt_schema_snapshot_data.current_customers ........ [RUN]
+[0m11:09:46.535008 [debug] [Thread-3 (]: Began running node model.data_pipeline.historical_customers
+[0m11:09:46.535008 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.data_pipeline.current_customers'
+[0m11:09:46.535008 [info ] [Thread-2 (]: 2 of 3 START sql table model dbt_schema_snapshot_data.customer_activity ........ [RUN]
+[0m11:09:46.535008 [debug] [Thread-1 (]: Began compiling node model.data_pipeline.current_customers
+[0m11:09:46.535008 [info ] [Thread-3 (]: 3 of 3 START sql table model dbt_schema_snapshot_data.historical_customers ..... [RUN]
+[0m11:09:46.535008 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.data_pipeline.customer_activity'
+[0m11:09:46.553818 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_pipeline.current_customers"
+[0m11:09:46.554817 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.data_pipeline.historical_customers'
+[0m11:09:46.554817 [debug] [Thread-2 (]: Began compiling node model.data_pipeline.customer_activity
+[0m11:09:46.555814 [debug] [Thread-3 (]: Began compiling node model.data_pipeline.historical_customers
+[0m11:09:46.558391 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_pipeline.customer_activity"
+[0m11:09:46.560389 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_pipeline.historical_customers"
+[0m11:09:46.561390 [debug] [Thread-1 (]: Began executing node model.data_pipeline.current_customers
+[0m11:09:46.586917 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_pipeline.current_customers"
+[0m11:09:46.586917 [debug] [Thread-3 (]: Began executing node model.data_pipeline.historical_customers
+[0m11:09:46.586917 [debug] [Thread-2 (]: Began executing node model.data_pipeline.customer_activity
+[0m11:09:46.593601 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_pipeline.historical_customers"
+[0m11:09:46.597436 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_pipeline.customer_activity"
+[0m11:09:46.597436 [debug] [Thread-1 (]: Using snowflake connection "model.data_pipeline.current_customers"
+[0m11:09:46.597436 [debug] [Thread-1 (]: On model.data_pipeline.current_customers: create or replace transient table dbt_db.dbt_schema_snapshot_data.current_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NULL
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.current_customers"} */;
+[0m11:09:46.597436 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:09:46.600269 [debug] [Thread-2 (]: Using snowflake connection "model.data_pipeline.customer_activity"
+[0m11:09:46.600269 [debug] [Thread-2 (]: On model.data_pipeline.customer_activity: create or replace transient table dbt_db.dbt_schema_snapshot_data.customer_activity
+    
+    
+    
+    as (-- This model demonstrates how to use snapshot data for current and historical insights
+
+WITH snapshot_data AS (
+    SELECT 
+        customer_id,
+        customer_name,
+        customer_status,
+        dbt_valid_from,
+        dbt_valid_to,
+        CASE 
+            WHEN dbt_valid_to IS NULL THEN 'current'
+            ELSE 'historical'
+        END AS record_status
+    FROM dbt_db.snapshots.customer_snapshot
+)
+
+SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    record_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM snapshot_data
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.customer_activity"} */;
+[0m11:09:46.602019 [debug] [Thread-3 (]: Using snowflake connection "model.data_pipeline.historical_customers"
+[0m11:09:46.602019 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:09:46.602945 [debug] [Thread-3 (]: On model.data_pipeline.historical_customers: create or replace transient table dbt_db.dbt_schema_snapshot_data.historical_customers
+    
+    
+    
+    as (SELECT 
+    customer_id,
+    customer_name,
+    customer_status,
+    dbt_valid_from,
+    dbt_valid_to
+FROM dbt_db.snapshots.customer_snapshot_check
+WHERE dbt_valid_to IS NOT NULL
+ORDER BY customer_id, dbt_valid_from
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.5", "profile_name": "data_pipeline", "target_name": "dev", "node_id": "model.data_pipeline.historical_customers"} */;
+[0m11:09:46.603961 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:09:47.606578 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.007 seconds
+[0m11:09:47.626595 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 1.022 seconds
+[0m11:09:47.628590 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCCE8A540>]}
+[0m11:09:47.628590 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD40A7FB0>]}
+[0m11:09:47.629729 [info ] [Thread-1 (]: 1 of 3 OK created sql table model dbt_schema_snapshot_data.current_customers ... [[32mSUCCESS 1[0m in 1.09s]
+[0m11:09:47.630746 [debug] [Thread-1 (]: Finished running node model.data_pipeline.current_customers
+[0m11:09:47.629729 [info ] [Thread-3 (]: 3 of 3 OK created sql table model dbt_schema_snapshot_data.historical_customers  [[32mSUCCESS 1[0m in 1.07s]
+[0m11:09:47.630746 [debug] [Thread-3 (]: Finished running node model.data_pipeline.historical_customers
+[0m11:09:47.934327 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.332 seconds
+[0m11:09:47.936481 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a1394dc9-b2ff-42d3-b8da-6968ccc2e71d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DD401E450>]}
+[0m11:09:47.937481 [info ] [Thread-2 (]: 2 of 3 OK created sql table model dbt_schema_snapshot_data.customer_activity ... [[32mSUCCESS 1[0m in 1.40s]
+[0m11:09:47.938169 [debug] [Thread-2 (]: Finished running node model.data_pipeline.customer_activity
+[0m11:09:47.939655 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:09:47.940742 [debug] [MainThread]: Connection 'list_dbt_db' was left open.
+[0m11:09:47.940742 [debug] [MainThread]: On list_dbt_db: Close
+[0m11:09:48.181844 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema' was left open.
+[0m11:09:48.182610 [debug] [MainThread]: On list_dbt_db_dbt_schema: Close
+[0m11:09:48.367468 [debug] [MainThread]: Connection 'list_dbt_db_dbt_schema_snapshot_data' was left open.
+[0m11:09:48.368473 [debug] [MainThread]: On list_dbt_db_dbt_schema_snapshot_data: Close
+[0m11:09:48.576862 [debug] [MainThread]: Connection 'list_dbt_db_snapshots' was left open.
+[0m11:09:48.577877 [debug] [MainThread]: On list_dbt_db_snapshots: Close
+[0m11:09:48.921853 [debug] [MainThread]: Connection 'model.data_pipeline.current_customers' was left open.
+[0m11:09:48.921853 [debug] [MainThread]: On model.data_pipeline.current_customers: Close
+[0m11:09:49.120136 [debug] [MainThread]: Connection 'model.data_pipeline.customer_activity' was left open.
+[0m11:09:49.120136 [debug] [MainThread]: On model.data_pipeline.customer_activity: Close
+[0m11:09:49.417463 [debug] [MainThread]: Connection 'model.data_pipeline.historical_customers' was left open.
+[0m11:09:49.417463 [debug] [MainThread]: On model.data_pipeline.historical_customers: Close
+[0m11:09:49.745437 [info ] [MainThread]: 
+[0m11:09:49.745437 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 7.42 seconds (7.42s).
+[0m11:09:49.746436 [debug] [MainThread]: Command end result
+[0m11:09:49.770387 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\lenovo\data_pipeline\target\manifest.json
+[0m11:09:49.775098 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\lenovo\data_pipeline\target\semantic_manifest.json
+[0m11:09:49.775098 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\lenovo\data_pipeline\target\run_results.json
+[0m11:09:49.775098 [info ] [MainThread]: 
+[0m11:09:49.775098 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:09:49.775098 [info ] [MainThread]: 
+[0m11:09:49.775098 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m11:09:49.775098 [debug] [MainThread]: Command `dbt run` succeeded at 11:09:49.775098 after 10.54 seconds
+[0m11:09:49.784133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCFFB0CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCF33ED80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020DCF2C1DF0>]}
+[0m11:09:49.784133 [debug] [MainThread]: Flushing usage events
+[0m11:09:52.132690 [debug] [MainThread]: An error was encountered while trying to flush usage events
